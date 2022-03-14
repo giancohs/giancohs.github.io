@@ -60,6 +60,12 @@ features.setAttribute("id", "features");
 
 // If the content exists, then assign it to the 'header' element
 // Note how each one of these are assigning 'innerHTML'
+
+if (config.logo) {
+  var logoPath = document.createElement("div");
+  logoPath.innerHTML = config.logo;
+  header.appendChild(logoPath);
+}
 if (config.topTitle) {
   var topTitle = document.createElement("div");
   topTitle.innerHTML = config.topTitle;
@@ -85,6 +91,8 @@ if (config.description) {
   descriptionText.innerHTML = config.description;
   header.appendChild(descriptionText);
 }
+
+
 
 // If after this, the header has anything in it, it gets appended to the story
 if (header.innerText.length > 0) {
@@ -218,95 +226,24 @@ map.on("load", function () {
       },
     });
   }
+  
+  
   map.addLayer(
     {
-      id: "turnstileData",
+      id: "fallecidosCovid",
       type: "circle",
       source: {
         type: "geojson",
-        data: "data/turnstileData.geojson",
+        data: "./data/tasa_fallecidos_covid_clean.geojson"
       },
       paint: {
-        "circle-color": [
-          "interpolate",
-          ["linear"],
-          ["get", "ENTRIES_DIFF"],
-          -1,
-          "#ff4400",
-          -0.7,
-          "#ffba31",
-          -0.4,
-          "#ffffff",
-        ],
-        "circle-stroke-color": "#4d4d4d",
-        "circle-stroke-width": 0.5,
-        "circle-radius": [
-          "interpolate",
-          ["exponential", 2],
-          ["zoom"],
-          10,
-          ["interpolate", ["linear"], ["get", "ENTRIES_DIFF"], -1, 10, -0.4, 1],
-          15,
-          [
-            "interpolate",
-            ["linear"],
-            ["get", "ENTRIES_DIFF"],
-            -1,
-            25,
-            -0.4,
-            12,
-          ],
-        ],
-      },
-    },
-    "road-label-simple"
-  );
-  map.addLayer(
-    {
-      id: "medianIncome",
-      type: "fill",
-      source: {
-        type: "geojson",
-        data: "data/medianIncome.geojson",
-      },
-      paint: {
-        "fill-opacity": 0,
-        "fill-color": [
-          "step",
-          ["get", "MHHI"],
-          "#ffffff",
-          20000,
-          "#ccedf5",
-          50000,
-          "#99daea",
-          75000,
-          "#66c7e0",
-          100000,
-          "#33b5d5",
-          150000,
-          "#00a2ca",
-        ],
-      },
-    },
-    "waterway-shadow"
-  );
-
-  map.addLayer(
-    {
-      id: "positivos_covid",
-      type: "circle",
-      source: {
-        type: "geojson",
-        data: "./data/positivos_covid_last_week_clean.geojson"
-      },
-      paint: {
-        'circle-color': '#ff7f50',
-        'circle-stroke-color': '#4d4d4d',
-        'circle-opacity': 0.7,
+        'circle-color': '#d10000 ',
+        'circle-stroke-color': '#d10000 ',
+        'circle-opacity': 0.25,
         'circle-stroke-width': 0.1,
-        'circle-radius': ['interpolate', ['linear'], ['get', 'n_casos'],
+        'circle-radius': ['interpolate', ['linear'], ['get', 'tasa_falle'],
             1, 2,
-            500, 25,
+            3000, 25,
          ]
       },
     },
@@ -315,42 +252,52 @@ map.on("load", function () {
 
   map.addLayer(
     {
-      id: "idh_2019_distritos_clean.geojson",
+      id: "idhDistritos_plain",
       type: "fill",
       source: {
         type: "geojson",
-        data: "data/idh_2019_distritos_clean.geojson_",
+        data: "./data/idh_2019_distritos_clean.geojson",
       },
-      paint: {
-        "fill-opacity": 0,
+      paint: {        
         "fill-color": '#00ffff',
         "fill-opacity": 0.3
       },
     },
-    "positivos_covid"
+    "fallecidosCovid"
   );
 
   map.addLayer(
     {
-      id: "idh_2019_distritos_clean.geojson",
+      id: "idhDistritos",
       type: "fill",
       source: {
         type: "geojson",
-        data: "data/idh_2019_distritos_clean.geojson",
+        data: "./data/idh_2019_distritos_clean.geojson",
       },
       paint: {        
-        "fill-color": ['step', ['get', 'idh_2019'],
-                        '#ffffff',
-                        0.1, '#ccedf5',
-                        0.3, '#99daea',
-                        0.5, '#66c7e0',
-                        0.7, '#33b5d5',
-                        1, '#00a2ca'],
-        "fill-opacity": 0.3
+        "fill-color": [
+          "step",
+          ["get", "idh_2019"],
+          "#6c0000",
+          0,
+          "#ce692c",
+          0.25,
+          "#ffe09c",
+          0.39,
+          "#7fb468",
+          0.54,
+          "#376a24",
+          0.69,
+          "#376a24"
+          
+        ],
+        "fill-opacity": 0
       },
     },
-    "positivos_covid"
+    "fallecidosCovid"
   );
+
+  
 
 
   // Setup the instance, pass callback functions

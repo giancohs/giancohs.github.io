@@ -1,6 +1,6 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 #map {
@@ -11,22 +11,40 @@ body {
 }
 
 #header {
-    margin: auto;
+    margin: auto auto auto auto;
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;    
     position: relative;
     z-index: 5;
     padding: 2vh 0vh 5vh 0vh;
+    background-color: rgba(0,0,0,0.5);    
+    
 }
 
+#header .logoOP{
+  display: block;
+  margin-top: 0px;
+  margin-left: auto;  
+  margin-right: auto;
+  width: 25vh;    
+  position: relative;
+  padding: 0vh 0vh 0vh 0vh;
+  background-color: rgba(0,0,0,0);
+  
+  
+}
+
+
 #features {
-    padding-top: 80vh;
+    padding-top: 100vh;    
+    position: relative;
     padding-bottom: 10vh;
 }
-@media (max-width: 750px) {
+@media (max-width: 100%) {
     #features {
-      width: 100vw;
-      margin: auto;
+      height: auto;      
+      width: 100%;
+      
     }
 }
 
@@ -43,9 +61,11 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     font-family: 'Merriweather', serif;
-    text-align: left;
-    margin: auto;
+    text-align: center;
+    margin: 4em auto auto auto;
     max-width: 600px;
+    padding: 1em 2.5em 1em 2.5em;
+    opacity: 0.9;
 }
 #header h4 {
     font-family: 'Roboto Condensed', sans-serif;
@@ -67,7 +87,8 @@ body {
     text-align: left;
     font-size: 1.2em;
     max-width: 600px;
-    margin: 1em auto 1em auto;
+    margin: auto auto auto auto;
+    padding: 0.5em 2.5em 0.5em 2.5em;
 }
 #features h3 {
     font-weight: 700;
@@ -75,12 +96,15 @@ body {
     font-family: 'Merriweather', serif;
     text-align: left;
     max-width: 50vw;
+    padding: 0em 0em;
+    
 }
 #features p {
     font-family: 'Roboto Condensed', sans-serif;
     text-align: left;
-    font-size: 1.2em;
-    max-width: 50vw;
+    font-size: 1.2em;    
+    padding: 0em;
+    
 }
 #features .imageCredit {
   font-size: 0.9em;
@@ -91,7 +115,7 @@ body {
   font-size: 0.9em;
   max-width: 600px;
   padding: 0.75em 0em;
-  margin: 0px auto;
+  margin: 1em 1em 1em 1em;
 }
 
 a, a:hover, a:visited {
@@ -138,7 +162,7 @@ a, a:hover, a:visited {
     margin-left: 62vw;
   }
   .fully {
-    padding: 0px 0px;
+    
     width: 100%;
     margin: auto;
     
@@ -150,10 +174,11 @@ a, a:hover, a:visited {
   .dark {
     color: #fafafa;
     background-color: #444;
+
   }
   .step {
-    padding-bottom: 50vh;
-    opacity: 0.15;
+    padding-bottom: 100vh;
+    opacity: 0.99;
   }
   .step.active {
     opacity: 0.99;
@@ -168,8 +193,8 @@ a, a:hover, a:visited {
   }
   @media (max-width: 750px) {
     .centered, .lefty, .righty, .fully {
-      width: 100vh;
-      margin: auto;
+      width: 100%;
+      margin: auto auto;
     }
   }
   /* Fix issue on mobile browser where scroll breaks  */

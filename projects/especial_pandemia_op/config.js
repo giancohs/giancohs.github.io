@@ -1,5 +1,7 @@
 let topTitleDiv = "<h4></h4>";
 
+let logoDiv = '<img class= "logoOP"src="./images/ojopublico_logo_white.png">' 
+
 let titleDiv =
   "<h1>A dos años de la Pandemia en el Perú</h1>";
 
@@ -9,6 +11,7 @@ let descriptionDiv =
   '<p> En el 2019, el INEI identificó regiones, provincias y distritos con menor índice de desarrollo humano. La pandemia por la Covid-19 ha afectado en sobremanera en estos lugares que ya eran vulnerables.</p>' +
   '<p>Un equipo multidisplinario analizó la información registrada durante la pandemia <a href="https://www.datosabiertos.gob.pe/group/datos-abiertos-de-covid-19">(casos y fallecidos por Covid-19, vacunas, entre otros)</a></p>' +
   "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum natus eos cum rem iure aperiam omnis distinctio illo quis, sunt nesciunt sint impedit deleniti dolor saepe necessitatibus eligendi aut?</p><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum natus eos cum rem iure aperiam omnis distinctio illo quis, sunt nesciunt sint impedit deleniti dolor saepe necessitatibus eligendi aut?</p>" +
+  "<br></br>"+
   '<p style="text-align:center">Desliza para continuar<br>▼</p>';
 
 let footerDiv =
@@ -55,6 +58,7 @@ var config = {
   byline: bylineDiv,
   description: descriptionDiv,
   footer: footerDiv,
+  logo: logoDiv,
   chapters: [
     {
       id: "overallMap",
@@ -62,30 +66,9 @@ var config = {
       hidden: false,
       chapterDiv: divChapter1,
       location: {
-        center: [-81.124849, -9.918927],
-        zoom: 5,
-        zoomSmall: 2,
-        pitch: 0,
-        bearing: 0,
-      },
-      mapAnimation: "flyTo",
-      rotateAnimation: false,
-      callback: "",
-      onChapterEnter: [],
-      onChapterExit: [],
-    },
-    {
-      id: "incomeUnderlay",
-      alignment: "left",
-      hidden: false,
-      title: "",
-      image: "",
-      description: "",
-      chapterDiv: divChapter2,
-      location: {
-        center: [-81.124849, -9.918927],
-        zoom: 5,
-        zoomSmall: 9,
+        center: [-74.55652, -9.54131],
+        zoom: 4.5,
+        zoomSmall: 4,
         pitch: 0,
         bearing: 0,
       },
@@ -94,22 +77,95 @@ var config = {
       callback: "",
       onChapterEnter: [
         {
-          layer: "medianIncome",
-          opacity: 1,
+          layer: "fallecidosCovid",
+          opacity: 0.25,
+          duration: 300,
+        },
+        {
+          layer: "idhDistritos_plain",
+          opacity: 0.25,
+          duration: 300,
+        },
+        {
+          layer: "idhDistritos",
+          opacity: 0,
+          duration: 0,
+        },
+      ],
+      onChapterExit: [
+        {
+          layer: "fallecidosCovid",
+          opacity: 0.25,
+          duration: 0,
+        },
+        {
+          layer: "idhDistritos_plain",
+          opacity: 0.25,
+          duration: 0,
+        },
+        {
+          layer: "idhDistritos",
+          opacity: 0,
+          duration: 0,
+        },
+      ],
+    },
+    {
+      id: "idhDistritos",
+      alignment: "left",
+      hidden: false,
+      title: "",
+      image: "",
+      description: "",
+      chapterDiv: divChapter2,
+      location: {
+        center: [-74.55652, -9.54131],
+        zoom: 5,
+        zoomSmall: 4,
+        pitch: 0,
+        bearing: 0,
+      },
+      mapAnimation: "flyTo",
+      rotateAnimation: false,
+      callback: "",
+      onChapterEnter: [
+        {
+          layer: "fallecidosCovid",
+          opacity: 0,
+          duration: 0,
+        },
+        {
+          layer: "idhDistritos_plain",
+          opacity: 0,
+          duration: 0,
+        },
+        {
+          layer: "idhDistritos",
+          opacity: 0.9,
           duration: 300,
         },
       ],
       onChapterExit: [
         {
-          layer: "medianIncome",
+          layer: "fallecidosCovid",
           opacity: 0,
+          duration: 300,
+        },
+        {
+          layer: "idhDistritos_plain",
+          opacity: 0,
+          duration: 0,
+        },
+        {
+          layer: "idhDistritos",
+          opacity: 0.9,
           duration: 300,
         },
       ],
     },
     {
-      id: "elmhurstHospital",
-      alignment: "left",
+      id: "ucayali",
+      alignment: "right",
       hidden: false,
       title: "",
       image: "",
@@ -118,7 +174,7 @@ var config = {
       location: {
         center: [-74.35181, -8.45874 ],
         zoom: 8,
-        zoomSmall: 14,
+        zoomSmall: 6,
         pitch: 40,
         bearing: -7,
       },
@@ -127,15 +183,35 @@ var config = {
       callback: "",
       onChapterEnter: [
         {
-          layer: "medianIncome",
+          layer: "fallecidosCovid",
+          opacity: 0.9,
+          duration: 300,
+        },
+        {
+          layer: "idhDistritos_plain",
           opacity: 0,
+          duration: 0,
+        },
+        {
+          layer: "idhDistritos",
+          opacity: 0.9,
           duration: 300,
         },
       ],
       onChapterExit: [
         {
-          layer: "medianIncome",
+          layer: "fallecidosCovid",
+          opacity: 0.9,
+          duration: 300,
+        },
+        {
+          layer: "idhDistritos_plain",
           opacity: 0,
+          duration: 0,
+        },
+        {
+          layer: "idhDistritos",
+          opacity: 0.9,
           duration: 300,
         },
       ],
@@ -151,7 +227,7 @@ var config = {
       location: {
         center: [-80.39297, -5.17832],
         zoom: 16,
-        zoomSmall: 14,
+        zoomSmall: 10,
         pitch: 40,
         bearing: -7,
       },
@@ -160,14 +236,14 @@ var config = {
       callback: "",
       onChapterEnter: [
         {
-          layer: "medianIncome",
+          layer: "",
           opacity: 0,
           duration: 300,
         },
       ],
       onChapterExit: [
         {
-          layer: "medianIncome",
+          layer: "",
           opacity: 0,
           duration: 300,
         },
@@ -184,7 +260,7 @@ var config = {
       location: {
         center: [-80.39297, -5.17832],
         zoom: 8,
-        zoomSmall: 14,
+        zoomSmall: 6,
         pitch: 40,
         bearing: 8,
       },
@@ -193,14 +269,14 @@ var config = {
       callback: "",
       onChapterEnter: [
         {
-          layer: "medianIncome",
+          layer: "",
           opacity: 1,
           duration: 300,
         },
       ],
       onChapterExit: [
         {
-          layer: "medianIncome",
+          layer: "",
           opacity: 0,
           duration: 300,
         },
