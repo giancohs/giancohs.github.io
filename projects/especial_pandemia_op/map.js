@@ -256,7 +256,7 @@ map.on("load", function () {
       type: "fill",
       source: {
         type: "geojson",
-        data: "./data/idh_2019_distritos_clean.geojson",
+        data: "./data/idh_2019_distritos_clean_reduced.json",
       },
       paint: {        
         "fill-color": '#00ffff',
@@ -272,7 +272,7 @@ map.on("load", function () {
       type: "fill",
       source: {
         type: "geojson",
-        data: "./data/idh_2019_distritos_clean.geojson",
+        data: "./data/idh_2019_distritos_clean_reduced.json",
       },
       paint: {        
         "fill-color": [
