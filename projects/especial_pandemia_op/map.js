@@ -313,6 +313,45 @@ map.on("load", function () {
     ""
   );
 
+  map.addLayer(
+    {
+      id: "idh_2019_distritos_clean.geojson",
+      type: "fill",
+      source: {
+        type: "geojson",
+        data: "data/idh_2019_distritos_clean.geojson_",
+      },
+      paint: {
+        "fill-opacity": 0,
+        "fill-color": '#00ffff',
+        "fill-opacity": 0.3
+      },
+    },
+    "positivos_covid"
+  );
+
+  map.addLayer(
+    {
+      id: "idh_2019_distritos_clean.geojson",
+      type: "fill",
+      source: {
+        type: "geojson",
+        data: "data/idh_2019_distritos_clean.geojson",
+      },
+      paint: {        
+        "fill-color": ['step', ['get', 'idh_2019'],
+                        '#ffffff',
+                        0.1, '#ccedf5',
+                        0.3, '#99daea',
+                        0.5, '#66c7e0',
+                        0.7, '#33b5d5',
+                        1, '#00a2ca'],
+        "fill-opacity": 0.3
+      },
+    },
+    "positivos_covid"
+  );
+
 
   // Setup the instance, pass callback functions
   scroller

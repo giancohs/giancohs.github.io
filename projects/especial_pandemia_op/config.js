@@ -33,7 +33,7 @@ let divChapter3 =
   "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis tincidunt fermentum. Proin lobortis, leo ut iaculis ultricies, ante tellus porta dolor, efficitur egestas massa magna quis ipsum. Fusce rutrum dignissim dui, at tempus turpis vestibulum sit amet. In a augue eu est ultricies convallis. Vivamus tincidunt tortor ac vehicula. </p>";
 
 let divChapter4 =
-  '<div id="full-size"><img src="images/loreto_ojo_publico.jpg"></div>'  
+'<div style="padding: 0px 0px; margin-left:0; margin-right:0"><img src="./images/loreto_ojo_publico.jpg"></div>';
 
 let divChapter5 =
   "<h3>Piura</h3>" +
@@ -47,7 +47,7 @@ var config = {
     "pk.eyJ1Ijoib2pvcHVibGljbyIsImEiOiJjbDBsYzY3YzMwdjJtM2JzZHNkdTlpYm1sIn0.yIsJG1nJZLQys4T0zTKRbA",
   showMarkers: false,
   markerColor: "#3FB1CE",
-  theme: "light",
+  theme: "dark",
   use3dTerrain: false,
   topTitle: topTitleDiv,
   title: titleDiv,
@@ -145,9 +145,9 @@ var config = {
       alignment: "full",
       hidden: false,
       title: "",
-      image: "./images/loreto_ojo_publico.jpg",
-      description: "",
+      image: './images/loreto_ojo_publico.jpg',
       chapterDiv: divChapter4,
+      description: '',
       location: {
         center: [-80.39297, -5.17832],
         zoom: 16,

@@ -25,8 +25,8 @@ body {
 }
 @media (max-width: 750px) {
     #features {
-      width: 90vw;
-      margin: 0 auto;
+      width: 100vw;
+      margin: auto;
     }
 }
 
@@ -99,12 +99,12 @@ a, a:hover, a:visited {
   }
 
 
-html,body{ margin:0; padding:0; height:100%; width:100%; }
+/*html,body{ margin:0; padding:0; height:100%; width:100%; }
 #full-size{
   height:100%;
   width:100%;
-  overflow:hidden; /* or overflow:auto; if you want scrollbars */
-}
+  overflow:hidden; /* or overflow:auto; if you want scrollbars 
+}*/
 
 .mapboxgl-popup-content h4 {
     font-weight: 500;
@@ -138,8 +138,10 @@ html,body{ margin:0; padding:0; height:100%; width:100%; }
     margin-left: 62vw;
   }
   .fully {
+    padding: 0px 0px;
     width: 100%;
     margin: auto;
+    
   }
   .light {
     color: #444;
@@ -157,7 +159,7 @@ html,body{ margin:0; padding:0; height:100%; width:100%; }
     opacity: 0.99;
   }
   .step div {
-    padding: 25px 50px;
+    padding: 25px 50px; /*25px 50px */
     line-height: 25px;
     font-size: 13px;
   }
@@ -166,8 +168,8 @@ html,body{ margin:0; padding:0; height:100%; width:100%; }
   }
   @media (max-width: 750px) {
     .centered, .lefty, .righty, .fully {
-      width: 90vw;
-      margin: 0 auto;
+      width: 100vh;
+      margin: auto;
     }
   }
   /* Fix issue on mobile browser where scroll breaks  */
