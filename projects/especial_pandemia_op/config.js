@@ -3,14 +3,14 @@ let topTitleDiv = "<h4></h4>";
 let logoDiv = '<img class= "logoOP"src="./images/ojopublico_logo_white.png">' 
 
 let titleDiv =
-  "<h1>A dos años de la Pandemia en el Perú</h1>";
+  "<h1>Dos años de pandemia en el Perú:<br></h1><h2>el impacto la covid-19 por distritos</h2>";
 
 let bylineDiv = "<p>Por OjoPúblico y Espacio y Análisis</p>";
 
 let descriptionDiv =
-  '<p> En el 2019, el INEI identificó regiones, provincias y distritos con menor índice de desarrollo humano. La pandemia por la Covid-19 ha afectado en sobremanera en estos lugares que ya eran vulnerables.</p>' +
-  '<p>Un equipo multidisplinario analizó la información registrada durante la pandemia <a href="https://www.datosabiertos.gob.pe/group/datos-abiertos-de-covid-19">(casos y fallecidos por Covid-19, vacunas, entre otros)</a></p>' +
-  "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum natus eos cum rem iure aperiam omnis distinctio illo quis, sunt nesciunt sint impedit deleniti dolor saepe necessitatibus eligendi aut?</p><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum natus eos cum rem iure aperiam omnis distinctio illo quis, sunt nesciunt sint impedit deleniti dolor saepe necessitatibus eligendi aut?</p>" +
+  '<p>Las familias que se vieron forzadas a dejar la ciudad, los hospitales colapsados, la pérdida masiva de empleos, las escuelas cerradas, las colas por un balón de oxígeno, el desamparo de los pueblos indígenas, la espera interminable para acceder a una cama de cuidados intensivos, el hambre de tantos, las deudas exorbitantes, y los deudos, que cada vez son más. A dos años del inicio de la pandemia no quedan dudas: la covid-19 no nos ha afectado a todos por igual y, además, ha ampliado las brechas que ya existían en el acceso a derechos básicos y las posibilidades de desarrollo en todo el mundo.</p>' +
+  '<p>En Perú  —uno de los países más afectados por el coronavirus— la fragilidad del sistema sanitario, el empleo y el sistema educativo quedó en evidencia durante los primeros meses de pandemia y se exacerbó, todavía más, durante la segunda ola de la enfermedad. La emergencia sanitaria, en otras palabras, aumentó las desigualdades que ya existían y, de acuerdo con los especialistas, sus efectos se sentirán durante décadas.</p>' +
+  "<p>Otros aspectos, como el impacto de esas brechas —las que ya existían antes de la pandemia— en las muertes por covid-19 registradas en el país todavía están en discusión. Por eso, este nuevo especial, elaborado por OjoPúblico y Espacio y Análisis, indaga en la relación entre el índice de desarrollo humano, la inseguridad alimentaria y la tasa de mortalidad en los distritos urbanos y rurales del Perú.</p>" +
   "<br></br>"+
   '<p style="text-align:center">Desliza para continuar<br>▼</p>';
 
@@ -21,10 +21,8 @@ let footerDiv =
   '<p><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> | <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a> | <a href="https://brown.columbia.edu">The Brown Institute for Media Innovation</a></p>';
 
 let divChapter1 =
-  "<h3>Las tres olas en el Perú</h3>" +
-  '<img src="images/olas_covid_peru.jpg">' +
-  '<p class="imageCredit">Fuente: <a href="https://www.datosabiertos.gob.pe/dataset/casos-positivos-por-covid-19-ministerio-de-salud-minsa">Ministerio de Salud</a></p>' +
-  "<p>En marzo de 2020 se declaró en emergencia sanitaria Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum natus eos cum rem iure aperiam omnis distinctio illo quis, sunt nesciunt sint impedit deleniti dolor saepe necessitatibus eligendi aut?</p><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum natus eos cum rem iure aperiam omnis distinctio illo quis, sunt nesciunt sint impedit deleniti dolor saepe necessitatibus</p>";
+  "<h3>Replanteando el Índice de Desarrollo Humano</h3>" +
+  "<p>El índice de desarrollo humano (IDH) es un indicador diseñado por el Programa de Naciones Unidas para el Desarrollo (PNUD) para evaluar la dinámica social y el bienestar de un país o un territorio más completo que el índice de pobreza, pues evoluciona de acuerdo al propio desarrollo de la población. Abarca tres dimensiones: esperanza de vida, acceso a educación e ingresos económicos per cápita. Además, puede adaptarse y reflejar situaciones catastróficas como guerras, deterioro ambiental, o en este caso, una pandemia. Sin embargo, aún no existe un estudio actualizado al con los efectos de la crisis sanitaria, por ello se decidió trabajar con el último informe publicado en el 2019.</p>";
 
 let divChapter2 =
   "<h3>Índice de desarrollo Humano</h3>" +
