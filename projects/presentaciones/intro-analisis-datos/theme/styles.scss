@@ -1,0 +1,78 @@
+/*-- scss:defaults --*/
+
+// fonts
+$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+
+// colors
+$body-bg: #f0f1eb !default;
+$body-color: #000 !default;
+$link-color: #51483d !default;
+$selection-bg: #26351c;
+
+// headings
+$presentation-heading-font: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+$presentation-heading-color: #383d3d !default;
+
+/*-- scss:rules --*/
+
+.reveal body, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5,
+.reveal h6, .reveal p {
+  color: #5A5A5A;
+}
+
+.title-center {
+  font-size: 2.75em;
+  text-align: center;
+  margin: auto;
+}
+
+.half-image {
+  display: block;
+  margin-top: 2.5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.author {
+  font-size: 1.25em;
+  font-weight: 400;
+  text-align: left;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.reveal code {
+  color: #AF3C1F;
+}
+
+.reveal div.sourceCode {
+  background-color: #f0f1eb;
+}
+
+.reveal .code-wrapper {
+  height: 100%;
+  max-height: 100%;
+}
+
+.reveal a {
+  color: #1E1E1E;
+  line-height: 1em;
+  font-weight: 400;
+}
+
+.reveal a:hover {
+  font-weight: 600;
+}
+
+.reveal .column.cell {
+  padding: 3px;
+} 

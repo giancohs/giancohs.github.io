@@ -1,0 +1,47 @@
+---
+format: 
+    revealjs:
+      scrollable: true
+      theme: [serif, theme/styles.scss]
+      logo: "https://ojo-publico.com/themes/custom/ojo_publico_theme/images/logos/logo-light-default.svg"
+      slide-number: c/t
+      code-copy: true
+      center-title-slide: false
+      height: 1080
+      width: 1920
+      code-link: true
+      code-overflow: wrap
+execute: 
+  eval: true
+  echo: true
+editor_options: 
+  chunk_output_type: console
+---
+
+:::{.title-center}
+Introducción a las hojas de cálculo
+:::
+
+:::{.center}
+¿Cómo utilizar esta herramienta para analizar datos?
+:::
+
+:::{.half-image}
+![](intro-analisis-datos-slides_files/media/guaton-computadora.gif){fig-alt="gif rompiendo compu"}
+:::
+
+:::{.author}
+Gianfranco Huamán S.<br>
+twitter: @giancohs
+:::
+
+## Getting up
+
+-   Turn off alarm
+-   Get out of bed
+
+## Going to sleep
+
+-   Get in bed
+-   Count sheep
+
