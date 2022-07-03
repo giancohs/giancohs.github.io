@@ -18,21 +18,20 @@ editor_options:
   chunk_output_type: console
 ---
 
-:::{.title-center}
-Introducción a las hojas de cálculo
+::: title-center
+Introducción a las <br>`hojas de cálculo`
 :::
 
-:::{.center}
-¿Cómo utilizar esta herramienta para analizar datos?
+::: center
+<br>¿Cómo utilizar esta herramienta para analizar datos?
 :::
 
-:::{.half-image}
+::: half-image
 ![](intro-analisis-datos-slides_files/media/guaton-computadora.gif){fig-alt="gif rompiendo compu"}
 :::
 
-:::{.author}
-Gianfranco Huamán S.<br>
-twitter: @giancohs
+::: author
+<br>Gianfranco Huamán S.<br/> twitter: @giancohs
 :::
 
 ## Getting up
@@ -44,4 +43,3 @@ twitter: @giancohs
 
 -   Get in bed
 -   Count sheep
-
