@@ -31,11 +31,13 @@ Introducción a las <br>`hojas de cálculo`
 :::
 
 
-## {background-color="black" background-image="intro-analisis-datos-slides_files/media/spreadsheet-google-sheet.gif" background-size="comtain" background-repeat="no-repeat"}
+## {}
+
+![](intro-analisis-datos-slides_files/media/spreadsheet-google-sheet.gif
+){.absolute top=0 left=450 width="1080" height="1080"}
+
 
 ## ¿En qué momento me sirve crear un “excel” u hoja de cálculo?
-
-![](intro-analisis-datos-slides_files/media/spreadsheet-google-sheet.gif){.absolute top=200 left=800 width="600" height="600"}
 
 
 ::: {.incremental}
