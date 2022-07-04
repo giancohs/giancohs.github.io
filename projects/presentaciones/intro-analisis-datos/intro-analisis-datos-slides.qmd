@@ -70,6 +70,12 @@ Introducción a las <br>`hojas de cálculo`
 
 ## Creando mi primera tabla dinámica `(con Google sheets)`
 
+::: {.incremental}
+- Descargar data de precandidatos aquí
+- Explorar información
+- Establecer preguntas luego de la exploración
+
+:::
 ## Tips y consejos para ser un experto en el excel/google sheets
 
 ## ¿En qué momento puedo pedir ayuda y en google no encuentro una respuesta simple y rápida?
