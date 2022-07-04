@@ -26,20 +26,27 @@ Introducción a las <br>`hojas de cálculo`
 <br>¿Cómo utilizar esta herramienta para analizar datos?
 :::
 
-::: half-image
-![](intro-analisis-datos-slides_files/media/guaton-computadora.gif){fig-alt="gif rompiendo compu"}
-:::
-
 ::: author
 <br>Gianfranco Huamán S.<br/> twitter: @giancohs
 :::
 
-## Getting up
 
--   Turn off alarm
--   Get out of bed
+## {background-color="black" background-image="intro-analisis-datos-slides_files/media/spreadsheet-google-sheet.gif" background-size="comtain" background-repeat="no-repeat"}
 
-## Going to sleep
+## ¿En qué momento me sirve crear un “excel” u hoja de cálculo?
+
+![](intro-analisis-datos-slides_files/media/spreadsheet-google-sheet.gif){.absolute top=200 left=800 width="600" height="600"}
+
+
+::: {.incremental}
+- Para casi todo, pero depende del tipo de historia que estás contando y el tiempo que tienes disponible.
+- Ojo. El análisis de datos no reemplaza el reporteo tradicional.
+- Es necesario en la actualidad, cada día el Estado y organizaciones generan mucha información digitalizada y que el ciudadano de pie no accede o no le interesa. Nuestra labor es procesar esta información y contarla de la forma más simple. 
+
+:::
+
+
+## ¿Toda la información se puede estructurar? ¿Qué tipo de información se puede analizar?
 
 -   Get in bed
 -   Count sheep
