@@ -50,5 +50,28 @@ Introducción a las <br>`hojas de cálculo`
 
 ## ¿Toda la información se puede estructurar? ¿Qué tipo de información se puede analizar?
 
--   Get in bed
--   Count sheep
+## Etapas del análisis de datos
+
+::: {.incremental}
+- Recolección
+- Procesamiento
+- Limpieza
+- Análisis
+- Comunicación
+
+:::
+## Herramientas para analizar datos/tablas
+
+## `Excel` 
+
+## `Google Sheets` 
+
+## `R / Python` 
+
+## Creando mi primera tabla dinámica `(con Google sheets)`
+
+## Tips y consejos para ser un experto en el excel/google sheets
+
+## ¿En qué momento puedo pedir ayuda y en google no encuentro una respuesta simple y rápida?
+
+## Preguntas
