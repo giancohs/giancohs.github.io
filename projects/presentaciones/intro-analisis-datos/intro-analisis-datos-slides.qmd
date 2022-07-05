@@ -11,6 +11,7 @@ format:
       width: 1920
       code-link: true
       code-overflow: wrap
+      link-external-newwindow: true
 execute: 
   eval: true
   echo: true
@@ -37,8 +38,9 @@ Introducción a las <br>`hojas de cálculo`
 ){.absolute top=0 left=450 width="1080" height="1080"}
 
 
-## ¿En qué momento me sirve crear un “excel” u hoja de cálculo?
+##
 
+<h1>`¿En qué momento me sirve crear un “excel” u hoja de cálculo?`</h1>
 
 ::: {.incremental}
 - Para casi todo, pero depende del tipo de historia que estás contando y el tiempo que tienes disponible.
@@ -90,22 +92,80 @@ Introducción a las <br>`hojas de cálculo`
 
 ## `Google Sheets` 
 
+![](intro-analisis-datos-slides_files/media/googlesheets-1.jpg){.absolute .fragment top=150 left=150 width="1600" height="859"}
+
+
 ![](intro-analisis-datos-slides_files/media/ejemplo-googlesheets.png){.absolute .fragment top=150 left=150 width="1600" height="859"}
+
+![](intro-analisis-datos-slides_files/media/ejemplo-googlesheets-2.png){.absolute .fragment top=150 left=150 width="1600" height="859"}
 
 ## `Open Refine` 
 
+![](intro-analisis-datos-slides_files/media/openrefine-logo.png){.absolute .fragment top=120 left=150 width="1600" height="500"}
+
+
+![](intro-analisis-datos-slides_files/media/ejemplo-openrefine-1.jpg){.absolute .fragment top=120 left=150 width="1600" height="859"}
+
+![](intro-analisis-datos-slides_files/media/ejemplo-openrefine-2.png){.absolute .fragment top=120 left=150 width="1600" height="859"}
+
 ## `R / Python` 
+
+![](intro-analisis-datos-slides_files/media/ejemplo-rstudio.png){.absolute .fragment top=120 left=150 width="1600" height="859"}
+![](intro-analisis-datos-slides_files/media/ejemplo-pandas.png){.absolute .fragment top=120 left=150 width="1600" height="859"}
 
 ## Creando mi primera tabla dinámica `(con Google sheets)`
 
 ::: {.incremental}
-- Descargar data de precandidatos aquí
-- Explorar información
-- Establecer preguntas luego de la exploración
+- Ver/Descargar data de precandidatos [aquí](https://docs.google.com/spreadsheets/d/108TZqn7n2AP5cayt20EyYnOkRq4cOyDq4f6SXAMV6og/edit?usp=sharing)
+- Explorar información (Filtros, revisar filas de forma aleatoria)
+- Establecer preguntas luego de la exploración:
+  - ¿Cuántos precandidatos de mi región fueron autoridades previamente?
+  - ¿Cuál es la proporción de candidatos hombres/mujeres?
+  - ¿Cuál es el porcentaje de candidatos jóvenes?
+
 
 :::
-## Tips y consejos para ser un experto en el excel/google sheets
 
-## ¿En qué momento puedo pedir ayuda y en google no encuentro una respuesta simple y rápida?
 
-## Preguntas
+##
+
+. . .
+
+::: {.fragment .strike} 
+<h1>`Tips y consejos para ser un experto en el excel/google sheets:`</h1>
+::: 
+
+
+::: {.fragment } 
+<h1>`Consejo para ser un experto en el excel/google sheets:`</h1>
+:::
+
+::: {.fragment } 
+<h3>...</h3>
+:::
+::: {.fragment } 
+<h3><br>¡Googlea, y mucho!</h3>
+:::
+
+## ¿En qué momento puedo pedir ayuda?
+
+::: {.incremental}
+- Cruces de base de datos
+- Limpieza compleja de registros/datosa
+
+:::
+
+## Nuestra arma secreta: `Lisbeth`
+
+
+![](intro-analisis-datos-slides_files/media/lisbeth-1.png){.absolute .fragment top=70 left=150 width="1300" height="950"}
+
+![](intro-analisis-datos-slides_files/media/lisbeth-2.png){.absolute .fragment top=70 left=150 width="1300" height="950"}
+
+## 
+
+<h1>`Preguntas`</h1>
+
+## 
+
+<h1>`¡GRACIAS!`</h1>
