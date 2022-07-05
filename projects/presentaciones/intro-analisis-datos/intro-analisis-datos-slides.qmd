@@ -12,6 +12,7 @@ format:
       code-link: true
       code-overflow: wrap
       link-external-newwindow: true
+      multiplex: true
 execute: 
   eval: true
   echo: true
