@@ -21,152 +21,163 @@ editor_options:
 ---
 
 ::: title-center
-Introducción a las <br>`hojas de cálculo`
+Introducción al <br>`análisis de datos`
 :::
 
 ::: center
-<br>¿Cómo utilizar esta herramienta para analizar datos?
+<br>¿Cómo utilizar las hojas de cálculo para mis investigaciones periodísticasa?
 :::
 
 ::: author
 <br>Gianfranco Huamán S.<br/> twitter: @giancohs
 :::
 
+## 
 
-## {}
+![](intro-analisis-datos-slides_files/media/spreadsheet-google-sheet.gif){.absolute top="0" left="450" width="1080" height="1080"}
 
-![](intro-analisis-datos-slides_files/media/spreadsheet-google-sheet.gif
-){.absolute top=0 left=450 width="1080" height="1080"}
+## 
 
+<h1>
 
-##
+`¿En qué momento me sirve crear un “excel” u hoja de cálculo?`
 
-<h1>`¿En qué momento me sirve crear un “excel” u hoja de cálculo?`</h1>
+</h1>
 
-::: {.incremental}
-- Para casi todo, pero depende del tipo de historia que estás contando y el tiempo que tienes disponible.
-- Ojo. El análisis de datos no reemplaza el reporteo tradicional.
-- Es necesario en la actualidad, cada día el Estado y organizaciones generan mucha información digitalizada y que el ciudadano de pie no accede o no le interesa. Nuestra labor es procesar esta información y contarla de la forma más simple. 
-
+::: incremental
+-   Para casi todo, pero depende del tipo de historia que estás contando y el tiempo que tienes disponible.
+-   Ojo. El análisis de datos no reemplaza el reporteo tradicional.
+-   Es necesario en la actualidad, cada día el Estado y organizaciones generan mucha información digitalizada y que el ciudadano de pie no accede o no le interesa. Nuestra labor es procesar esta información y contarla de la forma más simple.
 :::
-
 
 ## ¿Toda la información se puede estructurar? ¿Qué tipo de información se puede analizar?
 
+![](intro-analisis-datos-slides_files/media/ejemplo-tabla-2-pdf.png){.absolute top="170" left="20" width="1300" height="700"}
 
-![](intro-analisis-datos-slides_files/media/ejemplo-tabla-2-pdf.png){.absolute top=170 left=20 width="1300" height="700"}
+![](intro-analisis-datos-slides_files/media/ejemplo-tabla-1-pdf.png){.absolute .fragment top="220" left="320" width="1300" height="800"}
 
-![](intro-analisis-datos-slides_files/media/ejemplo-tabla-1-pdf.png){.absolute .fragment top=220 left=320 width="1300" height="800"}
+![](intro-analisis-datos-slides_files/media/ejemplo-tabla-3-pdf.png){.absolute .fragment top="265" left="618" width="1300" height="800"}
 
-![](intro-analisis-datos-slides_files/media/ejemplo-tabla-3-pdf.png){.absolute .fragment top=265 left=618 width="1300" height="800"}
+![](intro-analisis-datos-slides_files/media/ejemplo-tabla-4-pdf.png){.absolute .fragment top="150" left="230" width="1400" height="900"}
 
-![](intro-analisis-datos-slides_files/media/ejemplo-tabla-4-pdf.png){.absolute .fragment top=150 left=230 width="1400" height="900"}
+![](intro-analisis-datos-slides_files/media/ejemplo-excel-correo.png){.absolute .fragment top="150" left="10" width="1400" height="900"}
 
-![](intro-analisis-datos-slides_files/media/ejemplo-excel-correo.png){.absolute .fragment top=150 left=10 width="1400" height="900"}
-
-![](intro-analisis-datos-slides_files/media/ejemplo-excel-correo-1.png){.absolute .fragment top=170 left=100 width="1600" height="850"}
-![](intro-analisis-datos-slides_files/media/ejemplo-datos-abiertos-1.png){.absolute .fragment top=150 left=180 width="1600" height="900"}
+![](intro-analisis-datos-slides_files/media/ejemplo-excel-correo-1.png){.absolute .fragment top="170" left="100" width="1600" height="850"} ![](intro-analisis-datos-slides_files/media/ejemplo-datos-abiertos-1.png){.absolute .fragment top="150" left="180" width="1600" height="900"}
 
 ## Etapas del análisis de datos
 
-::: {.incremental}
-- `Recolección`
-- `Procesamiento`
-- `Limpieza`
-- `Análisis`
-- `Comunicación`
+::: incremental
+-   `Recolección`
+-   `Procesamiento`
+-   `Limpieza`
+-   `Análisis`
+-   `Comunicación`
 :::
 
 ## Herramientas para analizar datos/tablas
 
-![](intro-analisis-datos-slides_files/media/cat-typing.gif){.absolute top=350 left=850 width="1000" height="600"}
+![](intro-analisis-datos-slides_files/media/cat-typing.gif){.absolute top="350" left="850" width="1000" height="600"}
 
-![](intro-analisis-datos-slides_files/media/smart.gif){.absolute top=150 left=15 width="1000" height="600"}
+![](intro-analisis-datos-slides_files/media/smart.gif){.absolute top="150" left="15" width="1000" height="600"}
 
+## `Excel`
 
+![](intro-analisis-datos-slides_files/media/herramientas-excelmicrosoft.webp){.absolute .fragment top="80" left="150" width="1600" height="900"}
 
-## `Excel` 
+![](intro-analisis-datos-slides_files/media/excelmicrosoft2.jpg){.absolute .fragment top="150" left="150" width="1600" height="850"}
 
-![](intro-analisis-datos-slides_files/media/herramientas-excelmicrosoft.webp){.absolute .fragment top=80 left=150 width="1600" height="900"}
+## `Google Sheets`
 
-![](intro-analisis-datos-slides_files/media/excelmicrosoft2.jpg){.absolute .fragment top=150 left=150 width="1600" height="850"}
+![](intro-analisis-datos-slides_files/media/googlesheets-1.jpg){.absolute .fragment top="150" left="150" width="1600" height="859"}
 
-## `Google Sheets` 
+![](intro-analisis-datos-slides_files/media/ejemplo-googlesheets.png){.absolute .fragment top="150" left="150" width="1600" height="859"}
 
-![](intro-analisis-datos-slides_files/media/googlesheets-1.jpg){.absolute .fragment top=150 left=150 width="1600" height="859"}
+![](intro-analisis-datos-slides_files/media/ejemplo-googlesheets-2.png){.absolute .fragment top="150" left="150" width="1600" height="859"}
 
+## `Open Refine`
 
-![](intro-analisis-datos-slides_files/media/ejemplo-googlesheets.png){.absolute .fragment top=150 left=150 width="1600" height="859"}
+![](intro-analisis-datos-slides_files/media/openrefine-logo.png){.absolute .fragment top="120" left="150" width="1600" height="500"}
 
-![](intro-analisis-datos-slides_files/media/ejemplo-googlesheets-2.png){.absolute .fragment top=150 left=150 width="1600" height="859"}
+![](intro-analisis-datos-slides_files/media/ejemplo-openrefine-1.jpg){.absolute .fragment top="120" left="150" width="1600" height="859"}
 
-## `Open Refine` 
+![](intro-analisis-datos-slides_files/media/ejemplo-openrefine-2.png){.absolute .fragment top="120" left="150" width="1600" height="859"}
 
-![](intro-analisis-datos-slides_files/media/openrefine-logo.png){.absolute .fragment top=120 left=150 width="1600" height="500"}
+## `R / Python`
 
-
-![](intro-analisis-datos-slides_files/media/ejemplo-openrefine-1.jpg){.absolute .fragment top=120 left=150 width="1600" height="859"}
-
-![](intro-analisis-datos-slides_files/media/ejemplo-openrefine-2.png){.absolute .fragment top=120 left=150 width="1600" height="859"}
-
-## `R / Python` 
-
-![](intro-analisis-datos-slides_files/media/ejemplo-rstudio.png){.absolute .fragment top=120 left=150 width="1600" height="859"}
-![](intro-analisis-datos-slides_files/media/ejemplo-pandas.png){.absolute .fragment top=120 left=150 width="1600" height="859"}
+![](intro-analisis-datos-slides_files/media/ejemplo-rstudio.png){.absolute .fragment top="120" left="150" width="1600" height="859"} ![](intro-analisis-datos-slides_files/media/ejemplo-pandas.png){.absolute .fragment top="120" left="150" width="1600" height="859"}
 
 ## Creando mi primera tabla dinámica `(con Google sheets)`
 
-::: {.incremental}
-- Ver/Descargar data de precandidatos [aquí](https://docs.google.com/spreadsheets/d/108TZqn7n2AP5cayt20EyYnOkRq4cOyDq4f6SXAMV6og/edit?usp=sharing)
-- Explorar información (Filtros, revisar filas de forma aleatoria)
-- Establecer preguntas luego de la exploración:
-  - ¿Cuántos precandidatos de mi región fueron autoridades previamente?
-  - ¿Cuál es la proporción de candidatos hombres/mujeres?
-  - ¿Cuál es el porcentaje de candidatos jóvenes?
-
-
+::: incremental
+-   Ver/Descargar data de precandidatos [aquí](https://docs.google.com/spreadsheets/d/108TZqn7n2AP5cayt20EyYnOkRq4cOyDq4f6SXAMV6og/edit?usp=sharing)
+-   Explorar información (Filtros, revisar filas de forma aleatoria)
+-   Establecer preguntas luego de la exploración:
+    -   ¿Cuántos precandidatos de mi región fueron autoridades previamente?
+    -   ¿Cuál es la proporción de candidatos hombres/mujeres?
+    -   ¿Cuál es el porcentaje de candidatos jóvenes?
 :::
 
-
-##
+## 
 
 . . .
 
-::: {.fragment .strike} 
-<h1>`Tips y consejos para ser un experto en el excel/google sheets:`</h1>
-::: 
+::: {.fragment .strike}
+<h1>
 
+`Tips y consejos para ser un experto en el excel/google sheets:`
 
-::: {.fragment } 
-<h1>`Consejo para ser un experto en el excel/google sheets:`</h1>
+</h1>
 :::
 
-::: {.fragment } 
-<h3>...</h3>
-:::
-::: {.fragment } 
-<h3><br>¡Googlea, y mucho!</h3>
-:::
+::: fragment
+<h1>
 
-## ¿En qué momento puedo pedir ayuda?
+`Consejo para ser un experto en el excel/google sheets:`
 
-::: {.incremental}
-- Cruces de base de datos
-- Limpieza compleja de registros/datosa
-
+</h1>
 :::
 
-## Nuestra arma secreta: `Lisbeth`
+::: fragment
+<h3>
 
+...
 
-![](intro-analisis-datos-slides_files/media/lisbeth-1.png){.absolute .fragment top=70 left=150 width="1300" height="950"}
+</h3>
+:::
 
-![](intro-analisis-datos-slides_files/media/lisbeth-2.png){.absolute .fragment top=70 left=150 width="1300" height="950"}
+::: fragment
+<h3>
+
+<br>¡Googlea, y mucho!
+
+</h3>
+:::
+
+## ¿En qué momento puedo pedir ayuda? {visibility="hidden"}
+
+::: incremental
+-   Cruces de base de datos
+-   Limpieza compleja de registros/datosa
+:::
+
+## Nuestra arma secreta: `Lisbeth` {visibility="hidden"}
+
+![](intro-analisis-datos-slides_files/media/lisbeth-1.png){.absolute .fragment top="70" left="150" width="1300" height="950"}
+
+![](intro-analisis-datos-slides_files/media/lisbeth-2.png){.absolute .fragment top="70" left="150" width="1300" height="950"}
 
 ## 
 
-<h1>`Preguntas`</h1>
+<h1>
+
+`Preguntas`
+
+</h1>
 
 ## 
 
-<h1>`¡GRACIAS!`</h1>
+<h1>
+
+`¡GRACIAS!`
+
+</h1>
