@@ -1,0 +1,276 @@
+---
+title: "ikea_exploracion"
+format: html
+editor: visual
+---
+
+## Contexto
+
+La multinacional Ikea llegará a latinoamérica con sucursales en Chile, Colombia y Perú. Parte de su estrategia es una sociedad comercial con Fallabella. Un angulo interesante en esta historia es identificar la madera comercializada, se tiene como hipótesis que Falabella no mantendrá los estándares ambientales de Ikea, a pesar de usar dicha marca.
+
+El objetivo es identificar proveedores, el tipo de madera comercialiada, y las variaciones en los uotimes meses. Tambien si hay coincidencias con las mismas que utiliza IKEA para fabricar sus muebles en todo el mundo.
+
+## Ikea EEUU
+
+Según datos de Panjiva, el capítulo arancelario que más utiliza IKEA de EEUU es el 94 (muebles).
+
+![](images/paste-B5AA1CB6.png)
+
+El capítulo 44 (madera) está entre los cinco productos que importa IKEA a EEUU.
+
+## Perú
+
+En el caso de Perú, el grupo Falabella tiene la siguiente estructura [según el último reporte de la SMV](https://www.smv.gob.pe/Bp_GrupoEconomico?op=bq9):
+
+Es de interés las siguientes sociedades:
+
+-   Falabella S.A. / No se encontró RUC
+
+-   Falabella Perú S.A.A. / RUC 20260172035
+
+-   Saga Falabella S.A. / RUC 20100128056
+
+-   Saga Falabella Oriente S.A.C. (Pucallpa) RUC 20393864967
+
+-   Saga Falabella Iquitos S.A.C. / RUC 20541246275
+
+-   Sodimac Perú / RUC 20389230724
+
+### La importancia de Fallabella en la importación de madera y muebles de madera
+
+Los datos de Panjiva muestra que fallabella y sodimac (empresas del mismo grupo empresarial) se encuentran en el top 15 de importadoras de madera al Perú en los últimos 5 años (desde 2017)
+
+![](images/paste-85D1AD58.png)
+
+### Falabella Perú SAA
+
+No registra importaciones.
+
+### Saga Falabella SA / RUC 20100128056
+
+Según Panjiva, los capitulos arancelarios de interes son el 94 (muebes) y 44 (madera).
+
+El primero concentra el 6.89% de todas las importaciones realizadas por Saga Falabella SA entre enero de 2017 a agosto de 2020. En dicho periodo se importaron 37,507,108 KG en muebles por la suma de USD 88,678,727
+
+El segundo concentra 0.14% en valor FOB en el periodo mencionado. Fallabella importó al Perú un total de 492,990 KG de madera valorizado en USD 1,822,479.
+
+![](images/paste-0916B6C7.png)
+
+![](images/paste-551294BA.png)
+
+Para entrar en detalle de la evolución de dichas partidas revisaremos los registros de Veritrade.
+
+Los datos preliminares muestran que hay un aumento en Peso neto y valor fob en las importaciones de madera (HS 44) en los últimos años.
+
+![](images/paste-5C47B58D.png)
+
+Respecto al capítulo 94 hay que filtrar y seleccionar las subpartidas de interes. Por ejemplo, existen partidas que se refieren a muebles hechos a base de madera, mientras que otro se refiere a colchones o luminaria.
+
+![](images/paste-0314D3F0.png)
+
+![](images/paste-94FF8E66.png)
+
+Una exploracion preliminar con los siguientes códigos revela que al cierre de 2021 se está recuperando el ritmo de importacion de años anteriores de la pandemia. El principal pais de origen de este tipo de muebles es Brazil.
+
+-   940330: Muebles de madera de los tipos utilizados en oficinas
+
+-   940340: Muebles de madera de los tipos utilizados en cocinas
+
+-   940350: Muebles de madera de los tipos utilizados en dormitorios
+
+-   940360: Los demás muebles de madera
+
+![](images/paste-6C7212D4.png)
+
+### Sodimac Perú SA / RUC 20389230724
+
+Los datos de Panjiva revelan que Sodimac Perú importó madera hasta diciembre de 2018. A partir de esta fecha no registra más importaciones de este producto.
+
+Se verificó de nuevo y se comprobó que Sodimac ya no importa ningún tipo de producto hasta diciembre de 2018. Qué subsidiaria lo está reemplazando?
+
+![](images/paste-EA37FB13.png)
+
+### Explorando industria de muebles a base de madera
+
+Una búsqueda de importaciones de las siguientes partidas arancelarias entre 2017 y 2022 revela que Falabella usa varias subsidiarias para importar muebles de madera.
+
+-   940330: Muebles de madera de los tipos utilizados en oficinas
+
+-   940340: Muebles de madera de los tipos utilizados en cocinas
+
+-   940350: Muebles de madera de los tipos utilizados en dormitorios
+
+-   940360: Los demás muebles de madera
+
+Por ejemplo aparecen razones sociales como Hipermercados Tottus SA , Tiendas de Mejoramiento del Hogar SA, Sodimac Peru SA (hasta fines de 2018). Estas compañías son parte del grupo Falabella según el organigrama subido por la SMV.
+
+Una búsqueda similar de la partida 44 revela que también utilizó Sodimac Perúm sigue importanto con Saga Falabellla, y en el ranking tambien aparece Tiendas de Mejoramiento del Hogar.
+
+Según datos de Sunat, Sodimac Perú está de baja. Ahora Tiendas de Mejoramiento del Hogar agrupa la Marca Sodimac y Maestro. Datos que coinciden con el registro de importaciones.
+
+![](images/paste-0718EB41.png)
+
+### Los envíos de IKEA a Perú
+
+Se ha realizado las siguentes busquedas en panjiva sin exito:
+
+-   Importaciones Ikso en Chile
+
+-   Exportaciones/importaciones de Ikso en Perú
+
+-   Hay una tendencia en el crecimiento de exportaciones de madera.
+
+-   
+
+-   Exportaciones de ikea de EEUU y México
+
+-   Exportaciones de Falabella Perú a otros países. (Solo hay registros hasta 2018 y no se pudo identificar a Chile )
+
+¿Cómo se puede encontrar la ruta de ikea a falabella Perú Chile?
+
+### Conclusiones principales caso Perú:
+
+-   Grupo Falabella en Perú usa varias razones sociales(hasta ahora se identificó 4) para importar madera 44, y muebles de madera (94).
+
+-   La importación de muebles de madera predomina por sobre la importación de madera sin procesar. Los muebles de madera tienen como principal origen Brasil.
+
+-   Las importaciones de madera que Falabella trae al Perú ha aumentado en los últimos años.
+
+-   En Ikea EEUU también predomina la importación de muebles procesados. (Más del 85% todos los años), mientras que la madera sin procesar ocupa entre 3% y 4%.
+
+-   Queda pendiente identificar los tipos de madera (o especies) juntando todas las razones sociales identificadas en el caso Perú. y compararlo con Ikea EEUU.
+
+### Siguientes pasos:
+
+-   Usar data de importaciones de falabella en Panjiva para identificar proveedores, paises y productos.
+
+-   Usar data de veritrade de falabella (descargar por año) para identificar proveedores, paises y productos.
+
+#### Importando datos
+
+```{r}
+library(tidyverse)
+library(googlesheets4)
+library(readxl)
+```
+
+```{r}
+#Descargando datos
+
+coltypes = "text"
+
+download.file(
+  "https://global-assets.panjiva.com/user_exports/5682411/Panjiva-Peru_Imports-all-results_1_to_10000_of_44438-2022-08-22-18-33.xlsx?1661207810", 
+  destfile = "./data/Panjiva-Peru_Imports-all-results_1_to_10000_of_44438-2022-08-22-18-33.xlsx")
+peru_imports_1 <- read_xlsx("./data/Panjiva-Peru_Imports-all-results_1_to_10000_of_44438-2022-08-22-18-33.xlsx", col_types = coltypes)
+
+download.file(
+  "https://global-assets.panjiva.com/user_exports/5682419/Panjiva-Peru_Imports-all-results_20000_to_29999_of_44438-2022-08-22-18-34.xlsx?1661207846",
+  destfile = "./data/Panjiva-Peru_Imports-all-results_20000_to_29999_of_44438-2022-08-22-18-34.xlsx")
+peru_imports_2 <- read_xlsx("./data/Panjiva-Peru_Imports-all-results_20000_to_29999_of_44438-2022-08-22-18-34.xlsx", col_types = coltypes)
+
+download.file(
+  "https://global-assets.panjiva.com/user_exports/5682423/Panjiva-Peru_Imports-all-results_30000_to_39999_of_44438-2022-08-22-18-36.xlsx?1661207997",
+  destfile = "./data/Panjiva-Peru_Imports-all-results_30000_to_39999_of_44438-2022-08-22-18-36.xlsx")
+peru_imports_3 <- read_xlsx("./data/Panjiva-Peru_Imports-all-results_30000_to_39999_of_44438-2022-08-22-18-36.xlsx", col_types = coltypes)
+
+download.file(
+  "https://global-assets.panjiva.com/user_exports/5682425/Panjiva-Peru_Imports-all-results_40000_to_44438_of_44438-2022-08-22-18-34.xlsx?1661207730",
+  destfile = "./data/Panjiva-Peru_Imports-all-results_40000_to_44438_of_44438-2022-08-22-18-34.xlsx")
+peru_imports_4 <- read_xlsx("./data/Panjiva-Peru_Imports-all-results_40000_to_44438_of_44438-2022-08-22-18-34.xlsx", col_types = coltypes)  
+
+peru_imports_falabella <- bind_rows(peru_imports_1,
+                                    peru_imports_2,
+                                    peru_imports_3,
+                                    peru_imports_4) 
+
+var_list_imports_peru <- c("Shipment Year",
+                           "Fecha de llegada",
+                           "Consignatario",
+                           "País del Consignatario",
+                           "Origen del envío",
+                           "País de venta",
+                           "Método de transporte",
+                           "Código HS",
+                           "Mercancías enviadas",
+                           "Volumen (TEU)",
+                           "Item Quantity",
+                           "Item Unit",
+                           "Gross Weight (kg)",
+                           "Net Weight (kg)",
+                           "Series FOB Value",
+                           "Import Quantity",
+                           "Import Unit",
+                           "Shipment Date",
+                           "DUI Number")
+
+```
+
+-   Ver si se cumple la hipotesis que a medida que pasa el tiempo de inaugaracion, las empresas de falabella empieza crecer la cantidad de improtaciones de madera.
+-   
+
+## Chile
+
+### La importancia de Fallabella en la importación de madera y muebles de madera
+
+#### Madera sin procesar (44)
+
+-   Según datos de panjiva, la importación de madera sin procesar ha aumentado en chile. Precisamente, el principal importador de este producto en Chile es Sodimac SA, empresa subsidaria de Falabella en dicho país. Este compañía agrupa el 10% en peso neto de todo lo importado en un periodo de 5 años (2017 a junio de 2022) y el 9% en valor FOB (USD 189 millones). Las importaciones de falabella por sí sola también han aumentado.
+
+    ![](images/paste-E386029D.png)
+
+-   Falabella Retail también tiene registros de importación en el mismo periodo, pero es un porcentaje bajo respecto al total. Sin embargo, en valor fob, la madera importada por esta empresa asciende a USD 7 millones. Sus importaciones se han mantenido en el promedio, no ha aumentado ni disminuido.
+
+    ![](images/paste-0F49928B.png)
+
+#### Madera procesada
+
+-   940330: Muebles de madera de los tipos utilizados en oficinas
+
+-   940340: Muebles de madera de los tipos utilizados en cocinas
+
+-   940350: Muebles de madera de los tipos utilizados en dormitorios
+
+-   940360: Los demás muebles de madera
+
+-   Al igual que la madera sin procesar, el principal importador de muebles de madera es Sodimac. Concentra más del 22% en peso y 17% en valor FOB (USD 200 millones). La situación es similar en el caso peruano, la pandemia ha afectado las importaciones de estos productos en 2020, donde el 2021 hay un crecimiento llegando a igualar a las importaciones de muebles antes de la pandemia.
+
+    ![](images/paste-BA134BE4.png)
+
+## Colombia
+
+### Madera sin procesar (44)
+
+-   Hay un ligero decrecimiento en las importaciones de madera sin procesar en Colombia. Además que la información de dicho país solo se tiene disponible hasta febrero de 2021.
+
+-   Sodimac Colombia también figura en el ranking de importadoras de madera sin procesar. Se encuentra en la posición N° 5 por valor fob, donde concentra el 4.6% (39 millones), y el 3.2% en peso neto (46 mil kg)
+
+    ![](images/paste-F8098C9A.png)
+
+    ![](images/paste-05565758.png)
+
+### Madera procesada (44)
+
+-   940330: Muebles de madera de los tipos utilizados en oficinas
+
+-   940340: Muebles de madera de los tipos utilizados en cocinas
+
+-   940350: Muebles de madera de los tipos utilizados en dormitorios
+
+-   940360: Los demás muebles de madera
+
+-   En colombia tambien se observa un deceso en las importaciones de muebles de madera. No se puede evidenciar una recuperación debido a que falta data completa del 2021.
+
+    ![](images/paste-BF75459F.png)
+
+-   Sodimac Colombia y Falabella también aparecen en el ranking de importadoras de muebles de madera.
+
+    ![](images/paste-8EB87891.png)
+
+-   Sodimac Colombia, por valor fob concentra el 14,5%(USD 17 millones) de todo lo importado entre 2017 a enero de 2021. Por peso neto llega a un porcentaje de 22% (11 millones de kg). También se observa un deceso en las importaciones en el 2020, probablemente a causa de la pandemia.
+
+-   Ojo aquí que Sodimac Colombia aparece vinculada a una empresa de razón social Organización Corona S.A., que a primera vista no parece estar vinculada a Falabella. Confirmar este dato.
+
+-   ![](images/paste-F3537BB3.png)
+
+Hola! Terminé de revisar la data de Chile y Colombia sobre importaciones de madera. En Chile hay una situación similar a la de Perú, donde las importaciones de madera sin procesar han aumentado, y en la que SODIMAC CHILE es la principal compradora de este producto y, al igual que el promedio general, sus importaciones han aumentado en peso y valor FOB en los últimos dos años. También aparece Falabella Retail pero varias posiciones por debajo en el ranking. En el caso de madera procesada (muebles) en Chile, Sodimac sigue apareciendo en el TOP 1, aquí sí la la pandemia ha afectado las importaciones de este tipo de madera, donde el 2020 hay una fuerte caída pero en el 2021 se ha normalizado como en años anteriores.
