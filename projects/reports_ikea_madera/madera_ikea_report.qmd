@@ -138,7 +138,6 @@ peru_imports_madera_clean %>%
   
 ```
 
-
 #### Mayores importadoras de madera sin procesar en el 2021
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -166,6 +165,7 @@ peru_imports_madera_clean %>%
 ```
 
 #### Gráficos - Evolución de importaciones de falabella respecto al total de madera procesada
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 
 
@@ -210,6 +210,7 @@ peru_imports_madera_clean %>%
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
   guides(color="none")
 ```
+
 #### Tabla - Evolución de importaciones de falabella respecto al total de madera procesada
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -268,6 +269,7 @@ peru_imports_madera_clean %>%
          x = "Año")+
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))
 ```
+
 ```{r}
 peru_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera sin procesar',
@@ -429,8 +431,6 @@ peru_imports_madera_clean %>%
   formatRound("peso_neto_kg", digits = 0, mark = ".")
 ```
 
-
-
 ```{r echo=FALSE ,message=FALSE, warning=FALSE}
 
 peru_imports_madera_clean %>% 
@@ -539,6 +539,7 @@ peru_imports_madera_clean %>%
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
   guides(color="none")
 ```
+
 ```{r}
 peru_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera procesada',
@@ -558,7 +559,6 @@ peru_imports_madera_clean %>%
   formatCurrency("valor_fob", digits = 0, mark = ".") %>% 
   formatRound("peso_neto_kg", digits = 0, mark = ".")
 ```
-
 
 ## Caso Chile
 
@@ -701,6 +701,7 @@ chile_imports_madera_clean %>%
          x = "Año")+
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))
 ```
+
 ```{r}
 chile_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera sin procesar',
@@ -785,6 +786,7 @@ chile_imports_madera_clean %>%
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
   guides(color="none")
 ```
+
 ```{r}
 chile_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera sin procesar',
@@ -840,6 +842,7 @@ chile_imports_madera_clean %>%
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
   guides(color="none")
 ```
+
 ###### Porcentaje del grupo falabella respecto al total de importaciones de madera procesada
 
 ```{r}
@@ -860,7 +863,6 @@ chile_imports_madera_clean %>%
    formatCurrency("valor_fob", digits = 0, mark = ".") %>% 
   formatRound("peso_neto_kg", digits = 0, mark = ".")
 ```
-
 
 ##### Grupo falabella
 
@@ -899,8 +901,6 @@ chile_imports_madera_clean %>%
    formatCurrency("valor_fob", digits = 0, mark = ".") %>% 
   formatRound("peso_neto_kg", digits = 0, mark = ".")
 ```
-
-
 
 #### Mayores importadoras de madera procesada en el 2021
 
@@ -948,6 +948,7 @@ chile_imports_madera_clean %>%
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
   guides(color="none")
 ```
+
 ```{r}
 chile_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera procesada',
@@ -1171,6 +1172,7 @@ colombia_imports_madera_clean %>%
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
   guides(color="none")
 ```
+
 ```{r}
 colombia_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera sin procesar',
@@ -1293,7 +1295,6 @@ colombia_imports_madera_clean %>%
 
 #### Importaciones de madera procesada en Colombia, por país de origen, 2017-2020
 
-
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 colombia_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera procesada',
@@ -1332,6 +1333,7 @@ colombia_imports_madera_clean %>%
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
   guides(color="none")
 ```
+
 ```{r}
 colombia_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera procesada',
@@ -1517,13 +1519,14 @@ mexico_imports_madera_clean %>%
 
 #### CASO IKSO (DIFERENTES HS CODES, DIFERENTES ORIGEN DATOS)
 
-
 ## Brazil como proveedores de madera
 
 ### ¿Cuańto creció en el último año la importación de madera brasileña?
 
 #### Madera sin procesar
+
 ##### Perú
+
 ```{r}
 peru_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera sin procesar',
@@ -1540,6 +1543,29 @@ peru_imports_madera_clean %>%
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
   guides(color="none")
 ```
+
+```{r}
+peru_imports_madera_clean %>% 
+  filter(tipo_madera == 'Madera sin procesar',
+         grupo_empresas == 'Grupo Falabella') %>% 
+  group_by(`Shipment Year`, brazil_case) %>% 
+  summarise(
+    n_envios = n(),
+    peso_neto_kg = sum(`Gross Weight (kg)`,na.rm = T),
+    valor_fob = sum(`Series FOB Value`,na.rm = T)
+  ) %>% 
+  ungroup() %>% 
+  mutate(
+    porcentaje_año_kg = round(peso_neto_kg/sum(peso_neto_kg),2),
+    porcentaje_año_fob = round(valor_fob/sum(peso_neto_kg),2)
+  ) %>% 
+  arrange(desc(peso_neto_kg)) %>% 
+  DT::datatable() %>% 
+  formatPercentage(c("porcentaje_año_kg","porcentaje_año_fob"), digits = 0) %>% 
+  formatRound(c("peso_neto_kg","valor_fob"),digits = 0,mark = ".")
+```
+
+
 
 ###### Tipos de madera sin procesar que envía Brasil a Perú
 
@@ -1585,7 +1611,30 @@ chile_imports_madera_clean %>%
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
   guides(color="none")
 ```
+
+```{r}
+chile_imports_madera_clean %>% 
+  filter(tipo_madera == 'Madera sin procesar',
+         grupo_empresas == 'Grupo Falabella') %>% 
+  group_by(`Shipment Year`, brazil_case) %>% 
+  summarise(
+    n_envios = n(),
+    peso_neto_kg = sum(`Gross Weight (kg)`,na.rm = T),
+    valor_fob = sum(`Series FOB Value`,na.rm = T)
+  ) %>% 
+  ungroup() %>% 
+  mutate(
+    porcentaje_año_kg = round(peso_neto_kg/sum(peso_neto_kg),2),
+    porcentaje_año_fob = round(valor_fob/sum(peso_neto_kg),2)
+  ) %>% 
+  arrange(desc(peso_neto_kg)) %>% 
+  DT::datatable() %>% 
+  formatPercentage(c("porcentaje_año_kg","porcentaje_año_fob"), digits = 0) %>% 
+  formatRound(c("peso_neto_kg","valor_fob"),digits = 0,mark = ".")
+```
+
 ###### Tipos de madera sin procesar que envía Brazil a Chile
+
 ```{r}
 chile_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera sin procesar',
@@ -1611,6 +1660,7 @@ chile_imports_madera_clean %>%
 ```
 
 ##### Colombia
+
 ```{r}
 colombia_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera sin procesar',
@@ -1626,6 +1676,27 @@ colombia_imports_madera_clean %>%
          x = "Año")+
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
   guides(color="none")
+```
+
+```{r}
+colombia_imports_madera_clean %>% 
+  filter(tipo_madera == 'Madera sin procesar',
+         grupo_empresas == 'Grupo Falabella') %>% 
+  group_by(`Shipment Year`, brazil_case) %>% 
+  summarise(
+    n_envios = n(),
+    peso_neto_kg = sum(`Gross Weight (kg)`,na.rm = T),
+    valor_fob = sum(`Series FOB Value`,na.rm = T)
+  ) %>% 
+  ungroup() %>% 
+  mutate(
+    porcentaje_año_kg = round(peso_neto_kg/sum(peso_neto_kg),2),
+    porcentaje_año_fob = round(valor_fob/sum(peso_neto_kg),2)
+  ) %>% 
+  arrange(desc(peso_neto_kg)) %>% 
+  DT::datatable() %>% 
+  formatPercentage(c("porcentaje_año_kg","porcentaje_año_fob"), digits = 0) %>% 
+  formatRound(c("peso_neto_kg","valor_fob"),digits = 0,mark = ".")
 ```
 
 ###### Tipo de madera sin procesar que envía Brazil a Colombia
@@ -1654,9 +1725,10 @@ colombia_imports_madera_clean %>%
   formatRound(c("peso_neto_kg","valor_fob"),digits = 0,mark = ".")
 ```
 
-
 #### Madera procesada
+
 ##### Perú
+
 ```{r}
 peru_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera procesada',
@@ -1673,7 +1745,30 @@ peru_imports_madera_clean %>%
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
   guides(color="none")
 ```
+
+```{r}
+peru_imports_madera_clean %>% 
+  filter(tipo_madera == 'Madera procesada',
+         grupo_empresas == 'Grupo Falabella') %>% 
+  group_by(`Shipment Year`, brazil_case) %>% 
+  summarise(
+    n_envios = n(),
+    peso_neto_kg = sum(`Gross Weight (kg)`,na.rm = T),
+    valor_fob = sum(`Series FOB Value`,na.rm = T)
+  ) %>% 
+  ungroup() %>% 
+  mutate(
+    porcentaje_año_kg = round(peso_neto_kg/sum(peso_neto_kg),2),
+    porcentaje_año_fob = round(valor_fob/sum(peso_neto_kg),2)
+  ) %>% 
+  arrange(desc(peso_neto_kg)) %>% 
+  DT::datatable() %>% 
+  formatPercentage(c("porcentaje_año_kg","porcentaje_año_fob"), digits = 0) %>% 
+  formatRound(c("peso_neto_kg","valor_fob"),digits = 0,mark = ".")
+```
+
 ###### Tipos de madera procesada que envía Brasil a Perú
+
 ```{r}
 peru_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera procesada',
@@ -1716,7 +1811,30 @@ chile_imports_madera_clean %>%
   scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
   guides(color="none")
 ```
+
+```{r}
+chile_imports_madera_clean %>% 
+  filter(tipo_madera == 'Madera procesada',
+         grupo_empresas == 'Grupo Falabella') %>% 
+  group_by(`Shipment Year`, brazil_case) %>% 
+  summarise(
+    n_envios = n(),
+    peso_neto_kg = sum(`Gross Weight (kg)`,na.rm = T),
+    valor_fob = sum(`Series FOB Value`,na.rm = T)
+  ) %>% 
+  ungroup() %>% 
+  mutate(
+    porcentaje_año_kg = round(peso_neto_kg/sum(peso_neto_kg),2),
+    porcentaje_año_fob = round(valor_fob/sum(peso_neto_kg),2)
+  ) %>% 
+  arrange(desc(peso_neto_kg)) %>% 
+  DT::datatable() %>% 
+  formatPercentage(c("porcentaje_año_kg","porcentaje_año_fob"), digits = 0) %>% 
+  formatRound(c("peso_neto_kg","valor_fob"),digits = 0,mark = ".")
+```
+
 ###### Tipos de madera procesada que envía Brasil a Chile
+
 ```{r}
 chile_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera procesada',
@@ -1740,6 +1858,7 @@ chile_imports_madera_clean %>%
   formatPercentage(c("porcentaje_año_kg","porcentaje_año_fob"), digits = 0) %>% 
   formatRound(c("peso_neto_kg","valor_fob"),digits = 0,mark = ".")
 ```
+
 ##### Colombia
 
 ```{r}
@@ -1759,7 +1878,29 @@ colombia_imports_madera_clean %>%
   guides(color="none")
 ```
 
+```{r}
+colombia_imports_madera_clean %>% 
+  filter(tipo_madera == 'Madera procesada',
+         grupo_empresas == 'Grupo Falabella') %>% 
+  group_by(`Shipment Year`, brazil_case) %>% 
+  summarise(
+    n_envios = n(),
+    peso_neto_kg = sum(`Gross Weight (kg)`,na.rm = T),
+    valor_fob = sum(`Series FOB Value`,na.rm = T)
+  ) %>% 
+  ungroup() %>% 
+  mutate(
+    porcentaje_año_kg = round(peso_neto_kg/sum(peso_neto_kg),2),
+    porcentaje_año_fob = round(valor_fob/sum(peso_neto_kg),2)
+  ) %>% 
+  arrange(desc(peso_neto_kg)) %>% 
+  DT::datatable() %>% 
+  formatPercentage(c("porcentaje_año_kg","porcentaje_año_fob"), digits = 0) %>% 
+  formatRound(c("peso_neto_kg","valor_fob"),digits = 0,mark = ".")
+```
+
 ###### Tipos de madera procesada que envía Brasil a Colombia
+
 ```{r}
 colombia_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera procesada',
@@ -1783,4 +1924,3 @@ colombia_imports_madera_clean %>%
   formatPercentage(c("porcentaje_año_kg","porcentaje_año_fob"), digits = 0) %>% 
   formatRound(c("peso_neto_kg","valor_fob"),digits = 0,mark = ".")
 ```
-
