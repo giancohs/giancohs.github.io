@@ -1521,8 +1521,6 @@ mexico_imports_madera_clean %>%
   guides(color="none")
 ```
 
-#### CASO IKSO (DIFERENTES HS CODES, DIFERENTES ORIGEN DATOS)
-
 ## Brazil como proveedores de madera
 
 ### ¿Cuańto creció en el último año la importación de madera brasileña?
@@ -1880,7 +1878,8 @@ chile_imports_madera_clean %>%
 
 ###### ¿Es Brasil el mayor proveedor de madera procesada en Chile?
 
-En la siguiente tabla se muestra el total de importaciones de madera procesada en Chile, desagregado por año. 
+En la siguiente tabla se muestra el total de importaciones de madera procesada en Chile, desagregado por año.
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 chile_imports_madera_clean %>% 
   filter(tipo_madera == 'Madera procesada') %>% 
@@ -1899,6 +1898,7 @@ chile_imports_madera_clean %>%
   formatPercentage(c("porcentaje_año_kg","porcentaje_año_fob"), digits = 0) %>% 
   formatRound(c("peso_neto_kg","valor_fob"),digits = 0,mark = ".")
 ```
+
 ##### Colombia
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -1963,3 +1963,64 @@ colombia_imports_madera_clean %>%
   formatPercentage(c("porcentaje_año_kg","porcentaje_año_fob"), digits = 0) %>% 
   formatRound(c("peso_neto_kg","valor_fob"),digits = 0,mark = ".")
 ```
+
+## Caso Ikso.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ikso_trades <- read_excel(paste0(here(),"/panjiva_data_download/Panjiva-Consolidated_View-Ikso_SpA-results_1_to_56_of_56-2022-09-19-13-05.xlsx"), col_types = "text") 
+
+ikso_trades$Fecha<- convertToDate(ikso_trades$Fecha)
+
+ikso_trades <- ikso_trades %>% 
+  select(
+    Fecha,
+    Consignatario,
+    `Estado / Región del consignatario`,
+    `País del Consignatario`,
+    Expedidor,
+    `País del Expedidor`,
+    `Origen del envío`,
+    `Destino del envío`,
+    `País del Puerto de Embarque`,
+    `País del Puerto de Descarge`,
+    `Código HS`,
+    `Mercancías enviadas`,
+    `Weight (KG)`,
+    `Valor (USD)`,
+    `fuente de datos`,
+    `Data Source Trade Direction`
+  ) %>% 
+  mutate(
+    año_envio = str_sub(Fecha,1,4)
+  ) %>% 
+  type_convert()
+
+```
+
+Según registros de Panjiva, Ikso ha comprado un total de 573.148 kg de madera (muebles) a Ikea España y otro par de empresas. Sin embargo, la data es insuficiente para determinar el verdadero flujo de esta compras. Dichos monto ha sido solo en el 2022, no hay registros de años anteriores, y ha ido aumentado durante los últimos meses:
+
+![](images/paste-9F5A381D.png)
+
+Por ejemplo, la data menciona que hubieron 31 envios de madera/muebles (314.652 KG), de origen peruano, que fueron distribuidos por Ikea España, pasaron por Estados Unidos y que tuvieron como destino final Chile, a través de la importadora Ikso Spa.
+
+### Ruta de las exportaciones de muebles de Ikea
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ikso_trades %>% 
+ group_by(`Origen del envío`, `Destino del envío`,`País del Puerto de Descarge`,Expedidor) %>% 
+  summarise(
+    n_envios = n(),
+    peso_neto_kg = sum(`Weight (KG)`,na.rm = T),
+    valor_fob_usd = sum(`Valor (USD)`,na.rm = T)
+  )
+```
+
+Además, la fuente de estos registros son los datos publicados por Estados Unidos. Es decir, la entidad aduanera de Chile no posee estos envíos o están registrados de otra manera. Una forma de poder encontrar es si se puede hacer la consulta oficial a aduanas de Chile con el código de las mercancías:
+
+### Descripción de las mercancías
+
+```{r}
+ikso_trades %>% count(`Mercancías enviadas`,sort = T)
+```
+
+IKEA HOME FURNISHING PRODUCTS TARIFF NUMBER: 06049000 CO NSIGNMENT NUMBER: 487-DT-22042 7640379 TOTAL GROSS WEIGHT: 11. 700 TOTAL VOLUME: 0. 340 TOTAL NUMBER OF PIECE(S): 60 IKEA HOME FURNISHING PRODUCTS TARIFF NUMBER: 33074990 CO NSIGNMENT NUMBER: 487-DT-22042 7640379 TOTAL GROSS WEIGHT: 15. 120 TOTAL VOLUME: 0. 046 TOTAL NUMBER OF PIECE(S): 360.
