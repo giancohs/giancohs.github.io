@@ -14,17 +14,11 @@ $selection-bg: #26351c;
 $presentation-heading-font: "noto serif", serif,
   "noto serif", serif !default;
 $presentation-heading-color: #ffbf00 !default;
-$presentation-h1-font-size: 1.50em !default;
+$presentation-h1-font-size: 1.3em !default;
 
 /*-- scss:rules --*/
 
-.h1 {
-  font-size: 1.50em;
-  font-weight: 600;
-  text-align: left;
-  margin: auto;
-  color: #ffbf00
-}
+
 
 .title-center {
   font-size: 3.5em;
