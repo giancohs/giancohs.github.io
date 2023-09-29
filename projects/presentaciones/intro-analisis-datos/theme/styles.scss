@@ -13,17 +13,21 @@ $selection-bg: #26351c;
 // headings
 $presentation-heading-font: "noto serif", serif,
   "noto serif", serif !default;
-$presentation-heading-color: #343a40 !default;
+$presentation-heading-color: #ffbf00 !default;
+$presentation-h1-font-size: 1.50em !default;
 
 /*-- scss:rules --*/
 
-.reveal body, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5,
-.reveal h6, .reveal p {
-  color: #343a40;
+.h1 {
+  font-size: 1.50em;
+  font-weight: 600;
+  text-align: left;
+  margin: auto;
+  color: #ffbf00
 }
 
 .title-center {
-  font-size: 2.2em;
+  font-size: 3.5em;
   font-weight: 600;
   text-align: center;
   margin: auto;
@@ -50,6 +54,7 @@ $presentation-heading-color: #343a40 !default;
   margin: auto;
   text-align: center;
   font-style: italic;
+  font-size: 1.5em;
 }
 
 .reveal code {
