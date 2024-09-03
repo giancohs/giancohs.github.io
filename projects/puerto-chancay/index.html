@@ -1,0 +1,279 @@
+<head>
+    <meta charset="utf-8" />
+    <title>Puerto Chcancay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
+</head>
+
+
+<body>
+    <div id="map"></div>
+    <div id="console">
+        <h1>Modificaciones Puerto de Chancay</h1>
+        <p>
+            El área de influencia del Puerto de Chancay fue modificado cuatro veces desde el 2013, según el
+            <a href="https://consultaciudadana.senace.gob.pe/#/home">Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles (SENACE).</a>
+        </p>
+        <div class="session" id="sliderbar">
+            <div class="year-display">
+                <h2>Año</h2>
+                <span id="active-year">2013</span>
+            </div>
+            <input id="slider" class="row" type="range" min="2013" max="2023" step="1" value="2013" />
+            <div class="button-container">
+                <button id="play-pause">Mostrar cambios</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    h2 {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #2dc4b2;
+    }
+
+    #console {
+        position: absolute;
+        width: 240px;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: white;
+    }
+
+
+    .session {
+        margin-bottom: 20px;
+    }
+
+    .row {
+        height: 12px;
+        width: 100%;
+    }
+
+    .colors {
+        background: linear-gradient(to right,
+                #2dc4b2,
+                #3bb3c3,
+                #669ec4,
+                #8b88b6,
+                #a2719b,
+                #aa5e79);
+        margin-bottom: 5px;
+    }
+
+    .label {
+        width: 15%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    #active-year {
+        font-size: 36px;
+        font-weight: bold;
+        color: #007cbf;
+    }
+
+    #slider {
+        width: 100%;
+        -webkit-appearance: none;
+        height: 15px;
+        border-radius: 5px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        transition: opacity .2s;
+    }
+
+    #slider:hover {
+        opacity: 1;
+    }
+
+    #slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #007cbf;
+        cursor: pointer;
+    }
+
+    #slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #007cbf;
+        cursor: pointer;
+    }
+
+    #play-pause {
+        padding: 8px 16px;
+        font-size: 18px;
+        background-color: #007cbf;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #play-pause:hover {
+        background-color: #005c8f;
+    }
+
+    .year-display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .year-display h2 {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+</style>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoib2pvcHVibGljbyIsImEiOiJja2x5MmN2N28xMnh4MnBudmxycHcwNmM1In0.ACkesvfEheuWxy0XPQtw7g';
+
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/ojopublico/cm0ft4lzb01v701qrgrjdcooa/draft',
+        center: [-77.27753, -11.58772],
+        zoom: 10
+    });
+
+    const years = [2013, 2015, 2020, 2023];
+    const layers = {};
+    let currentYearIndex = 0;
+    let isPlaying = false;
+    let playInterval;
+
+    map.on('load', () => {
+        years.forEach(year => {
+            const layerId = `area-influencia-${year}`;
+            map.addSource(layerId, {
+                type: 'geojson',
+                data: `./c${year}_area_influencia_reprojected.geojson`
+            });
+
+            map.addLayer({
+                id: layerId,
+                type: 'fill',
+                source: layerId,
+                paint: {
+                    'fill-color': '#007cbf',
+                    'fill-opacity': 0.5
+                },
+                layout: {
+                    visibility: 'none'
+                }
+            });
+
+            map.addLayer({
+                id: `${layerId}-outline`,
+                type: 'line',
+                source: layerId,
+                paint: {
+                    'line-color': '#000',
+                    'line-width': 2
+                },
+                layout: {
+                    visibility: 'none'
+                }
+            });
+
+            layers[year] = {
+                fill: layerId,
+                outline: `${layerId}-outline`
+            };
+        });
+
+        const slider = document.getElementById('slider');
+        const playPauseButton = document.getElementById('play-pause');
+
+        slider.addEventListener('input', updateMap);
+        playPauseButton.addEventListener('click', togglePlay);
+
+        function updateMap() {
+            const selectedYear = parseInt(slider.value);
+            const closestYear = years.reduce((prev, curr) => 
+                Math.abs(curr - selectedYear) < Math.abs(prev - selectedYear) ? curr : prev
+            );
+            
+            // Hide all layers
+            years.forEach(year => {
+                map.setLayoutProperty(layers[year].fill, 'visibility', 'none');
+                map.setLayoutProperty(layers[year].outline, 'visibility', 'none');
+            });
+
+            // Show the selected year's layer
+            map.setLayoutProperty(layers[closestYear].fill, 'visibility', 'visible');
+            map.setLayoutProperty(layers[closestYear].outline, 'visibility', 'visible');
+
+            document.getElementById('active-year').innerText = closestYear;
+            currentYearIndex = years.indexOf(closestYear);
+        }
+
+        function togglePlay() {
+            isPlaying = !isPlaying;
+            playPauseButton.textContent = isPlaying ? 'Pausar' : 'Mostrar cambios';
+
+            if (isPlaying) {
+                startAnimation();
+            } else {
+                clearInterval(playInterval);
+            }
+        }
+
+        function startAnimation() {
+            playInterval = setInterval(() => {
+                currentYearIndex = (currentYearIndex + 1) % years.length;
+                slider.value = years[currentYearIndex];
+                updateMap();
+            }, 1500); // Change every 1.5 seconds
+        }
+
+        // Initialize the map with the first year
+        updateMap();
+
+        // Auto-start the animation
+        setTimeout(() => {
+            isPlaying = true;
+            playPauseButton.textContent = 'Pausar';
+            startAnimation();
+        }, 1000); // Start after a 1-second delay to ensure map is fully loaded
+    });
+</script>
