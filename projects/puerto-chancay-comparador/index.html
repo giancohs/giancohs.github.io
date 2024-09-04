@@ -50,96 +50,130 @@
   <script>
     mapboxgl.accessToken = 'pk.eyJ1Ijoib2pvcHVibGljbyIsImEiOiJja2x5MmN2N28xMnh4MnBudmxycHcwNmM1In0.ACkesvfEheuWxy0XPQtw7g';
 
-    // Define the bounds of your image
-    const imageBounds = [
-      [-77.311944, -11.602778], // Southwest coordinates
-      [-77.239167, -11.564722]  // Northeast coordinates
-    ];
+    function createFixedMap(container) {
+      return new mapboxgl.Map({
+        container: container,
+        style: {
+          version: 8,
+          sources: {},
+          layers: [{
+            id: 'background',
+            type: 'background',
+            paint: { 'background-color': '#ffffff' }
+          }]
+        },
+        center: [0, 0],
+        zoom: 0,
+        dragPan: false,
+        dragRotate: false,
+        scrollZoom: false,
+        touchZoom: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        keyboard: false,
+        interactive: false
+      });
+    }
 
-    // Calculate the center of the image
-    const center = [
-      (imageBounds[0][0] + imageBounds[1][0]) / 2,
-      (imageBounds[0][1] + imageBounds[1][1]) / 2
-    ];
+    const beforeMap = createFixedMap('before');
+    const afterMap = createFixedMap('after');
 
-    const initialZoom = 13; // Adjust this value to zoom in or out
+    function addImageToMap(map, imageUrl, sourceId, layerId) {
+      const img = new Image();
+      img.onload = function() {
+        const aspect = img.width / img.height;
+        fitImageToMap(map, aspect, imageUrl, sourceId, layerId);
+      };
+      img.src = imageUrl;
+    }
 
-    const beforeMap = new mapboxgl.Map({
-      container: 'before',
-      style: {
-        version: 8,
-        sources: {},
-        layers: [{
-          id: 'background',
-          type: 'background',
-          paint: { 'background-color': '#ffffff' }
-        }]
-      },
-      center: center,
-      zoom: initialZoom
-    });
+    function fitImageToMap(map, imageAspect, imageUrl, sourceId, layerId) {
+      const mapAspect = map.getContainer().offsetWidth / map.getContainer().offsetHeight;
+      let coordinates;
 
-    const afterMap = new mapboxgl.Map({
-      container: 'after',
-      style: {
-        version: 8,
-        sources: {},
-        layers: [{
-          id: 'background',
-          type: 'background',
-          paint: { 'background-color': '#ffffff' }
-        }]
-      },
-      center: center,
-      zoom: initialZoom
-    });
+      if (imageAspect > mapAspect) {
+        // Image is wider than map
+        const height = 2 / imageAspect;
+        coordinates = [
+          [-1, height/2],
+          [1, height/2],
+          [1, -height/2],
+          [-1, -height/2]
+        ];
+      } else {
+        // Image is taller than map
+        const width = 2 * imageAspect;
+        coordinates = [
+          [-width/2, 1],
+          [width/2, 1],
+          [width/2, -1],
+          [-width/2, -1]
+        ];
+      }
 
-    beforeMap.on('load', () => {
-      beforeMap.addSource('image2022', {
+      if (map.getSource(sourceId)) {
+        map.removeLayer(layerId);
+        map.removeSource(sourceId);
+      }
+
+      map.addSource(sourceId, {
         type: 'image',
-        url: 'chancay_2022.png',
-        coordinates: [
-          [-77.311944, -11.564722], // Upper Left
-          [-77.239722, -11.565000], // Upper Right
-          [-77.239167, -11.602778], // Lower Right
-          [-77.311944, -11.602500]  // Lower Left
-        ]
+        url: imageUrl,
+        coordinates: coordinates
       });
 
-      beforeMap.addLayer({
-        id: 'image-layer-2022',
+      map.addLayer({
+        id: layerId,
         type: 'raster',
-        source: 'image2022',
+        source: sourceId,
         paint: { 'raster-opacity': 1 }
       });
+
+      map.fitBounds([
+        [coordinates[0][0], coordinates[3][1]],
+        [coordinates[2][0], coordinates[1][1]]
+      ], { padding: 0, duration: 0 });
+
+      // Adjust zoom to fill screen
+      const currentZoom = map.getZoom();
+      const newZoom = currentZoom + 0.1; // Increase zoom slightly
+      map.setZoom(newZoom);
+    }
+
+    let beforeImageAspect, afterImageAspect;
+
+    beforeMap.on('load', () => {
+      const img = new Image();
+      img.onload = function() {
+        beforeImageAspect = img.width / img.height;
+        fitImageToMap(beforeMap, beforeImageAspect, 'chancay_2022.png', 'image2022', 'image-layer-2022');
+      };
+      img.src = 'chancay_2022.png';
     });
 
     afterMap.on('load', () => {
-      afterMap.addSource('image2023', {
-        type: 'image',
-        url: 'chancay_2023.png',
-        coordinates: [
-          [-77.311944, -11.564722], // Upper Left
-          [-77.239722, -11.565000], // Upper Right
-          [-77.239167, -11.602778], // Lower Right
-          [-77.311944, -11.602500]  // Lower Left
-        ]
-      });
-
-      afterMap.addLayer({
-        id: 'image-layer-2023',
-        type: 'raster',
-        source: 'image2023',
-        paint: { 'raster-opacity': 1 }
-      });
+      const img = new Image();
+      img.onload = function() {
+        afterImageAspect = img.width / img.height;
+        fitImageToMap(afterMap, afterImageAspect, 'chancay_2023.png', 'image2023', 'image-layer-2023');
+      };
+      img.src = 'chancay_2023.png';
     });
 
     // A selector or reference to HTML element
     const container = '#comparison-container';
 
-    const map = new mapboxgl.Compare(beforeMap, afterMap, container, {
+    const compareMap = new mapboxgl.Compare(beforeMap, afterMap, container, {
       // Set this to enable comparing two maps by mouse movement:
       // mousemove: true
+    });
+
+    // Make the map responsive
+    window.addEventListener('resize', () => {
+      beforeMap.resize();
+      afterMap.resize();
+      if (beforeImageAspect) fitImageToMap(beforeMap, beforeImageAspect, 'chancay_2022.png', 'image2022', 'image-layer-2022');
+      if (afterImageAspect) fitImageToMap(afterMap, afterImageAspect, 'chancay_2023.png', 'image2023', 'image-layer-2023');
     });
   </script>
 
