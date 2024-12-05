@@ -1,11 +1,10 @@
-import { dev } from '$app/environment';
 import { error } from '@sveltejs/kit';
 import fs from 'node:fs';
 import path from 'node:path';
 
 export async function load() {
     try {
-        const projectsPath = path.join(process.cwd(), dev ? 'static' : 'build', 'projects');
+        const projectsPath = path.join(process.cwd(), 'static', 'projects');
         
         const projects = fs.readdirSync(projectsPath, { withFileTypes: true })
             .filter(dirent => dirent.isDirectory())

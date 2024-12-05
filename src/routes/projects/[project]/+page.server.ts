@@ -1,5 +1,4 @@
 import { error } from '@sveltejs/kit';
-import { dev } from '$app/environment';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -7,7 +6,7 @@ export async function load({ params }) {
     try {
         const projectPath = path.join(
             process.cwd(), 
-            dev ? 'static' : 'build', 
+            'static', 
             'projects', 
             params.project
         );
