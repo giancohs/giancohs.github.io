@@ -3,6 +3,37 @@ import path from 'node:path';
 
 export const prerender = true;
 
+// Tell SvelteKit which paths to prerender
+export function entries() {
+    const projectsPath = path.resolve(process.cwd(), 'static', 'projects');
+    const results: { project: string }[] = [];
+
+    try {
+        // Get root level projects
+        const projects = fs.readdirSync(projectsPath)
+            .filter(file => fs.statSync(path.join(projectsPath, file)).isDirectory());
+
+        // Add each project and its subfolders
+        for (const project of projects) {
+            results.push({ project });
+
+            // Check for subfolders
+            const projectPath = path.join(projectsPath, project);
+            const subfolders = fs.readdirSync(projectPath)
+                .filter(file => fs.statSync(path.join(projectPath, file)).isDirectory());
+
+            // Add paths for subfolders
+            for (const sub of subfolders) {
+                results.push({ project: `${project}/${sub}` });
+            }
+        }
+    } catch (err) {
+        console.error('Error getting entries:', err);
+    }
+
+    return results;
+}
+
 function getSubProjects(dir: string): string[] {
     const results: string[] = [];
     const items = fs.readdirSync(dir);

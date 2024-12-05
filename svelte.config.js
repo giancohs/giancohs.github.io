@@ -16,14 +16,26 @@ const config = {
 			base: ''
 		},
 		prerender: {
-			handleHttpError: ({ path, referrer, message }) => {
+			handleHttpError: ({ path, message }) => {
 				// Ignore 404s from project pages
 				if (path.startsWith('/projects/')) {
 					return;
 				}
 				
 				throw new Error(message);
-			}
+			},
+			handleEntryGeneratorMismatch: ({ generatedFromId, matchedById }) => {
+				// Ignore all entry generator mismatches in the projects directory
+				if (generatedFromId?.includes('/projects/')) {
+					return;
+				}
+				throw new Error('Entry generator mismatch');
+			},
+			entries: [
+				'*',
+				'/projects',
+				'/projects/*'
+			]
 		}
 	}
 };
