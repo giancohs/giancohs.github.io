@@ -23,10 +23,16 @@
         }
     }
     
+    // Add debouncing for theme changes
+    let themeChangeTimeout: NodeJS.Timeout;
+    
     function handleDarkMode() {
-        darkMode = !darkMode;
-        updateTheme(darkMode);
-        localStorage.setItem('darkMode', darkMode ? 'dark' : 'light');
+        clearTimeout(themeChangeTimeout);
+        themeChangeTimeout = setTimeout(() => {
+            darkMode = !darkMode;
+            updateTheme(darkMode);
+            localStorage.setItem('darkMode', darkMode ? 'dark' : 'light');
+        }, 100);
     }
 </script>
 
@@ -52,7 +58,7 @@
 </style>
 
 <div class="fixed inset-0 bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
-    <nav class="absolute top-0 w-full bg-white dark:bg-gray-800 shadow-md transition-colors duration-200 z-10">
+    <nav class="absolute top-0 w-full bg-white dark:bg-gray-800 shadow-md transition-colors duration-200 z-10" role="navigation" aria-label="Main navigation">
         <div class="max-w-6xl mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <a href="/" class="text-xl font-bold text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
@@ -69,6 +75,7 @@
                         onclick={handleDarkMode}
                         class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                         aria-label="Toggle dark mode"
+                        aria-pressed={darkMode}
                     >
                         {#if darkMode}
                             🌞

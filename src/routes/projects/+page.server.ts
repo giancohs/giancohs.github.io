@@ -3,6 +3,18 @@ import path from 'node:path';
 
 export const prerender = true;
 
+// Create a shared type for project data
+export interface Project {
+    name: string;
+    path: string;
+    contentPath: string;
+}
+
+// Use this type in your load function
+export interface ProjectData {
+    projects: string[];
+}
+
 export async function load() {
     try {
         const projectsPath = path.resolve(process.cwd(), 'static', 'projects');
