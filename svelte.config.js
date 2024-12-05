@@ -14,6 +14,16 @@ const config = {
 		}),
 		paths: {
 			base: ''
+		},
+		prerender: {
+			handleHttpError: ({ path, referrer, message }) => {
+				// Ignore 404s from project pages
+				if (path.startsWith('/projects/')) {
+					return;
+				}
+				
+				throw new Error(message);
+			}
 		}
 	}
 };
