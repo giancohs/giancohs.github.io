@@ -15,8 +15,9 @@ const config = {
 		paths: {
 			base: ''
 		},
-		files: {
-			assets: 'static'
+		prerender: {
+			entries: ['*'],
+			handleHttpError: 'warn'
 		}
 	}
 };
