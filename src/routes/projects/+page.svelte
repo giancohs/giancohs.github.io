@@ -1,14 +1,13 @@
 <script lang="ts">
     export let data: { 
-        projects: string[] 
+        projects: string[]
     };
 
-    console.log('Projects data:', data);
+    $: hasProjects = Array.isArray(data.projects) && data.projects.length > 0;
 </script>
 
 <div class="max-w-6xl mx-auto px-4 py-8">
-
-    {#if data.projects && data.projects.length > 0}
+    {#if hasProjects}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {#each data.projects as project}
                 <a 
@@ -26,6 +25,8 @@
             {/each}
         </div>
     {:else}
-        <p>No projects found.</p>
+        <div class="text-center py-12">
+            <p class="text-gray-600 dark:text-gray-400">Loading projects...</p>
+        </div>
     {/if}
 </div> 
