@@ -24,7 +24,7 @@ const config = {
 				
 				throw new Error(message);
 			},
-			handleEntryGeneratorMismatch: ({ generatedFromId, matchedById }) => {
+			handleEntryGeneratorMismatch: ({ generatedFromId }) => {
 				// Ignore all entry generator mismatches in the projects directory
 				if (generatedFromId?.includes('/projects/')) {
 					return;
