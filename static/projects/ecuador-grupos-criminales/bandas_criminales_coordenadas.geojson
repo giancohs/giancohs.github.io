@@ -46,7 +46,7 @@
 { "type": "Feature", "properties": { "id": 41, "banda": "Tiguerones" }, "geometry": { "type": "Point", "coordinates": [ -79.754001337166585, -1.956709179688802 ] } },
 { "type": "Feature", "properties": { "id": 42, "banda": "Latin King" }, "geometry": { "type": "Point", "coordinates": [ -79.768982521868622, -2.362449598701263 ] } },
 { "type": "Feature", "properties": { "id": 43, "banda": "Latin King" }, "geometry": { "type": "Point", "coordinates": [ -78.406527002025754, -0.382436353920462 ] } },
-{ "type": "Feature", "properties": { "id": 44, "banda": "Tiburones / M18" }, "geometry": { "type": "Point", "coordinates": [ -79.590040593483636, -2.048677007998292 ] } },
+{ "type": "Feature", "properties": { "id": 44, "banda": "Tiburones/M18" }, "geometry": { "type": "Point", "coordinates": [ -79.590040593483636, -2.048677007998292 ] } },
 { "type": "Feature", "properties": { "id": 45, "banda": "Los AK 47" }, "geometry": { "type": "Point", "coordinates": [ -79.435235018229662, -1.454423348152353 ] } }
 ]
 }
