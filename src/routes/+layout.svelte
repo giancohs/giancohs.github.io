@@ -47,19 +47,19 @@
         <nav class="absolute top-0 w-full bg-white dark:bg-gray-800 shadow-md transition-colors duration-200 z-10" aria-label="Main navigation">
             <div class="max-w-6xl mx-auto px-4 py-3">
                 <div class="flex justify-between items-center">
-                    <a href="/" class="text-xl font-bold text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <a href="/" class="text-xl font-bold text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors whitespace-nowrap">
                         HeavyDirtyData
                     </a>
-                    <div class="flex items-center gap-6">
-                        <a href="/" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <div class="flex items-center gap-4">
+                        <a href="/" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors whitespace-nowrap px-2">
                             Home
                         </a>
-                        <a href="/projects" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <a href="/projects" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors whitespace-nowrap px-2">
                             Projects
                         </a>
                         <button 
                             onclick={handleDarkMode}
-                            class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                            class="px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors flex-shrink-0 min-w-[4rem] w-[4.5rem]"
                             aria-label="Toggle dark mode"
                             aria-pressed={darkMode}
                         >
