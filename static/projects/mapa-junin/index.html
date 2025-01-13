@@ -314,6 +314,11 @@
                 display: none;
             }                
         }
+
+        /* Add this to your style section */
+        .mapboxgl-ctrl-attrib-inner a[href*="feedback"] {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -395,8 +400,14 @@
             container: 'map',
             style: 'mapbox://styles/ojopublico/cm0ft4lzb01v701qrgrjdcooa/draft',
             center: isMobile() ? [-76.13175, -10.72588] : [-76.14617, -10.97656],
-            zoom: isMobile() ? 8.35 : 9.45
+            zoom: isMobile() ? 8.35 : 9.45,
+            attributionControl: false  // Disable default attribution
         });
+
+        // Add custom attribution with styling
+        map.addControl(new mapboxgl.AttributionControl({
+            customAttribution: '<span style="opacity: 0.75;">Fuente: Con información de IBC  y MINEM</span>'
+        }));
 
         // Initialize popup (this was missing)
         const popup = new mapboxgl.Popup({
