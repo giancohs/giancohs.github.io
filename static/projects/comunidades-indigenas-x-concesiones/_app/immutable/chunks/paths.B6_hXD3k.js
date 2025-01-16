@@ -1,0 +1,1 @@
+var s;const a=((s=globalThis.__sveltekit_1rxeu9o)==null?void 0:s.base)??"/static/projects/comunidades-indigenas-x-concesiones";var e;const t=((e=globalThis.__sveltekit_1rxeu9o)==null?void 0:e.assets)??a;export{t as a,a as b};
