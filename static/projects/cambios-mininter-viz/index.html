@@ -2,35 +2,49 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/static/projects/cambios-mininter-viz/favicon.png" />
+		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
-		<link rel="modulepreload" href="/static/projects/cambios-mininter-viz/app/immutable/entry/start._s7fRLdK.js">
-		<link rel="modulepreload" href="/static/projects/cambios-mininter-viz/app/immutable/chunks/entry.CYtSf_OG.js">
-		<link rel="modulepreload" href="/static/projects/cambios-mininter-viz/app/immutable/chunks/runtime.C7YdZCj7.js">
-		<link rel="modulepreload" href="/static/projects/cambios-mininter-viz/app/immutable/chunks/paths.DzMKsllI.js">
-		<link rel="modulepreload" href="/static/projects/cambios-mininter-viz/app/immutable/entry/app.BX7CLhVi.js">
-		<link rel="modulepreload" href="/static/projects/cambios-mininter-viz/app/immutable/chunks/render.Gl6qR6wt.js">
-		<link rel="modulepreload" href="/static/projects/cambios-mininter-viz/app/immutable/chunks/disclose-version.B74JeE9W.js">
-		<link rel="modulepreload" href="/static/projects/cambios-mininter-viz/app/immutable/chunks/index-client.vOEQ48FN.js">
-		<link rel="modulepreload" href="/static/projects/cambios-mininter-viz/app/immutable/chunks/store.BjA6Phqn.js">
+		<link href="./_app/immutable/assets/0.D1fw3_k4.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.CTB_UQBW.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.0-cWw-7Y.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.SOGRbBsH.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/runtime.mCDHK8ie.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.DMzOrvyn.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.B43UFLcB.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/render.BWkL5cIR.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/disclose-version.DDr2Ybv3.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-client.fBxpzXsC.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/store.4QBrbFXo.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.2ranG9TB.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.DS3IwTzA.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/legacy.CJEpjvrZ.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/attributes.By8-imXs.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">
+		<div style="display: contents"><!--[--><!--[--><!----><!----><div class="visualizations-grid svelte-1p2t790"><a href="./lista-funcionarios" class="viz-card svelte-1p2t790"><h2 class="svelte-1p2t790">Lista de Funcionários</h2> <p class="svelte-1p2t790">Visualización mostrando los periodos de funcionarios del Mininter</p></a></div><!----><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
 			<script>
 				{
-					__sveltekit_1qsxmri = {
-						base: "/static/projects/cambios-mininter-viz",
+					__sveltekit_za6978 = {
+						base: new URL(".", location).pathname.slice(0, -1),
 						assets: "/static/projects/cambios-mininter-viz"
 					};
 
 					const element = document.currentScript.parentElement;
 
+					const data = [null,null];
+
 					Promise.all([
-						import("/static/projects/cambios-mininter-viz/app/immutable/entry/start._s7fRLdK.js"),
-						import("/static/projects/cambios-mininter-viz/app/immutable/entry/app.BX7CLhVi.js")
+						import("./_app/immutable/entry/start.0-cWw-7Y.js"),
+						import("./_app/immutable/entry/app.B43UFLcB.js")
 					]).then(([kit, app]) => {
-						kit.start(app, element);
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
 					});
 				}
 			</script>

@@ -1,0 +1,1 @@
+var s;const t=((s=globalThis.__sveltekit_za6978)==null?void 0:s.base)??"/static/projects/cambios-mininter-viz";var a;const e=((a=globalThis.__sveltekit_za6978)==null?void 0:a.assets)??t;export{e as a,t as b};
