@@ -1,0 +1,52 @@
+[
+  {
+    "nombre": "Abanto Verástegui, Arce Abogados",
+    "monto": 1400000,
+    "porcentaje": 49.78
+  },
+  {
+    "nombre": "DCC Consultores SAC", 
+    "monto": 390000,
+    "porcentaje": 13.87
+  },
+  {
+    "nombre": "Edwin Bustamante Montalvo",
+    "monto": 365000,
+    "porcentaje": 12.98
+  },
+  {
+    "nombre": "Carlos Nicolás Alvizuri Marín",
+    "monto": 150000,
+    "porcentaje": 5.33
+  },
+  {
+    "nombre": "Estudio Muñiz SCRL",
+    "monto": 148320,
+    "porcentaje": 5.27
+  },
+  {
+    "nombre": "Azabache Caracciolo EIRL",
+    "monto": 123900,
+    "porcentaje": 4.41
+  },
+  {
+    "nombre": "Guillermo Benites Villa",
+    "monto": 80000,
+    "porcentaje": 2.84
+  },
+  {
+    "nombre": "Susy Angelica Sandoval Espinoza",
+    "monto": 60000,
+    "porcentaje": 2.13
+  },
+  {
+    "nombre": "Jesús Poma Zamudio",
+    "monto": 50000,
+    "porcentaje": 1.78
+  },
+  {
+    "nombre": "Edwar Alvarez Yrala",
+    "monto": 45000,
+    "porcentaje": 1.60
+  }
+]
