@@ -5,21 +5,26 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
-		<link rel="modulepreload" href="./_app/immutable/entry/start.D7c3Dmh8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/entry.CQXhcqee.js">
+		<link href="./_app/immutable/assets/0.D8ILjifV.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.5k6MpvQK.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.COwSGnV0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.CyRoqjPj.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/runtime.Cb1LSv3f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.CmL-oDZw.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.DPRoOHhM.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.BTtC6z0Q.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.gtWGwvcZ.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/store.D2B2xmFw.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/disclose-version.CQEGTl70.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.6qkl533v.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.DuTxyqkq.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/legacy.Dv9uJenT.js">
 		<link rel="modulepreload" href="./_app/env.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">
+		<div style="display: contents"><!--[--><!--[--><!----><!----><div class="visualization-container svelte-ps1woj"><header class="svelte-ps1woj"><h1 class="svelte-ps1woj">Las economías ilegales de las fronteras amazónicas</h1> <p class="svelte-ps1woj">En Brasil, Colombia, Ecuador y Perú el narcotráfico, el comercio ilegal de madera y la minería ilegal dominan las localidades limítrofes.</p></header> <div class="filter-container svelte-ps1woj"><div class="filter-buttons svelte-ps1woj"><!--[--><button class="filter-button active svelte-ps1woj">Todos</button><button class="filter-button  svelte-ps1woj">Narcotráfico</button><button class="filter-button  svelte-ps1woj">Minería ilegal</button><button class="filter-button  svelte-ps1woj">Comercio ilegal de madera</button><!--]--></div></div> <div class="map-wrapper svelte-ps1woj"><!--[!--><div class="loading svelte-ps1woj">Cargando mapa...</div><!--]--></div></div><!----><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
 			<script>
 				{
-					__sveltekit_1q6kiyi = {
+					__sveltekit_a93m50 = {
 						base: new URL(".", location).pathname.slice(0, -1),
 						assets: "/static/projects/mapa-viz-mun-frontera",
 						env: null
@@ -27,14 +32,21 @@
 
 					const element = document.currentScript.parentElement;
 
+					const data = [null,null];
+
 					import("./_app/env.js").then(({ env }) => {
-						__sveltekit_1q6kiyi.env = env;
+						__sveltekit_a93m50.env = env;
 
 						Promise.all([
-							import("./_app/immutable/entry/start.D7c3Dmh8.js"),
-							import("./_app/immutable/entry/app.DPRoOHhM.js")
+							import("./_app/immutable/entry/start.COwSGnV0.js"),
+							import("./_app/immutable/entry/app.BTtC6z0Q.js")
 						]).then(([kit, app]) => {
-							kit.start(app, element);
+							kit.start(app, element, {
+								node_ids: [0, 2],
+								data,
+								form: null,
+								error: null
+							});
 						});
 					});
 				}
