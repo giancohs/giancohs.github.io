@@ -1,1 +1,0 @@
-var s;const t=((s=globalThis.__sveltekit_18ggxkr)==null?void 0:s.base)??"/static/projects/mapa-viz-mun-frontera";var a;const e=((a=globalThis.__sveltekit_18ggxkr)==null?void 0:a.assets)??t;export{e as a,t as b};
