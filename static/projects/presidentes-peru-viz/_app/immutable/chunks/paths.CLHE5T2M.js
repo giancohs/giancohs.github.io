@@ -1,1 +1,0 @@
-var s;const e=((s=globalThis.__sveltekit_tzgmu6)==null?void 0:s.base)??"/static/projects/presidentes-peru-viz";var t;const a=((t=globalThis.__sveltekit_tzgmu6)==null?void 0:t.assets)??e;export{a,e as b};
