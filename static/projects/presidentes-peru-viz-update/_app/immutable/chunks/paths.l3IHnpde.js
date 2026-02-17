@@ -1,0 +1,1 @@
+var s;const t=((s=globalThis.__sveltekit_m3cn8a)==null?void 0:s.base)??"/static/projects/presidentes-peru-viz-update";var e;const a=((e=globalThis.__sveltekit_m3cn8a)==null?void 0:e.assets)??t;export{a,t as b};
