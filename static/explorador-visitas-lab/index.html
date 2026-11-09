@@ -17,7 +17,7 @@
       --line: #334155;
       --accent: #38bdf8;
       --keiko: #e11d48;
-      --left: clamp(260px, 28vw, 360px);
+      --left: clamp(280px, 30vw, 400px);
     }
     * { box-sizing: border-box; }
     html, body {
@@ -40,8 +40,30 @@
       min-width: 0; overflow: hidden;
       backdrop-filter: blur(6px);
     }
-    #side-head { padding: 0.9rem 0.85rem 0.55rem; border-bottom: 1px solid var(--line); flex: 0 0 auto; }
-    #side-body { padding: 0.55rem 0.65rem 1rem; overflow: auto; flex: 1 1 auto; min-height: 0; }
+    /* Doble scroll: stats/búsqueda arriba · perfil/visitas abajo */
+    #side-head {
+      padding: 0.9rem 0.85rem 0.55rem;
+      border-bottom: 1px solid var(--line);
+      flex: 0 1 42%;
+      max-height: 46%;
+      min-height: 0;
+      overflow: auto;
+    }
+    #side-body {
+      padding: 0.55rem 0.65rem 1rem;
+      flex: 1 1 58%;
+      min-height: 0;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    #side-body #profile { flex: 0 0 auto; }
+    #side-body #list-title { flex: 0 0 auto; }
+    #side-body #visit-list {
+      flex: 1 1 auto;
+      min-height: 8rem;
+      overflow: auto;
+    }
     #main {
       display: grid;
       grid-template-rows: minmax(0, 0.9fr) minmax(0, 1.1fr);
