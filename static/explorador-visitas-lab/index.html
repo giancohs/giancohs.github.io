@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ego Keiko - visitas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg2: #1e293b;
+      --ink: #e2e8f0;
+      --muted: #94a3b8;
+      --panel: #111827;
+      --line: #334155;
+      --accent: #38bdf8;
+      --keiko: #e11d48;
+      --left: clamp(260px, 28vw, 360px);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; width: 100%; height: 100%; overflow: hidden;
+      font-family: "Source Sans 3", "Segoe UI", sans-serif;
+      background: radial-gradient(1200px 700px at 55% 15%, #1e293b 0%, var(--bg) 55%);
+      color: var(--ink);
+    }
+    #boot { padding: 2rem; }
+    #app {
+      display: grid;
+      grid-template-columns: var(--left) minmax(0, 1fr);
+      width: 100%; height: 100dvh; height: 100vh;
+      overflow: hidden;
+    }
+    #side {
+      background: color-mix(in srgb, var(--panel) 94%, transparent);
+      border-right: 1px solid var(--line);
+      display: flex; flex-direction: column;
+      min-width: 0; overflow: hidden;
+      backdrop-filter: blur(6px);
+    }
+    #side-head { padding: 0.9rem 0.85rem 0.55rem; border-bottom: 1px solid var(--line); flex: 0 0 auto; }
+    #side-body { padding: 0.55rem 0.65rem 1rem; overflow: auto; flex: 1 1 auto; min-height: 0; }
+    #main {
+      display: grid;
+      grid-template-rows: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      min-width: 0; min-height: 0; overflow: hidden;
+    }
+    .pane {
+      position: relative; min-width: 0; min-height: 0; overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+    .pane:last-child { border-bottom: 0; }
+    #pane-top {
+      display: flex; flex-direction: column;
+    }
+    .top-chrome {
+      flex: 0 0 auto;
+      display: flex; align-items: center; gap: 0.55rem;
+      padding: 0.35rem 0.55rem;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--panel) 88%, transparent);
+    }
+    .top-chrome .pane-label {
+      position: static; flex: 0 0 auto;
+      color: #5eead4; border-color: #2dd4bf55;
+      pointer-events: none;
+    }
+    .top-chrome .bot-search { flex: 1 1 auto; max-width: 420px; }
+    .top-body {
+      flex: 1 1 auto; min-height: 0; min-width: 0;
+      display: flex; flex-direction: row;
+    }
+    .top-graph-wrap {
+      position: relative; flex: 1 1 auto; min-width: 0; min-height: 0;
+    }
+    .top-pager {
+      flex: 0 0 auto;
+      display: flex; flex-direction: column; gap: 0.15rem;
+      justify-content: center; align-items: stretch;
+      padding: 0.4rem 0.35rem;
+      border-left: 1px solid var(--line);
+      background: color-mix(in srgb, var(--panel) 90%, transparent);
+      max-width: 78px;
+      border-color: #2dd4bf55;
+    }
+    .top-pager .sec-total { color: #5eead4; font-size: 0.62rem; text-align: center; margin-bottom: 0.15rem; }
+    .top-pager .sec-btns { display: flex; flex-direction: column; gap: 0.15rem; }
+    .top-pager button {
+      margin: 0; padding: 0.18rem 0.2rem;
+      border-radius: 4px; border: 1px solid var(--line);
+      background: transparent; color: var(--ink);
+      font-size: 0.68rem; cursor: pointer; line-height: 1.1;
+    }
+    .top-pager button:hover:not(:disabled) { border-color: #2dd4bf; color: #5eead4; }
+    .top-pager button:disabled { opacity: 0.35; cursor: default; }
+    .pane-label {
+      position: absolute; top: 0.55rem; left: 0.7rem; z-index: 2;
+      font-size: 0.72rem; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--muted);
+      background: color-mix(in srgb, var(--panel) 75%, transparent);
+      padding: 0.25rem 0.45rem; border-radius: 4px; border: 1px solid var(--line);
+      pointer-events: none;
+    }
+    #pane-bot {
+      display: flex; flex-direction: column;
+    }
+    .bot-chrome {
+      flex: 0 0 auto;
+      display: flex; align-items: center; gap: 0.55rem;
+      padding: 0.4rem 0.55rem;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--panel) 88%, transparent);
+      min-height: 0;
+    }
+    #pane-bot > .pane-label,
+    .bot-chrome .pane-label {
+      position: static; flex: 0 0 auto;
+      pointer-events: none;
+    }
+    .bot-search {
+      position: relative;
+      flex: 1 1 auto; min-width: 0;
+      max-width: 420px;
+    }
+    .bot-search input {
+      width: 100%; padding: 0.35rem 0.55rem; border-radius: 6px;
+      border: 1px solid var(--line); background: var(--bg2);
+      color: var(--ink); font-size: 0.8rem;
+    }
+    .flow-legend {
+      flex: 0 0 auto; margin-left: auto;
+      font-size: 0.68rem; line-height: 1.35;
+      color: var(--ink); pointer-events: none;
+      display: flex; flex-wrap: wrap; gap: 0.15rem 0.75rem;
+      justify-content: flex-end;
+    }
+    .flow-legend[hidden] { display: none; }
+    .flow-legend .row { display: flex; align-items: center; gap: 0.3rem; margin: 0; }
+    .flow-legend .row[hidden] { display: none; }
+    .flow-legend .sw {
+      width: 18px; height: 2px; border-radius: 2px; position: relative; display: inline-block;
+    }
+    .flow-legend .sw::after {
+      content: ""; position: absolute; right: -1px; top: 50%;
+      transform: translateY(-50%);
+      border: 3px solid transparent; border-right-width: 0;
+    }
+    .flow-legend .sw.out { background: #fbbf24; }
+    .flow-legend .sw.out::after { border-left-color: #fbbf24; }
+    .flow-legend .sw.in { background: #2dd4bf; }
+    .flow-legend .sw.in::after { border-left-color: #2dd4bf; }
+    .flow-legend .dot-ambos {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #a78bfa;
+      box-shadow: inset 0 0 0 1px #fbbf24, 0 0 0 1px #2dd4bf;
+      display: inline-block;
+    }
+    .bot-body {
+      flex: 1 1 auto; min-height: 0; min-width: 0;
+      display: flex; flex-direction: row;
+    }
+    .bot-graph-wrap {
+      position: relative; flex: 1 1 auto; min-width: 0; min-height: 0;
+    }
+    .sankey-heads {
+      position: absolute; top: 0.25rem; left: 0; right: 0; z-index: 3;
+      display: flex; gap: 0.35rem; justify-content: space-around;
+      align-items: flex-start;
+      pointer-events: none; padding: 0 3%;
+    }
+    .sankey-heads[hidden] { display: none; }
+    .sankey-heads .head-col {
+      pointer-events: auto;
+      flex: 0 1 auto; min-width: 0;
+      text-align: center;
+      padding: 0.12rem 0.35rem 0.18rem;
+      border-radius: 6px;
+      background: color-mix(in srgb, var(--panel) 82%, transparent);
+      border: 1px solid transparent;
+    }
+    .sankey-heads .head-col[hidden] { display: none; }
+    .sankey-heads .head-row {
+      display: flex; align-items: baseline; justify-content: center;
+      gap: 0.35rem; white-space: nowrap;
+    }
+    .sankey-heads .head-col .h {
+      font-size: 0.62rem; letter-spacing: 0.05em;
+      text-transform: uppercase; font-weight: 600;
+    }
+    .sankey-heads .head-col.left { border-color: #2dd4bf44; }
+    .sankey-heads .head-col.mid { border-color: #a78bfa44; }
+    .sankey-heads .head-col.right { border-color: #fbbf2444; }
+    .sankey-heads .head-col.left .h { color: #5eead4; }
+    .sankey-heads .head-col.mid .h { color: #c4b5fd; }
+    .sankey-heads .head-col.right .h { color: #fbbf24; }
+    .sankey-heads .sec-total {
+      font-size: 0.6rem; font-variant-numeric: tabular-nums;
+      color: var(--muted);
+    }
+    .sankey-heads .head-col.left .sec-total { color: #5eead499; }
+    .sankey-heads .head-col.mid .sec-total { color: #c4b5fd99; }
+    .sankey-heads .head-col.right .sec-total { color: #fbbf2499; }
+    .sankey-heads .sec-btns {
+      display: flex; gap: 0.15rem; justify-content: center;
+      margin-top: 0.12rem;
+    }
+    .sankey-heads .sec-btns button {
+      margin: 0; padding: 0.08rem 0.28rem;
+      border-radius: 3px; border: 1px solid var(--line);
+      background: transparent; color: var(--ink);
+      font-size: 0.6rem; cursor: pointer; line-height: 1.1;
+    }
+    .sankey-heads .head-col.left button:hover:not(:disabled) { border-color: #2dd4bf; color: #5eead4; }
+    .sankey-heads .head-col.mid button:hover:not(:disabled) { border-color: #a78bfa; color: #c4b5fd; }
+    .sankey-heads .head-col.right button:hover:not(:disabled) { border-color: #fbbf24; color: #fbbf24; }
+    .sankey-heads .sec-btns button:disabled { opacity: 0.35; cursor: default; }
+    /* top heads: solo etiqueta, sin pager */
+    #top-heads { top: 0.45rem; padding: 0 0 0 6%; justify-content: flex-start; pointer-events: none; }
+    #top-heads .h {
+      color: #5eead4; font-size: 0.78rem; letter-spacing: 0.05em;
+      text-transform: uppercase; font-weight: 600;
+    }
+    .suggest {
+      position: absolute; left: 0; right: 0; top: calc(100% + 4px);
+      max-height: 220px; overflow: auto;
+      background: #0b1220; border: 1px solid var(--line); border-radius: 8px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.45); z-index: 5;
+    }
+    .suggest button {
+      display: block; width: 100%; text-align: left; border: 0; border-bottom: 1px solid var(--line);
+      background: transparent; color: var(--ink); padding: 0.5rem 0.65rem; cursor: pointer; font: inherit;
+    }
+    .suggest button:hover, .suggest button.active { background: color-mix(in srgb, var(--accent) 16%, transparent); }
+    .suggest .ord { font-weight: 600; font-size: 0.84rem; }
+    .suggest .raw { font-size: 0.72rem; color: var(--muted); }
+    .suggest .meta { font-size: 0.7rem; color: var(--accent); }
+    .graph { width: 100%; height: 100%; }
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.12rem; font-weight: 600; margin: 0 0 0.3rem;
+      letter-spacing: -0.02em; line-height: 1.25;
+    }
+    h2 {
+      font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin: 0.85rem 0 0.4rem;
+    }
+    p, label { font-size: 0.84rem; line-height: 1.45; margin: 0.2rem 0; }
+    .muted { color: var(--muted); }
+    .stat {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 0.15rem 0.5rem; font-size: 0.82rem;
+      padding: 0.3rem 0; border-bottom: 1px solid var(--line);
+    }
+    .stat b { font-variant-numeric: tabular-nums; color: var(--accent); }
+    .stat.stat-ent {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+    .stat.stat-ent .ent-role {
+      font-size: 0.72rem; letter-spacing: 0.04em;
+      text-transform: uppercase; color: var(--muted); font-weight: 600;
+    }
+    .stat.stat-ent .ent-list {
+      font-size: 0.78rem; color: var(--ink); line-height: 1.35;
+      word-break: break-word;
+    }
+    .stat.stat-ent .ent-list em {
+      font-style: normal; color: var(--accent); font-variant-numeric: tabular-nums;
+    }
+    .search {
+      width: 100%; margin: 0.45rem 0 0.2rem; padding: 0.45rem 0.55rem;
+      border-radius: 6px; border: 1px solid var(--line);
+      background: var(--bg2); color: var(--ink); font-size: 0.82rem;
+    }
+    .search-wrap { position: relative; }
+    button.ghost {
+      width: 100%; margin-top: 0.35rem; padding: 0.4rem 0.55rem;
+      border-radius: 6px; border: 1px solid var(--line);
+      background: transparent; color: var(--ink); cursor: pointer; font-size: 0.8rem;
+    }
+    .profile {
+      margin: 0 0 0.75rem; padding: 0.65rem 0.7rem;
+      border: 1px solid var(--line); border-radius: 10px;
+      background: color-mix(in srgb, var(--bg2) 75%, transparent);
+    }
+    .profile .ord {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.05rem; font-weight: 600; margin: 0 0 0.2rem;
+    }
+    .profile .raw { font-size: 0.78rem; color: var(--muted); margin: 0 0 0.55rem; word-break: break-word; }
+    .profile .grid {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 0.2rem 0.55rem; font-size: 0.78rem;
+    }
+    .profile .grid span { color: var(--muted); }
+    .profile .grid b { font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 600; text-align: right; }
+    .profile .block { margin-top: 0.55rem; font-size: 0.75rem; }
+    .profile .block .k { color: var(--muted); margin-bottom: 0.15rem; }
+    .visit {
+      border: 1px solid var(--line); border-radius: 8px;
+      margin: 0.4rem 0; background: color-mix(in srgb, var(--bg2) 70%, transparent);
+      overflow: hidden;
+    }
+    .visit-sum {
+      display: grid; grid-template-columns: 1.4rem 1fr; gap: 0.15rem 0.4rem;
+      align-items: start; padding: 0.5rem 0.55rem; cursor: pointer; width: 100%;
+      text-align: left; border: 0; background: transparent; color: inherit; font: inherit;
+    }
+    .visit-sum:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+    .chev {
+      width: 1.2rem; height: 1.2rem; display: grid; place-items: center;
+      color: var(--accent); transition: transform 0.15s ease; font-size: 0.75rem;
+    }
+    .visit.open .chev { transform: rotate(90deg); }
+    .visit-title { font-size: 0.8rem; font-weight: 600; }
+    .visit-sub { font-size: 0.72rem; color: var(--muted); }
+    .visit-detail {
+      display: none; padding: 0 0.65rem 0.65rem 1.75rem;
+      font-size: 0.75rem; line-height: 1.45; border-top: 1px solid var(--line);
+    }
+    .visit.open .visit-detail { display: block; }
+    .visit-detail dt { color: var(--muted); margin-top: 0.35rem; }
+    .visit-detail dd { margin: 0.05rem 0 0; }
+    #status { font-size: 0.76rem; color: var(--muted); margin-top: 0.35rem; }
+    #empty-bottom {
+      position: absolute; inset: 0; display: grid; place-items: center;
+      color: var(--muted); font-size: clamp(0.98rem, 1.6vw, 1.2rem);
+      font-weight: 500; line-height: 1.45;
+      pointer-events: none; text-align: center;
+      padding: 1.25rem 1.75rem; max-width: 32rem; margin: auto;
+    }
+    #empty-bottom .host-name { color: #e11d48; font-weight: 700; }
+    #empty-bottom.hide { display: none; }
+    @media (max-width: 860px) {
+      #app { grid-template-columns: 1fr; grid-template-rows: minmax(34vh, auto) minmax(0, 1fr); height: auto; min-height: 100dvh; overflow: auto; }
+      #side { max-height: 42vh; border-right: 0; border-bottom: 1px solid var(--line); }
+      #main { min-height: 70vh; }
+    }
+  </style>
+</head>
+<body>
+  <div id="boot">Cargando…</div>
+  <div id="app" hidden>
+    <aside id="side">
+      <div id="side-head">
+        <h1>Explorador de visitas</h1>
+        <p class="muted">Busca anfitrión para poder revisar el detalle de las visitas que recibe. Puedes buscar por nombre o DNI.</p>
+        <div id="stats"></div>
+        <div class="search-wrap">
+          <input class="search" id="q-person" type="search" placeholder="Buscar anfitrión por nombre o DNI…" autocomplete="off" />
+          <div class="suggest" id="suggest-side" hidden></div>
+        </div>
+        <button type="button" class="ghost" id="btn-clear">Limpiar selección</button>
+        <div id="status"></div>
+      </div>
+      <div id="side-body">
+        <div id="profile" class="profile" hidden></div>
+        <h2 id="list-title">Registros de visitas</h2>
+        <div id="visit-list"><p class="muted">Clic en una <strong>línea</strong> del panel inferior para ver los registros. El clic en un nodo muestra el perfil.</p></div>
+      </div>
+    </aside>
+    <div id="main">
+      <section class="pane" id="pane-top">
+        <div class="top-chrome">
+          <div class="pane-label" id="top-label">Anfitrión</div>
+          <div class="bot-search">
+            <input id="q-top" type="search" placeholder="Buscar anfitrión por nombre o DNI…" autocomplete="off" />
+            <div class="suggest" id="suggest-top" hidden></div>
+          </div>
+        </div>
+        <div class="top-body">
+          <div class="top-graph-wrap">
+            <div class="sankey-heads" id="top-heads">
+              <span class="h left">Quiénes lo visitaron</span>
+            </div>
+            <div class="graph" id="graph-top"></div>
+          </div>
+          <div class="top-pager" id="top-pager">
+            <div class="sec-total" id="top-pager-total">0/0</div>
+            <div class="sec-btns">
+              <button type="button" data-act="more" title="Sumar 5">+5</button>
+              <button type="button" data-act="less" title="Quitar 5">−5</button>
+              <button type="button" data-act="reset" title="Volver a 10">↺</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pane" id="pane-bot">
+        <div class="bot-chrome">
+          <div class="pane-label" id="bot-label">Flujo de la persona</div>
+          <div class="bot-search">
+            <input id="q-bot" type="search" placeholder="Buscar persona o DNI…" autocomplete="off" />
+            <div class="suggest" id="suggest-bot" hidden></div>
+          </div>
+          <div class="flow-legend" id="flow-legend" hidden>
+            <div class="row" id="leg-left"><span class="sw in"></span> <strong>anfitrión</strong></div>
+            <div class="row" id="leg-mid"><span class="dot-ambos"></span> <strong>ambos roles</strong></div>
+            <div class="row" id="leg-right"><span class="sw out"></span> <strong>visitante</strong></div>
+          </div>
+        </div>
+        <div class="bot-body">
+          <div class="bot-graph-wrap">
+            <div class="sankey-heads" id="sankey-heads" hidden>
+              <div class="head-col left" id="pager-left" hidden data-sec="left">
+                <div class="head-row">
+                  <span class="h">Anfitrión</span>
+                  <span class="sec-total" data-total></span>
+                </div>
+                <div class="sec-btns">
+                  <button type="button" data-act="more" title="Sumar 5">+5</button>
+                  <button type="button" data-act="less" title="Quitar 5">−5</button>
+                  <button type="button" data-act="reset" title="Volver a 5">↺</button>
+                </div>
+              </div>
+              <div class="head-col mid" id="pager-mid" hidden data-sec="mid">
+                <div class="head-row">
+                  <span class="h">Ambos roles</span>
+                  <span class="sec-total" data-total></span>
+                </div>
+                <div class="sec-btns">
+                  <button type="button" data-act="more" title="Sumar 5">+5</button>
+                  <button type="button" data-act="less" title="Quitar 5">−5</button>
+                  <button type="button" data-act="reset" title="Volver a 5">↺</button>
+                </div>
+              </div>
+              <div class="head-col right" id="pager-right" hidden data-sec="right">
+                <div class="head-row">
+                  <span class="h">Visitante</span>
+                  <span class="sec-total" data-total></span>
+                </div>
+                <div class="sec-btns">
+                  <button type="button" data-act="more" title="Sumar 5">+5</button>
+                  <button type="button" data-act="less" title="Quitar 5">−5</button>
+                  <button type="button" data-act="reset" title="Volver a 5">↺</button>
+                </div>
+              </div>
+            </div>
+            <div class="graph" id="graph-bot"></div>
+            <div id="empty-bottom">Haz clic arriba en cualquier nombre de las personas que visitaron a <span class="host-name">Keiko Fujimori</span>.</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="./force-graph.min.js"></script>
+  <script>
+    function esc(s) {
+      return String(s ?? "").replace(/[&<>"']/g, c => ({
+        "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+      })[c]);
+    }
+    function fmtFecha(iso, raw) {
+      if (raw) return raw;
+      if (!iso) return "-";
+      const [y,m,d] = iso.split("-");
+      return `${d}/${m}/${y}`;
+    }
+    const NAME_PARTICLES = new Set(["de", "del", "la", "las", "los", "y", "e", "da", "do", "van", "von"]);
+    const SURNAME_BRIDGES = new Set(["de", "del", "da", "do", "van", "von"]);
+    const SURNAME_ARTICLES = new Set(["la", "las", "los"]);
+    function foldToken(w) {
+      return String(w || "").normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+    }
+    function titleCaseWord(w) {
+      const f = foldToken(w);
+      if (NAME_PARTICLES.has(f)) return f;
+      const s = String(w || "").toLowerCase();
+      return s ? s.charAt(0).toUpperCase() + s.slice(1) : "";
+    }
+    function titleCaseName(s) {
+      return String(s || "").trim().split(/\s+/).filter(Boolean).map(titleCaseWord).join(" ");
+    }
+    function skipApellido(parts, i) {
+      // { i, yBoth }: yBoth = García y García ya cubrió ambos apellidos
+      const n = parts.length;
+      if (i >= n) return { i, yBoth: false };
+      const lead = new Set([...SURNAME_BRIDGES, ...SURNAME_ARTICLES]);
+      while (i < n && lead.has(foldToken(parts[i]))) i += 1;
+      if (i >= n) return { i, yBoth: false };
+      i += 1; // núcleo
+      let yBoth = false;
+      if (i < n && (foldToken(parts[i]) === "y" || foldToken(parts[i]) === "e") && i + 1 < n) {
+        const nxt = foldToken(parts[i + 1]);
+        if (!NAME_PARTICLES.has(nxt)) { i += 2; yBoth = true; }
+      }
+      // Garfias de Vega / de la Torre
+      while (i < n && SURNAME_BRIDGES.has(foldToken(parts[i]))) {
+        i += 1;
+        while (i < n && SURNAME_ARTICLES.has(foldToken(parts[i]))) i += 1;
+        if (i < n) i += 1;
+      }
+      return { i, yBoth };
+    }
+    function shortPersonName(full) {
+      // HERZ GARFIAS DE VEGA ANA ROSA → Ana Herz
+      const parts = String(full || "").trim().split(/\s+/).filter(Boolean);
+      if (!parts.length) return "";
+      if (parts.length === 1) return titleCaseName(parts[0]);
+      const alpha = parts.filter(p => /[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/.test(p));
+      const mostlyCaps = alpha.length > 0 && alpha.every(p => {
+        const letters = p.replace(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/g, "");
+        return !letters || letters === letters.toUpperCase();
+      });
+      if (mostlyCaps) {
+        const lead = new Set([...SURNAME_BRIDGES, ...SURNAME_ARTICLES]);
+        let j = 0;
+        while (j < parts.length && lead.has(foldToken(parts[j]))) j += 1;
+        const apellido1 = parts[j] || parts[0];
+        let { i, yBoth } = skipApellido(parts, 0);
+        if (!yBoth) ({ i } = skipApellido(parts, i));
+        const nombre1 = parts[i] || parts[parts.length - 1];
+        return titleCaseName(`${nombre1} ${apellido1}`);
+      }
+      return titleCaseName(parts.slice(0, 2).join(" "));
+    }
+    function sizeByN(n, minR, maxR, maxN) {
+      if (!maxN) return minR;
+      return minR + (maxR - minR) * Math.sqrt(n / maxN);
+    }
+    function entList(arr) {
+      if (!arr || !arr.length) return "-";
+      return arr.map(e => `${e.name} (${e.n})`).join("; ");
+    }
+
+    async function main() {
+      const boot = document.getElementById("boot");
+      if (typeof ForceGraph !== "function") {
+        boot.textContent = "No cargó ForceGraph. Sirve esta carpeta por HTTP.";
+        return;
+      }
+      let data;
+      try {
+        async function loadGraph() {
+          // Preferir .gz (deploy) y caer a .json (local)
+          const tryUrls = ["./graph.json.gz", "./graph.json"];
+          let lastErr = null;
+          for (const url of tryUrls) {
+            try {
+              const res = await fetch(url, { cache: "no-store" });
+              if (!res.ok) throw new Error(res.status + " " + res.statusText);
+              if (url.endsWith(".gz")) {
+                if (typeof DecompressionStream !== "function") {
+                  throw new Error("Este navegador no soporta DecompressionStream");
+                }
+                const stream = res.body.pipeThrough(new DecompressionStream("gzip"));
+                const text = await new Response(stream).text();
+                return JSON.parse(text);
+              }
+              return await res.json();
+            } catch (err) {
+              lastErr = err;
+            }
+          }
+          throw lastErr || new Error("sin datos");
+        }
+        data = await loadGraph();
+      } catch (e) {
+        boot.innerHTML = "Falta <code>graph.json</code>. Corre <code>./run_all.sh</code>.<br/><small>" + esc(e.message) + "</small>";
+        return;
+      }
+
+      boot.hidden = true;
+      document.getElementById("app").hidden = false;
+
+      const center = data.meta.center;
+      const visitorsAll = data.visitors || [];
+      const people = data.people || {};
+      const egos = data.egos || {};
+      // Recalcula nombres cortos (p.ej. HERZ GARFIAS DE VEGA ANA ROSA → Ana Herz)
+      for (const p of Object.values(people)) {
+        if (p && p.label) p.label_ordered = shortPersonName(p.label);
+      }
+      for (const e of Object.values(egos)) {
+        if (!e) continue;
+        if (e.label) e.label_ordered = shortPersonName(e.label);
+        for (const side of ["as_host", "as_visitor"]) {
+          for (const x of e[side] || []) {
+            if (x && x.label) x.label_ordered = shortPersonName(x.label);
+          }
+        }
+      }
+      for (const v of visitorsAll) {
+        if (v && v.label) v.label_ordered = shortPersonName(v.label);
+      }
+      const searchIndex = data.search_index || Object.values(people);
+      for (const p of searchIndex) {
+        if (p && p.label) p.label_ordered = shortPersonName(p.label);
+      }
+      const maxN = Math.max(...visitorsAll.map(v => v.n), 1);
+
+      const TOP_INIT = 10;   // anfitrión: top 10 al inicio
+      const TOP_STEP = 5;    // paso del pager superior
+      const BOT_PAGE = 5;    // máx. inicial / paso por columna de flujo
+      let visibleLimit = TOP_INIT;
+      let botLimits = { left: BOT_PAGE, mid: BOT_PAGE, right: BOT_PAGE };
+      let botPools = { left: [], mid: [], right: [] };
+      let botEgoId = null;
+      let topEgoId = center.id; // referencia superior (arranca en Keiko)
+      let topHostsAll = [];
+      let selectedId = null;
+      let suggestFocus = -1;
+
+      function clearVisitsHint() {
+        document.getElementById("list-title").textContent = "Registros de visitas";
+        document.getElementById("visit-list").innerHTML =
+          "<p class='muted'>Clic en una <strong>línea</strong> del panel inferior para ver los registros de ese vínculo.</p>";
+      }
+
+      function visitsToTopEgo(pid) {
+        if (!pid || pid === topEgoId) return 0;
+        if (topEgoId === center.id) {
+          return people[pid]?.n_to_center ?? 0;
+        }
+        const asHost = (egos[topEgoId]?.as_host || []).find(x => x.id === pid);
+        if (asHost) return asHost.n || 0;
+        const asVis = (egos[pid]?.as_visitor || []).find(x => x.id === topEgoId);
+        return asVis ? (asVis.n || 0) : 0;
+      }
+
+      function formatEntBlock(role, arr) {
+        if (!arr || !arr.length) return "";
+        const lines = arr
+          .slice()
+          .sort((a, b) => (b.n || 0) - (a.n || 0))
+          .slice(0, 4)
+          .map(e => `${esc(e.name)} <em>(${esc(e.n)})</em>`)
+          .join("<br/>");
+        const more = arr.length > 4 ? `<br/><span class="muted">+${arr.length - 4} más</span>` : "";
+        return `<div class="stat stat-ent"><div class="ent-role">${esc(role)}</div><div class="ent-list">${lines}${more}</div></div>`;
+      }
+
+      function oficinaLabel(v) {
+        const ent = String(v.nombre_entidad || v.slug || "").trim();
+        const lug = String(v.lugar || "").trim();
+        if (ent && lug) return `${ent} · ${lug}`;
+        return ent || lug || "";
+      }
+
+      function countLugares(pid, side) {
+        // side: "as_host" | "as_visitor" - entidad + oficina/lugar
+        const counts = new Map();
+        for (const edge of (egos[pid] && egos[pid][side]) || []) {
+          for (const v of edge.visits || []) {
+            const L = oficinaLabel(v);
+            if (!L) continue;
+            counts.set(L, (counts.get(L) || 0) + 1);
+          }
+        }
+        return [...counts.entries()]
+          .map(([name, n]) => ({ name, n }))
+          .sort((a, b) => b.n - a.n);
+      }
+
+      function updateSideStats() {
+        const ego = topEgoMeta();
+        const p = people[topEgoId] || {};
+        const nVisitors = topHostsAll.length;
+        const nVisits = topHostsAll.reduce((s, v) => s + (v.n || 0), 0);
+        const rows = [
+          ["Anfitrión", ego.short],
+          ["Visitantes", nVisitors],
+          ["Visitas recibidas", nVisits],
+        ].map(([k, v]) => `<div class="stat"><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join("");
+        const ents =
+          formatEntBlock("Entidad como anfitrión", p.entities_as_host) +
+          formatEntBlock("Entidad como visitante", p.entities_as_visitor) +
+          formatEntBlock("Oficina o lugar (como anfitrión)", countLugares(topEgoId, "as_host")) +
+          formatEntBlock("Oficina o lugar (como visitante)", countLugares(topEgoId, "as_visitor"));
+        const footer = `<div class="stat"><span>Personas en universo</span><b>${esc(data.summary.n_people)}</b></div>`;
+        document.getElementById("stats").innerHTML = rows + ents + footer;
+      }
+
+      function renderProfile(pid) {
+        const box = document.getElementById("profile");
+        const p = people[pid];
+        if (!p) {
+          box.hidden = true;
+          box.innerHTML = "";
+          return;
+        }
+        box.hidden = false;
+        const dni = p.dni || (p.dnis && p.dnis[0]) || "-";
+        const hostShort = topEgoMeta().short;
+        const nToHost = visitsToTopEgo(pid);
+        const lugHost = countLugares(pid, "as_host");
+        const lugVis = countLugares(pid, "as_visitor");
+        box.innerHTML = `
+          <p class="ord">${esc(p.label_ordered || shortPersonName(p.label))}</p>
+          <p class="raw">Original: ${esc(p.label_raw || p.label)}</p>
+          <div class="grid">
+            <span>DNI</span><b>${esc(dni)}</b>
+            <span>Visitas hechas</span><b>${esc(p.n_made ?? 0)}</b>
+            <span>Visitas recibidas</span><b>${esc(p.n_received ?? 0)}</b>
+            <span>A ${esc(hostShort)}</span><b>${esc(nToHost)}</b>
+          </div>
+          <div class="block"><div class="k">Como visitante (entidad)</div>${esc(entList(p.entities_as_visitor))}</div>
+          <div class="block"><div class="k">Como anfitrión (entidad / sede)</div>${esc(entList(p.entities_as_host))}</div>
+          ${lugHost.length ? `<div class="block"><div class="k">Oficina o lugar (como anfitrión)</div>${esc(entList(lugHost))}</div>` : ""}
+          ${lugVis.length ? `<div class="block"><div class="k">Oficina o lugar (como visitante)</div>${esc(entList(lugVis))}</div>` : ""}`;
+      }
+
+      function renderVisits(visits, title) {
+        const box = document.getElementById("visit-list");
+        document.getElementById("list-title").textContent = title || "Registros de visitas";
+        if (!visits || !visits.length) {
+          box.innerHTML = "<p class='muted'>Sin registros en este vínculo.</p>";
+          return;
+        }
+        box.innerHTML = visits.map((v, i) => {
+          const when = `${esc(fmtFecha(v.fecha, v.fecha_raw))} · ${esc(v.hora_in || "?")}${v.hora_out ? "–" + esc(v.hora_out) : ""}`;
+          const whoShort = `${esc(shortPersonName(v.visitor_name))} → ${esc(shortPersonName(v.host_name))}`;
+          const oficina = oficinaLabel(v) || "-";
+          return `<article class="visit" data-i="${i}">
+            <button type="button" class="visit-sum" aria-expanded="false">
+              <span class="chev">▶</span>
+              <span>
+                <div class="visit-title">${when}</div>
+                <div class="visit-sub">${whoShort}</div>
+                <div class="visit-sub">Oficina o lugar: ${esc(oficina)}</div>
+                <div class="visit-sub">${esc(v.motivo || "")}</div>
+              </span>
+            </button>
+            <dl class="visit-detail">
+              <dt>Visitante (completo)</dt><dd>${esc(v.visitor_name || "-")}</dd>
+              <dt>Anfitrión (completo)</dt><dd>${esc(v.host_name || "-")}</dd>
+              <dt>Documento</dt><dd>${esc(v.documento || v.visitor_dni || "-")}</dd>
+              <dt>Oficina o lugar</dt><dd>${esc(oficina)}</dd>
+              <dt>Entidad del visitante</dt><dd>${esc(v.entidad_visitante || "-")}</dd>
+              <dt>Motivo</dt><dd>${esc(v.motivo || "-")}</dd>
+              <dt>Observación</dt><dd>${esc(v.observacion || "-")}</dd>
+            </dl>
+          </article>`;
+        }).join("");
+        box.querySelectorAll(".visit-sum").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const art = btn.closest(".visit");
+            const open = art.classList.toggle("open");
+            btn.setAttribute("aria-expanded", open ? "true" : "false");
+          });
+        });
+      }
+
+      function queryPeople(q) {
+        const raw = String(q || "").trim();
+        if (raw.length < 2) return [];
+        const f = foldToken(raw).replace(/\s+/g, " ");
+        const digits = raw.replace(/\D/g, "");
+        const scored = [];
+        for (const p of searchIndex) {
+          const hay = p.search || foldToken(`${p.label} ${p.label_ordered} ${p.dni || ""}`);
+          let score = 0;
+          if (digits.length >= 4 && (p.dni || "").includes(digits)) score += 100;
+          if (hay.includes(f)) score += 40;
+          const tokens = f.split(" ").filter(Boolean);
+          if (tokens.length && tokens.every(t => hay.includes(t))) score += 20;
+          if (!score) continue;
+          score += Math.min(15, (p.n_made || 0) + (p.n_received || 0)) / 10;
+          scored.push({ p, score });
+        }
+        scored.sort((a, b) => b.score - a.score || (b.p.n_made + b.p.n_received) - (a.p.n_made + a.p.n_received));
+        return scored.slice(0, 12).map(x => x.p);
+      }
+
+      function bindSuggest(input, box, onPick, { defaults } = {}) {
+        let items = [];
+        function resolveList(q) {
+          const raw = String(q || "").trim();
+          if (!raw && typeof defaults === "function") return defaults();
+          return queryPeople(raw);
+        }
+        function paint(list) {
+          items = list;
+          suggestFocus = -1;
+          if (!list.length) { box.hidden = true; box.innerHTML = ""; return; }
+          box.hidden = false;
+          box.innerHTML = list.map((p, i) => `
+            <button type="button" data-i="${i}" class="${i === suggestFocus ? "active" : ""}">
+              <div class="ord">${esc(p.label_ordered || shortPersonName(p.label))}</div>
+              <div class="raw">${esc(p.label)}${p.dni ? " · DNI " + esc(p.dni) : ""}</div>
+              <div class="meta">hechas ${esc(p.n_made || 0)} · recibidas ${esc(p.n_received || 0)}</div>
+            </button>`).join("");
+          box.querySelectorAll("button").forEach(btn => {
+            btn.addEventListener("mousedown", e => {
+              e.preventDefault();
+              onPick(items[Number(btn.dataset.i)]);
+              box.hidden = true;
+              input.value = "";
+            });
+          });
+        }
+        input.addEventListener("input", () => paint(resolveList(input.value)));
+        input.addEventListener("focus", () => paint(resolveList(input.value)));
+        input.addEventListener("click", () => {
+          if (box.hidden) paint(resolveList(input.value));
+        });
+        input.addEventListener("keydown", e => {
+          if (box.hidden || !items.length) return;
+          if (e.key === "ArrowDown") { e.preventDefault(); suggestFocus = Math.min(items.length - 1, suggestFocus + 1); paint(items); }
+          if (e.key === "ArrowUp") { e.preventDefault(); suggestFocus = Math.max(0, suggestFocus - 1); paint(items); }
+          if (e.key === "Enter" && suggestFocus >= 0) {
+            e.preventDefault();
+            onPick(items[suggestFocus]);
+            box.hidden = true;
+            input.value = "";
+          }
+          if (e.key === "Escape") box.hidden = true;
+        });
+        input.addEventListener("blur", () => setTimeout(() => { box.hidden = true; }, 150));
+      }
+
+      // --- TOP (Keiko anfitrión: mismo esquema que abajo, solo columna izquierda) ---
+      const topEl = document.getElementById("graph-top");
+      const Top = ForceGraph()(topEl)
+        .backgroundColor("rgba(0,0,0,0)")
+        .nodeId("id")
+        .enableNodeDrag(false)
+        .autoPauseRedraw(false)
+        .linkDirectionalArrowLength(11)
+        .linkDirectionalArrowRelPos(0.92)
+        .linkCurvature(l => l.curv || 0)
+        .linkColor(() => "#2dd4bf")
+        .linkWidth(7)
+        .linkDirectionalParticles(4)
+        .linkDirectionalParticleWidth(5)
+        .linkDirectionalParticleSpeed(0.0045)
+        .linkDirectionalParticleColor(() => "#f0fdfa")
+        .onNodeClick(n => { if (!n.pad) selectPerson(n.id); })
+        .nodeCanvasObject((node, ctx, globalScale) => {
+          if (node.pad) return;
+          const r = node.r || 6;
+          const isFocus = node.isCenter || node.id === selectedId;
+          if (node.isCenter) {
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, r + 5 / globalScale, 0, 2 * Math.PI);
+            ctx.fillStyle = "rgba(225, 29, 72, 0.18)";
+            ctx.fill();
+          }
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, r, 0, 2 * Math.PI);
+          ctx.fillStyle = isFocus ? (center.color || "#e11d48") : node.color;
+          ctx.fill();
+          if (isFocus) {
+            ctx.lineWidth = (node.isCenter ? 2.8 : 2.4) / globalScale;
+            ctx.strokeStyle = "#f8fafc";
+            ctx.stroke();
+          }
+          if (node.isCenter) {
+            const nameSize = 20 / globalScale;
+            ctx.textAlign = "center";
+            ctx.textBaseline = "top";
+            ctx.font = `600 ${nameSize}px Fraunces, Georgia, serif`;
+            ctx.fillStyle = "#f8fafc";
+            ctx.fillText(node.short, node.x, node.y + r + 6 / globalScale);
+            return;
+          }
+          const nameSize = 15 / globalScale;
+          const gap = r + 10 / globalScale;
+          const label = `${node.short} (${node.n} visita${node.n === 1 ? "" : "s"})`;
+          ctx.textAlign = "right";
+          ctx.textBaseline = "middle";
+          ctx.font = `600 ${nameSize}px Sans-Serif`;
+          ctx.fillStyle = isFocus ? "#fecdd3" : "#e2e8f0";
+          ctx.fillText(label, node.x - gap, node.y);
+          node.__labelW = ctx.measureText(label).width;
+          node.__labelGap = gap;
+        })
+        .nodePointerAreaPaint((node, color, ctx) => {
+          if (node.pad) return;
+          const r = (node.r || 6) + 4;
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, r, 0, 2 * Math.PI);
+          ctx.fillStyle = color;
+          ctx.fill();
+          if (node.col === "left") {
+            const lw = node.__labelW || 200;
+            const gap = node.__labelGap || 16;
+            const hh = 22;
+            ctx.fillRect(node.x - gap - lw - 4, node.y - hh / 2, lw + gap + 4, hh);
+          }
+        });
+
+      function topEgoMeta() {
+        if (topEgoId === center.id) {
+          return {
+            id: center.id,
+            label: center.label,
+            short: center.short || shortPersonName(center.label),
+            color: center.color || "#e11d48",
+          };
+        }
+        const p = people[topEgoId] || egos[topEgoId] || {};
+        return {
+          id: topEgoId,
+          label: p.label || topEgoId,
+          short: p.label_ordered || shortPersonName(p.label || topEgoId),
+          color: "#e11d48",
+        };
+      }
+
+      function loadTopHosts() {
+        if (topEgoId === center.id && visitorsAll.length) {
+          topHostsAll = [...visitorsAll].sort((a, b) => b.n - a.n);
+          return;
+        }
+        const ego = egos[topEgoId];
+        const hosts = (ego && ego.as_host) ? ego.as_host : [];
+        topHostsAll = [...hosts].sort((a, b) => b.n - a.n);
+      }
+
+      // Zoom medido tras alejamiento manual preferido del usuario (k ≈ 0.829).
+      // Nodos anclados en (fx,fy) alrededor del origen → centerAt(0,0) + zoom fijo.
+      const TOP_ZOOM_K = 0.829;
+      function fitTop(ms = 280) {
+        Top.centerAt(0, 0, 0);
+        Top.zoom(TOP_ZOOM_K, ms);
+      }
+
+      function setTopEgo(pid, { resetLimit, resetBottom } = { resetLimit: true }) {
+        if (!people[pid] && !egos[pid] && pid !== center.id) return;
+        topEgoId = pid;
+        if (resetLimit) visibleLimit = TOP_INIT;
+        loadTopHosts();
+        updateSideStats();
+        if (resetBottom) {
+          resetBottomToHostHint();
+        } else if (selectedId) {
+          renderProfile(selectedId);
+        }
+        paintTop();
+        // repinta abajo para que el rojo siga al anfitrión actual
+        if (!resetBottom && botEgoId) showBottom(botEgoId, { resetLimit: false });
+        Top.width(topEl.clientWidth).height(topEl.clientHeight);
+        setTimeout(() => fitTop(280), 40);
+      }
+
+      function updateTopPager() {
+        const total = topHostsAll.length;
+        const shown = Math.min(visibleLimit, total);
+        const el = document.getElementById("top-pager");
+        el.querySelector("#top-pager-total").textContent = `${shown}/${total}`;
+        el.querySelector("#top-pager-total").title = `mostrando ${shown} de ${total} visitantes`;
+        el.querySelector('[data-act="more"]').disabled = shown >= total;
+        el.querySelector('[data-act="less"]').disabled = visibleLimit <= TOP_INIT;
+        el.querySelector('[data-act="reset"]').disabled = visibleLimit <= TOP_INIT;
+      }
+
+      function paintTop() {
+        // anfitrión activo: izquierda = quienes lo visitaron · centro = persona
+        if (!topHostsAll.length && topEgoId) loadTopHosts();
+        const ego = topEgoMeta();
+        const list = topHostsAll.slice(0, visibleLimit);
+        document.getElementById("top-label").textContent =
+          `Anfitrión · ${ego.short}`;
+        const localMax = Math.max(...list.map(v => v.n), 1);
+        const localMin = Math.min(...list.map(v => v.n), localMax);
+        // coordenadas ~ al tamaño del canvas: zoomToFit con poco padding llena el pane
+        const w = Math.max(topEl.clientWidth, 320);
+        const h = Math.max(topEl.clientHeight, 200);
+        const labelRoom = Math.min(260, w * 0.40); // nombres a la izquierda
+        const padT = 22, padB = 10, padR = 28;
+        const COL_X = {
+          left: -w / 2 + labelRoom,
+          mid: w / 2 - padR - 20,
+        };
+        const spanH = Math.max(120, h - padT - padB);
+        const ROW = spanH / Math.max(list.length, 1);
+        function stackY(n) {
+          if (n <= 0) return [];
+          const total = (n - 1) * ROW;
+          return Array.from({ length: n }, (_, i) => -total / 2 + i * ROW);
+        }
+        const leftYs = stackY(list.length);
+        function rByVisits(n) {
+          const minR = 7, maxR = 16;
+          if (localMax <= localMin) return (minR + maxR) / 2;
+          return minR + (maxR - minR) * ((n - localMin) / (localMax - localMin));
+        }
+        const yTop = list.length ? leftYs[0] : -spanH / 2;
+        const yBot = list.length ? leftYs[leftYs.length - 1] : spanH / 2;
+        const nodes = [
+          {
+            id: ego.id, label: ego.label,
+            short: ego.short,
+            isCenter: true, col: "mid", color: ego.color, r: 22,
+            fx: COL_X.mid, fy: 0,
+          },
+          ...list.map((v, i) => ({
+            id: v.id, label: v.label,
+            short: v.label_ordered || shortPersonName(v.label),
+            n: v.n, col: "left",
+            color: v.id === selectedId ? (center.color || "#e11d48") : "#2dd4bf",
+            r: rByVisits(v.n),
+            fx: COL_X.left, fy: leftYs[i],
+          })),
+          // anclas invisibles: zoomToFit aprovecha todo el pane (incl. nombres)
+          { id: "__pad_l", pad: true, r: 1, fx: -w / 2 + 8, fy: 0 },
+          { id: "__pad_r", pad: true, r: 1, fx: w / 2 - 8, fy: 0 },
+          { id: "__pad_t", pad: true, r: 1, fx: 0, fy: yTop - ROW * 0.15 },
+          { id: "__pad_b", pad: true, r: 1, fx: 0, fy: yBot + ROW * 0.15 },
+        ];
+        const links = list.map((v, i) => {
+          const mid = (list.length - 1) / 2;
+          const curv = list.length <= 1 ? 0 : ((i - mid) / Math.max(mid, 1)) * 0.04;
+          return {
+            source: v.id, target: ego.id, n: v.n, kind: "in",
+            curv,
+          };
+        });
+        Top.graphData({ nodes, links });
+        updateTopPager();
+        document.getElementById("status").textContent =
+          `Anfitrión · ${ego.short}: ${list.length}/${topHostsAll.length}` +
+          (selectedId ? " · persona activa abajo" : "");
+      }
+
+      // --- BOTTOM ---
+      const botEl = document.getElementById("graph-bot");
+      const emptyBot = document.getElementById("empty-bottom");
+      const Bot = ForceGraph()(botEl)
+        .backgroundColor("rgba(0,0,0,0)")
+        .nodeId("id")
+        .autoPauseRedraw(false)
+        .linkDirectionalArrowLength(l => l.kind === "both" ? 0 : 11)
+        .linkDirectionalArrowRelPos(0.92)
+        .linkCurvature(l => l.curv || 0)
+        .linkColor(l => l.kind === "both" ? "rgba(0,0,0,0)" : (l.kind === "out" ? "#fbbf24" : "#2dd4bf"))
+        // grosor fijo: el número en la etiqueta ya comunica el volumen
+        .linkWidth(l => l.kind === "both" ? 0.1 : 8)
+        .linkDirectionalParticles(l => l.kind === "both" ? 0 : 5)
+        .linkDirectionalParticleWidth(5.5)
+        .linkDirectionalParticleSpeed(0.0045)
+        .linkDirectionalParticleColor(l => l.kind === "out" ? "#fffbeb" : "#f0fdfa")
+        .linkCanvasObjectMode(l => l.kind === "both" ? "replace" : "after")
+        .linkCanvasObject((link, ctx, globalScale) => {
+          const start = link.source, end = link.target;
+          if (!start || !end || start.x == null || end.x == null) return;
+          const x1 = start.x, y1 = start.y, x2 = end.x, y2 = end.y;
+          let cpx, cpy;
+          const cp = link.__controlPoints;
+          if (cp && cp.length >= 2) {
+            cpx = cp[0]; cpy = cp[1];
+          } else {
+            const dx = x2 - x1, dy = y2 - y1;
+            const len = Math.sqrt(dx * dx + dy * dy) || 1;
+            const curv = link.curv || 0;
+            const a = Math.atan2(dy, dx);
+            const u = len * curv;
+            cpx = (x1 + x2) / 2 + u * Math.cos(a - Math.PI / 2);
+            cpy = (y1 + y2) / 2 + u * Math.sin(a - Math.PI / 2);
+          }
+
+          function quadPoint(t) {
+            const mt = 1 - t;
+            return {
+              x: mt * mt * x1 + 2 * mt * t * cpx + t * t * x2,
+              y: mt * mt * y1 + 2 * mt * t * cpy + t * t * y2,
+            };
+          }
+          function quadTangent(t) {
+            const mt = 1 - t;
+            return {
+              x: 2 * mt * (cpx - x1) + 2 * t * (x2 - cpx),
+              y: 2 * mt * (cpy - y1) + 2 * t * (y2 - cpy),
+            };
+          }
+
+          if (link.kind === "both") {
+            // cinta bicolor fija: izquierda anfitrión (teal) | derecha visitante (ámbar)
+            const steps = 28;
+            const half = 3.2 / globalScale;
+            const ptsA = [], ptsB = [];
+            for (let i = 0; i <= steps; i++) {
+              const t = i / steps;
+              const p = quadPoint(t);
+              const tg = quadTangent(t);
+              const tl = Math.sqrt(tg.x * tg.x + tg.y * tg.y) || 1;
+              const nx = -tg.y / tl, ny = tg.x / tl;
+              ptsA.push({ x: p.x + nx * half, y: p.y + ny * half });
+              ptsB.push({ x: p.x - nx * half, y: p.y - ny * half });
+            }
+            const mid = Math.floor(ptsA.length / 2);
+            const leftPts = ptsA[mid].x <= ptsB[mid].x ? ptsA : ptsB;
+            const rightPts = leftPts === ptsA ? ptsB : ptsA;
+            ctx.save();
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.lineWidth = Math.max(2.4, 3.2 / globalScale);
+            ctx.strokeStyle = "#2dd4bf";
+            ctx.beginPath();
+            leftPts.forEach((p, i) => i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y));
+            ctx.stroke();
+            ctx.strokeStyle = "#fbbf24";
+            ctx.beginPath();
+            rightPts.forEach((p, i) => i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y));
+            ctx.stroke();
+
+            // partículas propias por cinta (el motor nativo no dibuja en mode replace)
+            function pathMeta(pts) {
+              const seg = [0];
+              let len = 0;
+              for (let i = 1; i < pts.length; i++) {
+                len += Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y);
+                seg.push(len);
+              }
+              return { pts, seg, len };
+            }
+            function pointOn(meta, u) {
+              const d = ((u % 1) + 1) % 1 * meta.len;
+              const { pts, seg } = meta;
+              for (let i = 1; i < pts.length; i++) {
+                if (seg[i] >= d) {
+                  const span = seg[i] - seg[i - 1] || 1;
+                  const t = (d - seg[i - 1]) / span;
+                  return {
+                    x: pts[i - 1].x + (pts[i].x - pts[i - 1].x) * t,
+                    y: pts[i - 1].y + (pts[i].y - pts[i - 1].y) * t,
+                  };
+                }
+              }
+              return pts[pts.length - 1];
+            }
+            function drawFlowDots(pts, fill, glow, count, phase, reverse) {
+              const meta = pathMeta(pts);
+              if (meta.len < 1) return;
+              const t0 = performance.now() * 0.000275 + phase;
+              const r = 3.2 / globalScale;
+              for (let i = 0; i < count; i++) {
+                let u = (t0 + i / count) % 1;
+                if (reverse) u = 1 - u;
+                const p = pointOn(meta, u);
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, r * 1.8, 0, Math.PI * 2);
+                ctx.fillStyle = glow;
+                ctx.fill();
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+                ctx.fillStyle = fill;
+                ctx.fill();
+              }
+            }
+            // anfitrión (verde): hacia el ego · visitante (ámbar): hacia el otro
+            drawFlowDots(leftPts, "#f0fdfa", "rgba(45,212,191,0.35)", 4, 0.0, true);
+            drawFlowDots(rightPts, "#fffbeb", "rgba(251,191,36,0.35)", 4, 0.37, false);
+
+            // flechas: izquierda teal, derecha ámbar
+            const tip = quadPoint(0.92);
+            const tg = quadTangent(0.92);
+            const ang = Math.atan2(tg.y, tg.x);
+            const ah = 7 / globalScale;
+            const side = 4 / globalScale;
+            const pL = {
+              x: tip.x + Math.cos(ang + Math.PI / 2) * side,
+              y: tip.y + Math.sin(ang + Math.PI / 2) * side,
+            };
+            const pR = {
+              x: tip.x + Math.cos(ang - Math.PI / 2) * side,
+              y: tip.y + Math.sin(ang - Math.PI / 2) * side,
+            };
+            const leftTip = pL.x <= pR.x ? pL : pR;
+            const rightTip = leftTip === pL ? pR : pL;
+            [[leftTip, "#2dd4bf"], [rightTip, "#fbbf24"]].forEach(([pt, col]) => {
+              ctx.fillStyle = col;
+              ctx.beginPath();
+              ctx.moveTo(pt.x, pt.y);
+              ctx.lineTo(pt.x - Math.cos(ang - 0.4) * ah, pt.y - Math.sin(ang - 0.4) * ah);
+              ctx.lineTo(pt.x - Math.cos(ang + 0.4) * ah, pt.y - Math.sin(ang + 0.4) * ah);
+              ctx.closePath();
+              ctx.fill();
+            });
+            ctx.restore();
+            return;
+          }
+
+          // etiqueta fuera, pegada al nodo periférico, siguiendo la curva
+          const label = link.kind === "out" ? `visitante · ${link.n}` : `anfitrión · ${link.n}`;
+          const fontSize = 11 / globalScale;
+          ctx.save();
+          ctx.font = `700 ${fontSize}px Sans-Serif`;
+          ctx.fillStyle = link.kind === "out" ? "#fbbf24" : "#2dd4bf";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+
+          // cerca del nodo con más aire (izq → source; der → target)
+          const tCenter = link.kind === "in" ? 0.22 : 0.78;
+          const chars = [...label];
+          const widths = chars.map(ch => ctx.measureText(ch).width);
+          const totalW = widths.reduce((a, b) => a + b, 0);
+          // longitud aprox. de la curva para mapear caracteres a t
+          const samples = 24;
+          const pts = [];
+          let pathLen = 0;
+          for (let i = 0; i <= samples; i++) {
+            const tt = i / samples;
+            const p = quadPoint(tt);
+            if (pts.length) {
+              const prev = pts[pts.length - 1];
+              pathLen += Math.hypot(p.x - prev.x, p.y - prev.y);
+            }
+            pts.push({ ...p, tt, dist: pathLen });
+          }
+          const midDist = pathLen * tCenter;
+          const half = totalW / 2;
+          let cursor = midDist - half;
+
+          // offset exterior (alejado del arco / hacia afuera del ego)
+          const egoNode = link.kind === "in" ? end : start;
+          function pointAtDist(d) {
+            const clamped = Math.max(0, Math.min(pathLen, d));
+            for (let i = 1; i < pts.length; i++) {
+              if (pts[i].dist >= clamped) {
+                const a = pts[i - 1], b = pts[i];
+                const span = b.dist - a.dist || 1;
+                const u = (clamped - a.dist) / span;
+                const x = a.x + (b.x - a.x) * u;
+                const y = a.y + (b.y - a.y) * u;
+                const tt = a.tt + (b.tt - a.tt) * u;
+                const tg = quadTangent(tt);
+                const tl = Math.hypot(tg.x, tg.y) || 1;
+                let nx = -tg.y / tl, ny = tg.x / tl;
+                const awayX = x - egoNode.x, awayY = y - egoNode.y;
+                if (nx * awayX + ny * awayY < 0) { nx = -nx; ny = -ny; }
+                let ang = Math.atan2(tg.y, tg.x);
+                if (ang > Math.PI / 2 || ang < -Math.PI / 2) ang += Math.PI;
+                return { x, y, nx, ny, ang };
+              }
+            }
+            const last = pts[pts.length - 1];
+            return { x: last.x, y: last.y, nx: 0, ny: -1, ang: 0 };
+          }
+
+          const lift = 10 / globalScale;
+          chars.forEach((ch, i) => {
+            const w = widths[i];
+            const pos = pointAtDist(cursor + w / 2);
+            ctx.save();
+            ctx.translate(pos.x + pos.nx * lift, pos.y + pos.ny * lift);
+            ctx.rotate(pos.ang);
+            ctx.fillText(ch, 0, 0);
+            ctx.restore();
+            cursor += w;
+          });
+          ctx.restore();
+        })
+        .onNodeClick(n => {
+          renderProfile(n.id);
+          clearVisitsHint();
+          if (n.id !== selectedId && egos[n.id]) {
+            selectPerson(n.id, { keepVisitsHint: true });
+          }
+        })
+        .onLinkClick(l => {
+          if (l.kind === "both") {
+            renderVisits(
+              l.visits || [],
+              `Ambos roles · ${shortPersonName(l.targetLabel || l.sourceLabel)} (anfitrión ${l.nIn || 0} / visitante ${l.nOut || 0})`
+            );
+            return;
+          }
+          renderVisits(
+            l.visits || [],
+            `${shortPersonName(l.sourceLabel)} → ${shortPersonName(l.targetLabel)}`
+          );
+        })
+        .nodeCanvasObject((node, ctx, globalScale) => {
+          const r = node.r || 7;
+          const focusRed = center.color || "#e11d48";
+          // rojo = ego del flujo, selección, o anfitrión del panel superior
+          const isFocus = node.isEgo || node.id === selectedId || node.id === topEgoId;
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, r, 0, 2 * Math.PI);
+          ctx.fillStyle = isFocus ? focusRed : node.color;
+          ctx.fill();
+          if (isFocus) {
+            ctx.lineWidth = 2.4 / globalScale;
+            ctx.strokeStyle = "#f8fafc";
+            ctx.stroke();
+          }
+          if (node.roleHint === "ambos" && !isFocus) {
+            ctx.lineWidth = 1.6 / globalScale;
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, r + 2.2 / globalScale, -Math.PI / 2, Math.PI / 2);
+            ctx.strokeStyle = "#fbbf24";
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, r + 2.2 / globalScale, Math.PI / 2, 3 * Math.PI / 2);
+            ctx.strokeStyle = "#2dd4bf";
+            ctx.stroke();
+          }
+          const fontSize = (node.isEgo ? 13 : 11) / globalScale;
+          ctx.font = `${node.isEgo ? 600 : 400} ${fontSize}px Sans-Serif`;
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = "#e2e8f0";
+          if (node.col === "left") {
+            ctx.textAlign = "right";
+            ctx.fillText(node.short, node.x - r - 6 / globalScale, node.y);
+          } else if (node.col === "right") {
+            ctx.textAlign = "left";
+            ctx.fillText(node.short, node.x + r + 6 / globalScale, node.y);
+          } else if (node.roleHint === "ambos") {
+            // nombre + debajo roles del ego con esa persona
+            ctx.textAlign = "center";
+            ctx.textBaseline = "top";
+            const nameY = node.y + r + 4 / globalScale;
+            ctx.fillText(node.short, node.x, nameY);
+            const sub = Math.max(8, 9.5 / globalScale);
+            ctx.font = `600 ${sub}px Sans-Serif`;
+            const line1 = `anfitrión ${node.nIn ?? 0}`;
+            const line2 = `visitante ${node.nOut ?? 0}`;
+            ctx.fillStyle = "#5eead4";
+            ctx.fillText(line1, node.x, nameY + fontSize + 2 / globalScale);
+            ctx.fillStyle = "#fbbf24";
+            ctx.fillText(line2, node.x, nameY + fontSize + sub + 4 / globalScale);
+          } else {
+            ctx.textAlign = "center";
+            ctx.textBaseline = "top";
+            ctx.fillText(node.short, node.x, node.y + r + 3 / globalScale);
+          }
+        })
+        .nodePointerAreaPaint((node, color, ctx) => {
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, (node.r || 7) + 3, 0, 2 * Math.PI);
+          ctx.fillStyle = color;
+          ctx.fill();
+        });
+
+      function resetBottomToHostHint() {
+        selectedId = null;
+        botEgoId = null;
+        botPools = { left: [], mid: [], right: [] };
+        botLimits = { left: BOT_PAGE, mid: BOT_PAGE, right: BOT_PAGE };
+        const ego = topEgoMeta();
+        emptyBot.classList.remove("hide");
+        emptyBot.innerHTML =
+          `Haz clic arriba en cualquier nombre de las personas que visitaron a <span class="host-name">${esc(ego.short)}</span>.`;
+        document.getElementById("flow-legend").hidden = true;
+        document.getElementById("sankey-heads").hidden = true;
+        document.getElementById("bot-label").textContent = "Flujo de la persona";
+        Bot.graphData({ nodes: [], links: [] });
+        Bot.width(botEl.clientWidth).height(botEl.clientHeight);
+        document.getElementById("profile").hidden = true;
+        document.getElementById("profile").innerHTML = "";
+        clearVisitsHint();
+      }
+
+      function updateSectionPagers() {
+        const wrap = document.getElementById("sankey-heads");
+        if (!botEgoId) {
+          wrap.hidden = true;
+          return;
+        }
+        wrap.hidden = false;
+        const map = [
+          ["left", "pager-left"],
+          ["mid", "pager-mid"],
+          ["right", "pager-right"],
+        ];
+        map.forEach(([key, id]) => {
+          const el = document.getElementById(id);
+          const pool = botPools[key] || [];
+          const total = pool.length;
+          if (!total) {
+            el.hidden = true;
+            return;
+          }
+          el.hidden = false;
+          const shown = Math.min(botLimits[key], total);
+          el.querySelector("[data-total]").textContent = `${shown}/${total}`;
+          el.querySelector("[data-total]").title = `mostrando ${shown} de ${total} personas`;
+          el.querySelector('[data-act="more"]').disabled = shown >= total;
+          el.querySelector('[data-act="less"]').disabled = botLimits[key] <= BOT_PAGE;
+          el.querySelector('[data-act="reset"]').disabled = botLimits[key] <= BOT_PAGE;
+        });
+      }
+
+      function updateSectionHeads(hasL, hasB, hasR) {
+        document.getElementById("leg-left").hidden = !hasL;
+        document.getElementById("leg-mid").hidden = !hasB;
+        document.getElementById("leg-right").hidden = !hasR;
+      }
+
+      function showBottom(pid, { resetLimit } = { resetLimit: true }) {
+        const ego = egos[pid];
+        if (!ego) {
+          emptyBot.classList.remove("hide");
+          document.getElementById("flow-legend").hidden = true;
+          document.getElementById("sankey-heads").hidden = true;
+          botEgoId = null;
+          botPools = { left: [], mid: [], right: [] };
+          Bot.graphData({ nodes: [], links: [] });
+          return;
+        }
+        if (resetLimit || botEgoId !== pid) {
+          botLimits = { left: BOT_PAGE, mid: BOT_PAGE, right: BOT_PAGE };
+          botEgoId = pid;
+        }
+        emptyBot.classList.add("hide");
+        document.getElementById("flow-legend").hidden = false;
+        document.getElementById("bot-label").textContent = `Flujo · ${ego.label_ordered || shortPersonName(ego.label)}`;
+
+        const outs = ego.as_visitor || [];
+        const inns = ego.as_host || [];
+        const neigh = new Map();
+        outs.forEach(x => neigh.set(x.id, { ...x, hasOut: true, nOut: x.n, n: x.n }));
+        inns.forEach(x => {
+          const prev = neigh.get(x.id) || { id: x.id, label: x.label, n: 0 };
+          prev.hasIn = true;
+          prev.nIn = x.n;
+          prev.n = Math.max(prev.n || 0, x.n);
+          prev.label = x.label;
+          prev.label_ordered = x.label_ordered;
+          neigh.set(x.id, prev);
+        });
+        const allSorted = [...neigh.values()].sort((a, b) => b.n - a.n);
+        const bothAll = allSorted.filter(x => x.hasOut && x.hasIn);
+        const leftAll = allSorted.filter(x => x.hasIn && !x.hasOut);
+        const rightAll = allSorted.filter(x => x.hasOut && !x.hasIn);
+        botPools = { left: leftAll, mid: bothAll, right: rightAll };
+
+        const take = (arr, n) => arr.slice(0, Math.max(0, n));
+        const left = take(leftAll, botLimits.left);
+        const right = take(rightAll, botLimits.right);
+        const both = take(bothAll, botLimits.mid);
+
+        const hasL = leftAll.length > 0;
+        const hasR = rightAll.length > 0;
+        const hasB = bothAll.length > 0;
+        updateSectionHeads(hasL, hasB, hasR);
+
+        const maxLink = Math.max(1, ...[...both, ...left, ...right].map(x => x.n), 1);
+
+        // columnas se acomodan a las secciones presentes
+        let COL_X = { left: -280, mid: 0, right: 280 };
+        if (hasL && hasR) {
+          COL_X = { left: -280, mid: 0, right: 280 };
+        } else if (hasL && !hasR) {
+          COL_X = { left: -220, mid: 180, right: 280 };
+        } else if (!hasL && hasR) {
+          COL_X = { left: -280, mid: -180, right: 220 };
+        } else {
+          COL_X = { left: -280, mid: 0, right: 280 };
+        }
+
+        const ROW = 42;
+        const COL_GAP = 108;
+        function stackY(n) {
+          if (n <= 0) return [];
+          const total = (n - 1) * ROW;
+          return Array.from({ length: n }, (_, i) => -total / 2 + i * ROW);
+        }
+        const egoY = both.length ? -55 : 0;
+        const bothY = egoY + 95;
+        const bothXs = (() => {
+          if (!both.length) return [];
+          const total = (both.length - 1) * COL_GAP;
+          return both.map((_, i) => -total / 2 + i * COL_GAP);
+        })();
+        const leftYs = stackY(left.length).map(y => y + egoY * 0.2);
+        const rightYs = stackY(right.length).map(y => y + egoY * 0.2);
+
+        const focusRed = center.color || "#e11d48";
+        const nodes = [
+          {
+            id: ego.id, label: ego.label,
+            short: ego.label_ordered || shortPersonName(ego.label),
+            isEgo: true, col: "mid",
+            color: focusRed,
+            r: 18, fx: COL_X.mid, fy: egoY,
+          },
+          ...left.map((x, i) => ({
+            id: x.id, label: x.label,
+            short: x.label_ordered || shortPersonName(x.label),
+            roleHint: "anfitrion-peer", col: "left",
+            color: x.id === topEgoId ? focusRed : "#2dd4bf",
+            r: sizeByN(x.n, 6, 12, maxLink),
+            fx: COL_X.left, fy: leftYs[i],
+          })),
+          ...right.map((x, i) => ({
+            id: x.id, label: x.label,
+            short: x.label_ordered || shortPersonName(x.label),
+            roleHint: "visitante-peer", col: "right",
+            color: x.id === topEgoId ? focusRed : "#fbbf24",
+            r: sizeByN(x.n, 6, 12, maxLink),
+            fx: COL_X.right, fy: rightYs[i],
+          })),
+          ...both.map((x, i) => {
+            const o = outs.find(v => v.id === x.id);
+            const inn = inns.find(v => v.id === x.id);
+            return {
+              id: x.id, label: x.label,
+              short: x.label_ordered || shortPersonName(x.label),
+              roleHint: "ambos", col: "mid",
+              color: x.id === topEgoId ? focusRed : "#a78bfa",
+              nOut: o ? o.n : 0,
+              nIn: inn ? inn.n : 0,
+              r: sizeByN(x.n, 7, 13, maxLink),
+              fx: bothXs[i], fy: bothY,
+            };
+          }),
+        ];
+
+        function curvLR(y, idx, nCol, egoY0) {
+          const rel = y - egoY0;
+          const spread = (idx - (Math.max(nCol, 1) - 1) / 2) * 0.03;
+          const base = 0.14 + Math.abs(spread);
+          return (rel <= 0 ? base : -base);
+        }
+
+        const links = [];
+        left.forEach((x, i) => {
+          const src = inns.find(v => v.id === x.id);
+          if (!src) return;
+          links.push({
+            source: x.id, target: ego.id, kind: "in", n: src.n, visits: src.visits,
+            sourceLabel: x.label, targetLabel: ego.label,
+            curv: curvLR(leftYs[i], i, left.length, egoY),
+          });
+        });
+        right.forEach((x, i) => {
+          const src = outs.find(v => v.id === x.id);
+          if (!src) return;
+          links.push({
+            source: ego.id, target: x.id, kind: "out", n: src.n, visits: src.visits,
+            sourceLabel: ego.label, targetLabel: x.label,
+            curv: curvLR(rightYs[i], i, right.length, egoY),
+          });
+        });
+        both.forEach((x, i) => {
+          const o = outs.find(v => v.id === x.id);
+          const inn = inns.find(v => v.id === x.id);
+          // cinta bicolor ego → fila (curvatura en abanico L→R)
+          const spread = (i - (both.length - 1) / 2) * 0.06;
+          links.push({
+            source: ego.id,
+            target: x.id,
+            kind: "both",
+            nOut: o ? o.n : 0,
+            nIn: inn ? inn.n : 0,
+            n: (o ? o.n : 0) + (inn ? inn.n : 0),
+            visits: [...(o?.visits || []), ...(inn?.visits || [])],
+            visitsOut: o?.visits || [],
+            visitsIn: inn?.visits || [],
+            sourceLabel: ego.label,
+            targetLabel: x.label,
+            curv: spread,
+          });
+        });
+        Bot.graphData({ nodes, links });
+        updateSectionPagers();
+        // el riel de pagers cambia el ancho: reajustar canvas
+        Bot.width(botEl.clientWidth).height(botEl.clientHeight);
+        setTimeout(() => Bot.zoomToFit(380, 64), 50);
+      }
+
+      function selectPerson(pid, opts = {}) {
+        if (!people[pid] && !egos[pid]) return;
+        selectedId = pid;
+        renderProfile(pid);
+        if (!opts.keepVisitsHint) clearVisitsHint();
+        showBottom(pid, { resetLimit: true });
+        paintTop(); // resalta selección en el panel superior sin cambiar el anfitrión
+      }
+
+      let resizeTimer = null;
+      function resize() {
+        Top.width(topEl.clientWidth).height(topEl.clientHeight);
+        Bot.width(botEl.clientWidth).height(botEl.clientHeight);
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => { paintTop(); fitTop(220); }, 80);
+      }
+      resize();
+      new ResizeObserver(resize).observe(document.getElementById("main"));
+
+      // Al hacer foco/click (vacío): Galarreta, Dyer + 3 ministros con más visitas recibidas
+      const TOP_HOST_DEFAULTS = [
+        "name:galarreta velarde luis fernando", // PCM
+        "dni:10308523", // Luis Dyer (Salud)
+        "dni:41716680", // Marco Vinelli (Midagri)
+        "dni:10224991", // Elmer Cuba (MEF)
+        "dni:29640505", // Mauricio Arnillas
+      ];
+      const hostDefaults = () => TOP_HOST_DEFAULTS.map(id => people[id]).filter(Boolean);
+      function pickAnfitrion(p) {
+        setTopEgo(p.id, { resetLimit: true, resetBottom: true });
+      }
+      bindSuggest(document.getElementById("q-person"), document.getElementById("suggest-side"), pickAnfitrion, {
+        defaults: hostDefaults,
+      });
+      bindSuggest(document.getElementById("q-bot"), document.getElementById("suggest-bot"), p => selectPerson(p.id));
+      bindSuggest(document.getElementById("q-top"), document.getElementById("suggest-top"), pickAnfitrion, {
+        defaults: hostDefaults,
+      });
+
+      document.getElementById("top-pager").addEventListener("click", (ev) => {
+        const btn = ev.target.closest("[data-act]");
+        if (!btn) return;
+        const total = topHostsAll.length;
+        const act = btn.dataset.act;
+        if (act === "more") {
+          visibleLimit = Math.min(total, visibleLimit + TOP_STEP);
+        } else if (act === "less") {
+          visibleLimit = Math.max(TOP_INIT, visibleLimit - TOP_STEP);
+        } else if (act === "reset") {
+          visibleLimit = TOP_INIT;
+        } else {
+          return;
+        }
+        paintTop();
+        Top.width(topEl.clientWidth).height(topEl.clientHeight);
+        setTimeout(() => fitTop(280), 30);
+      });
+      document.getElementById("sankey-heads").addEventListener("click", (ev) => {
+        const btn = ev.target.closest("[data-act]");
+        if (!btn || !botEgoId) return;
+        const sec = btn.closest("[data-sec]")?.dataset.sec;
+        if (!sec || !botPools[sec]) return;
+        const total = botPools[sec].length;
+        const act = btn.dataset.act;
+        if (act === "more") {
+          botLimits[sec] = Math.min(total, botLimits[sec] + BOT_PAGE);
+        } else if (act === "less") {
+          botLimits[sec] = Math.max(BOT_PAGE, botLimits[sec] - BOT_PAGE);
+        } else if (act === "reset") {
+          botLimits[sec] = BOT_PAGE;
+        } else {
+          return;
+        }
+        showBottom(botEgoId, { resetLimit: false });
+        Bot.width(botEl.clientWidth).height(botEl.clientHeight);
+      });
+      document.getElementById("btn-clear").addEventListener("click", () => {
+        document.getElementById("q-top").value = "";
+        setTopEgo(center.id, { resetLimit: true, resetBottom: true });
+      });
+
+      loadTopHosts();
+      updateSideStats();
+      paintTop();
+      resetBottomToHostHint();
+      setTimeout(() => fitTop(360), 80);
+    }
+
+    main();
+  </script>
+</body>
+</html>
