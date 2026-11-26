@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Mapa Starlink Perú en una nota</title>
+		<style>
+			body {
+				margin: 0;
+				background: #fff;
+				color: #181818;
+				font: 18px/1.5 Georgia, 'Times New Roman', serif;
+			}
+
+			article {
+				max-width: 720px;
+				margin: 0 auto;
+				padding: 40px 20px 72px;
+			}
+
+			p {
+				margin: 0 0 1em;
+			}
+
+			.marco {
+				width: min(600px, 100%);
+				height: 750px;
+				margin: 1.4em auto;
+			}
+
+			iframe {
+				display: block;
+				width: 100%;
+				height: 100%;
+				border: 1px solid #d5dee4;
+			}
+		</style>
+	</head>
+	<body>
+		<article>
+			<p>
+				Entre 2023 y 2026 instituciones como el Ministerio Público, Fuerzas Armadas, INPE y otros
+				reportaron encontrar antenas satelitales Starlink durante diversos operativos contra la minería
+				ilegal, narcotráfico o cerca a centros penitenciarios.
+			</p>
+			<div class="marco">
+				<iframe
+					src="/mapa-starlink-peru/"
+					title="Mapa de antenas Starlink y clientes por distrito"
+				></iframe>
+			</div>
+			<p>
+				El recuadro mide 600 px de ancho y 750 px de alto. En una pantalla más angosta ocupa todo el
+				ancho disponible y el mapa se ajusta adentro.
+			</p>
+		</article>
+	</body>
+</html>

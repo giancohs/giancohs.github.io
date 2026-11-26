@@ -1,0 +1,1724 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.0142,
+          -12.8918
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0001",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Madre de Dios",
+        "actividad_asociada": "minería ilegal",
+        "lat": -12.8918,
+        "lon": -70.0142,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0001",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0001",
+            "nota_id": "pnp-797510",
+            "fecha_publicacion": "2023-07-13",
+            "titulo": "MADRE DE DIOS: Incautan bienes destinados a la minería ilegal",
+            "fuente_slug": "pnp",
+            "url": "https://www.gob.pe/institucion/pnp/noticias/797510-madre-de-dios-incautan-bienes-destinados-a-la-mineria-ilegal",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "hecho ocurrido en la carretera Interoceánica, distrito de Inambari, provincia de Tambopata, Madre de Dios.",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Madre de Dios",
+            "actividad_asociada": "minería ilegal",
+            "lat": -12.8918,
+            "lon": -70.0142
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.58784,
+          -12.9214
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0002",
+        "cantidad_estimada": "50",
+        "departamento_detectado": "Madre de Dios",
+        "actividad_asociada": "minería ilegal",
+        "lat": -12.9214,
+        "lon": -70.58784,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0002",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0002",
+            "nota_id": "pnp-817346",
+            "fecha_publicacion": "2023-08-09",
+            "titulo": "Madre de Dios: Incautan bienes destinados a la minería ilegal",
+            "fuente_slug": "pnp",
+            "url": "https://www.gob.pe/institucion/pnp/noticias/817346-madre-de-dios-incautan-bienes-destinados-a-la-mineria-ilegal",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "50",
+            "estimacion_georeferencia": "zona de amortiguamiento de la Reserva Comunal Amarakaeri, comunidad nativa Barranco Chico, distrito de Huepetuhe, provincia del Manu, Madre de Dios.",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Madre de Dios",
+            "actividad_asociada": "minería ilegal",
+            "lat": -12.9214,
+            "lon": -70.58784
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.64707,
+          -12.96821
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0003",
+        "cantidad_estimada": "7",
+        "departamento_detectado": "Madre de Dios",
+        "actividad_asociada": "minería ilegal",
+        "lat": -12.96821,
+        "lon": -70.64707,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0003",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0003",
+            "nota_id": "pnp-822781",
+            "fecha_publicacion": "2023-08-17",
+            "titulo": "Madre de Dios: Incautan bienes destinados a la minería ilegal",
+            "fuente_slug": "pnp",
+            "url": "https://www.gob.pe/institucion/pnp/noticias/822781-madre-de-dios-incautan-bienes-destinados-a-la-mineria-ilegal",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "7",
+            "estimacion_georeferencia": "zona de amortiguamiento de la Reserva Comunal Amarakaeri, sector Setapo, distrito de Huepetuhe, Madre de Dios.",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Madre de Dios",
+            "actividad_asociada": "minería ilegal",
+            "lat": -12.96821,
+            "lon": -70.64707
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.0011779,
+          -12.9617474
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0004a",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Madre de Dios",
+        "actividad_asociada": "minería ilegal",
+        "lat": -12.9617474,
+        "lon": -70.0011779,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0004a",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0004",
+            "nota_id": "mpfn-831524",
+            "fecha_publicacion": "2023-09-08",
+            "titulo": "Madre de Dios: FEMA logró interdicción de maquinarias e insumos valorizados en más de S/9 millones producto de la minería ilegal",
+            "fuente_slug": "mpfn",
+            "url": "https://www.gob.pe/institucion/mpfn/noticias/831524-madre-de-dios-fema-logro-interdiccion-de-maquinarias-e-insumos-valorizados-en-mas-de-s-9-millones-producto-de-la-mineria-ilegal",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "La Pampa - Zona de Amortiguamiento de la Reserva Nacional Tambopata",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Madre de Dios",
+            "actividad_asociada": "minería ilegal",
+            "lat": -12.9617474,
+            "lon": -70.0011779
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.6714306,
+          -12.7053203
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0004b",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Madre de Dios",
+        "actividad_asociada": "minería ilegal",
+        "lat": -12.7053203,
+        "lon": -69.6714306,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0004b",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0004",
+            "nota_id": "mpfn-831524",
+            "fecha_publicacion": "2023-09-08",
+            "titulo": "Madre de Dios: FEMA logró interdicción de maquinarias e insumos valorizados en más de S/9 millones producto de la minería ilegal",
+            "fuente_slug": "mpfn",
+            "url": "https://www.gob.pe/institucion/mpfn/noticias/831524-madre-de-dios-fema-logro-interdiccion-de-maquinarias-e-insumos-valorizados-en-mas-de-s-9-millones-producto-de-la-mineria-ilegal",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "Sector Castañal – sector Boca Unión, distrito de Laberinto.",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Madre de Dios",
+            "actividad_asociada": "minería ilegal",
+            "lat": -12.7053203,
+            "lon": -69.6714306
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5957612,
+          -12.7444433
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0004c",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Madre de Dios",
+        "actividad_asociada": "minería ilegal",
+        "lat": -12.7444433,
+        "lon": -70.5957612,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0004c",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0004",
+            "nota_id": "mpfn-831524",
+            "fecha_publicacion": "2023-09-08",
+            "titulo": "Madre de Dios: FEMA logró interdicción de maquinarias e insumos valorizados en más de S/9 millones producto de la minería ilegal",
+            "fuente_slug": "mpfn",
+            "url": "https://www.gob.pe/institucion/mpfn/noticias/831524-madre-de-dios-fema-logro-interdiccion-de-maquinarias-e-insumos-valorizados-en-mas-de-s-9-millones-producto-de-la-mineria-ilegal",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "Comunidad Nativa Puerto Luz – Zona de Amortiguamiento de la Reserva Comunal Amarakaeri.",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Madre de Dios",
+            "actividad_asociada": "minería ilegal",
+            "lat": -12.7444433,
+            "lon": -70.5957612
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5113831,
+          -12.8213135
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0004d",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Madre de Dios",
+        "actividad_asociada": "minería ilegal",
+        "lat": -12.8213135,
+        "lon": -70.5113831,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0004d",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0004",
+            "nota_id": "mpfn-831524",
+            "fecha_publicacion": "2023-09-08",
+            "titulo": "Madre de Dios: FEMA logró interdicción de maquinarias e insumos valorizados en más de S/9 millones producto de la minería ilegal",
+            "fuente_slug": "mpfn",
+            "url": "https://www.gob.pe/institucion/mpfn/noticias/831524-madre-de-dios-fema-logro-interdiccion-de-maquinarias-e-insumos-valorizados-en-mas-de-s-9-millones-producto-de-la-mineria-ilegal",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "Comunidad Nativa de Barranco Chico del distrito de Huepetuhe, provincia de Manu",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Madre de Dios",
+            "actividad_asociada": "minería ilegal",
+            "lat": -12.8213135,
+            "lon": -70.5113831
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7543356,
+          -13.2307497
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0005",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Cusco",
+        "actividad_asociada": "minería ilegal",
+        "lat": -13.2307497,
+        "lon": -70.7543356,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0005",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0005",
+            "nota_id": "pnp-991554",
+            "fecha_publicacion": "2024-07-19",
+            "titulo": "Cusco: Incautan maquinaria valorizada en más de seis millones de soles utilizada en la minería ilegal",
+            "fuente_slug": "pnp",
+            "url": "https://www.gob.pe/institucion/pnp/noticias/991554-cusco-incautan-maquinaria-valorizada-en-mas-de-seis-millones-de-soles-utilizada-en-la-mineria-ilegal",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "sector denominado “La Quebrada de Chontapunco”, ciudad de Quincemil, distrito de Camanti, provincia de Quispicanchi, departamento de Cusco.",
+            "certeza_georef": "media",
+            "departamento_detectado": "Cusco",
+            "actividad_asociada": "minería ilegal",
+            "lat": -13.2307497,
+            "lon": -70.7543356
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.4491483,
+          -3.942133
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0006",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Loreto",
+        "actividad_asociada": "narcotráfico",
+        "lat": -3.942133,
+        "lon": -70.4491483,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0006",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0006",
+            "nota_id": "pnp-995866",
+            "fecha_publicacion": "2024-07-30",
+            "titulo": "Policía peruana y brasilera decomisan más de 95 kilos de estupefacientes",
+            "fuente_slug": "pnp",
+            "url": "https://www.gob.pe/institucion/pnp/noticias/995866-policia-peruana-y-brasilera-decomisan-mas-de-95-kilos-de-estupefacientes",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "Caserío Cuchillo Cocha en la provincia de Mariscal Ramón Castilla-Loreto",
+            "certeza_georef": "media",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "narcotráfico",
+            "lat": -3.942133,
+            "lon": -70.4491483
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.5868876,
+          -12.7173125
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0007",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Madre de Dios",
+        "actividad_asociada": "minería ilegal",
+        "lat": -12.7173125,
+        "lon": -69.5868876,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0007",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0007",
+            "nota_id": "mpfn-1017874",
+            "fecha_publicacion": "2024-09-06",
+            "titulo": "FEMA de Madre de Dios dirige operativo de interdicción contra la minería ilegal en comunidad nativa Boca Inambari",
+            "fuente_slug": "mpfn",
+            "url": "https://www.gob.pe/institucion/mpfn/noticias/1017874-fema-de-madre-de-dios-dirige-operativo-de-interdiccion-contra-la-mineria-ilegal-en-comunidad-nativa-boca-inambari",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "zona del sector denominado Playa Jesús - comunidad Amarakaeri (territorio de la Comunidad Nativa Boca Inambari), jurisdicción del distrito Laberinto, provincia de Tambopata, departamento de Madre de Dios.",
+            "certeza_georef": "media",
+            "departamento_detectado": "Madre de Dios",
+            "actividad_asociada": "minería ilegal",
+            "lat": -12.7173125,
+            "lon": -69.5868876
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.798838,
+          -17.23415
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0008",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Tacna",
+        "actividad_asociada": "extorsión",
+        "lat": -17.23415,
+        "lon": -69.798838,
+        "n_fuentes": 4,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0008",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0008",
+            "nota_id": "medio_74b69a5741b2",
+            "fecha_publicacion": "2025-04-09",
+            "titulo": "Descubren internet satelital, router, placa electrónica y cigarrillos durante requisa en penal de Challapalca, uno de los más seguros del país",
+            "fuente_slug": "medio",
+            "url": "https://www.infobae.com/peru/2025/04/09/hallan-antena-satelital-router-placa-electronica-y-cigarrillos-durante-requisa-en-penal-de-challapalca-uno-de-los-mas-seguros-del-pais",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "penal Challapalca; Tarata; departamento lima; departamento moquegua",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Tacna",
+            "actividad_asociada": "extorsión",
+            "lat": -17.23415,
+            "lon": -69.798838
+          },
+          {
+            "grupo_manual": "evt-0008",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0008",
+            "nota_id": "medio_1ecaa4776e66",
+            "fecha_publicacion": "2025-04-10",
+            "titulo": "🔴🔵Challapalca: Hallan aparato que operaba como antena de internet en penal de máxima seguridad - YouTube",
+            "fuente_slug": "medio",
+            "url": "https://www.youtube.com/watch?v=Fmbuqg1SVDI",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "penal Challapalca; penal Ancón I; Tarata",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Tacna",
+            "actividad_asociada": "extorsión",
+            "lat": -17.23415,
+            "lon": -69.798838
+          },
+          {
+            "grupo_manual": "evt-0008",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0008",
+            "nota_id": "mpfn-1143626",
+            "fecha_publicacion": "2025-04-10",
+            "titulo": "Fiscalía de Tarata inició investigación preliminar por hallazgo de antena de Internet en el penal de Challapalca",
+            "fuente_slug": "mpfn",
+            "url": "https://www.gob.pe/institucion/mpfn/noticias/1143626-fiscalia-de-tarata-inicio-investigacion-preliminar-por-hallazgo-de-antena-de-internet-en-el-penal-de-challapalca",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "penal Challapalca; Tarata",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Tacna",
+            "actividad_asociada": "extorsión",
+            "lat": -17.23415,
+            "lon": -69.798838
+          },
+          {
+            "grupo_manual": "evt-0008",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0031",
+            "nota_id": "medio_24d13b1dda5b",
+            "fecha_publicacion": "2026-04-10",
+            "titulo": "❌ #CHALLAPALCA : RECLUSOS TENÍAN ACCESO... - Pisco te Informa | Facebook",
+            "fuente_slug": "medio",
+            "url": "https://www.facebook.com/PiscoteInforma/posts/-challapalca-reclusos-ten%C3%ADan-acceso-a-internet-satelital-en-el-penal-de-m%C3%A1xima-s/1076016944550549",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "penal Challapalca; Tarata",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Tacna",
+            "actividad_asociada": "extorsión",
+            "lat": -17.23415,
+            "lon": -69.798838
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.700063,
+          -2.792136
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0009",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Loreto",
+        "actividad_asociada": "grupo armado",
+        "lat": -2.792136,
+        "lon": -70.700063,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0009",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0009",
+            "nota_id": "ccffaa-1172136",
+            "fecha_publicacion": "2025-05-19",
+            "titulo": "Comando Operacional de la Amazonía frustran incursión de grupo armado en Putumayo e incautan material de guerra",
+            "fuente_slug": "ccffaa",
+            "url": "https://www.gob.pe/institucion/ccffaa/noticias/1172136-comando-operacional-de-la-amazonia-frustran-incursion-de-grupo-armado-en-putumayo-e-incautan-material-de-guerra",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "distrito de Yaguas, provincia de Putumayo, región Loreto.",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "grupo armado",
+            "lat": -2.792136,
+            "lon": -70.700063
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.38511,
+          -3.94954
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0010",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Loreto",
+        "actividad_asociada": "narcotráfico",
+        "lat": -3.94954,
+        "lon": -70.38511,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0010",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0010",
+            "nota_id": "ccffaa-1172196",
+            "fecha_publicacion": "2025-05-19",
+            "titulo": "Loreto: Fuerzas del orden desmantelan laboratorios de droga y golpean al narcotráfico en la triple frontera",
+            "fuente_slug": "ccffaa",
+            "url": "https://www.gob.pe/institucion/ccffaa/noticias/1172196-loreto-fuerzas-del-orden-desmantelan-laboratorios-de-droga-y-golpean-al-narcotrafico-en-la-triple-frontera",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "comunidad nativa Nueva Galilea, provincia de Mariscal Ramón Castilla,",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "narcotráfico",
+            "lat": -3.94954,
+            "lon": -70.38511
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.5934126,
+          -7.7861211
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0011",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "La Libertad",
+        "actividad_asociada": "minería ilegal",
+        "lat": -7.7861211,
+        "lon": -77.5934126,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0011",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0011",
+            "nota_id": "mpfn-1178813",
+            "fecha_publicacion": "2025-05-31",
+            "titulo": "Fiscales especializados en Materia Ambiental participan en operativo de interdicción contra la minería ilegal en Pataz",
+            "fuente_slug": "mpfn",
+            "url": "https://www.gob.pe/institucion/mpfn/noticias/1178813-fiscales-especializados-en-materia-ambiental-participan-en-operativo-de-interdiccion-contra-la-mineria-ilegal-en-pataz",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "Pataz",
+            "certeza_georef": "baja",
+            "departamento_detectado": "La Libertad",
+            "actividad_asociada": "minería ilegal",
+            "lat": -7.7861211,
+            "lon": -77.5934126
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.3428,
+          -4.221
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0012",
+        "cantidad_estimada": "9",
+        "departamento_detectado": "Amazonas",
+        "actividad_asociada": "minería ilegal",
+        "lat": -4.221,
+        "lon": -78.3428,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0012",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0012",
+            "nota_id": "pcm-1197907",
+            "fecha_publicacion": "2025-06-28",
+            "titulo": "Fuerzas del orden destruyen bienes valorizados en más de 49 millones de soles en operativo contra minería ilegal en Amazonas",
+            "fuente_slug": "pcm",
+            "url": "https://www.gob.pe/institucion/pcm/noticias/1197907-fuerzas-del-orden-destruyen-bienes-valorizados-en-mas-de-49-millones-de-soles-en-operativo-contra-mineria-ilegal-en-amazonas",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "9",
+            "estimacion_georeferencia": "distrito de El Cenepa, provincia de Condorcanqui, en la región Amazonas.",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Amazonas",
+            "actividad_asociada": "minería ilegal",
+            "lat": -4.221,
+            "lon": -78.3428
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.1609,
+          -3.5076
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0013",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Amazonas",
+        "actividad_asociada": "minería ilegal",
+        "lat": -3.5076,
+        "lon": -78.1609,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0013",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0013",
+            "nota_id": "mininter-1252804",
+            "fecha_publicacion": "2025-09-25",
+            "titulo": "Amazonas: Gobierno incauta bienes por más de S/ 80 millones vinculados a la minería ilegal",
+            "fuente_slug": "mininter",
+            "url": "https://www.gob.pe/institucion/mininter/noticias/1252804-amazonas-gobierno-incauta-bienes-por-mas-de-s-80-millones-vinculados-a-la-mineria-ilegal",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "quebrada Sawintza, una zona de difícil acceso que abarca aproximadamente 25 kilómetros. comunidad nativa de Kumpanan, ubicada en el distrito de El Cenepa, provincia de Condorcanqui, región Amazonas, en la frontera con Ecuador.",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Amazonas",
+            "actividad_asociada": "minería ilegal",
+            "lat": -3.5076,
+            "lon": -78.1609
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.12177,
+          -11.810983
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0014",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Lima",
+        "actividad_asociada": "extorsión",
+        "lat": -11.810983,
+        "lon": -77.12177,
+        "n_fuentes": 2,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0014",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0014",
+            "nota_id": "inpe-1260325",
+            "fecha_publicacion": "2025-10-07",
+            "titulo": "Frente a las extorsiones a los transportistas, INPE realiza operativo en pabellones de \"El jorobado\" y alias «JJ» en el penal Ancón I",
+            "fuente_slug": "inpe",
+            "url": "https://www.gob.pe/institucion/inpe/noticias/1260325-frente-a-las-extorsiones-a-los-transportistas-inpe-realiza-operativo-en-pabellones-de-el-jorobado-y-alias-jj-en-el-penal-ancon-i",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "penal Ancón I",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Lima",
+            "actividad_asociada": "extorsión",
+            "lat": -11.810983,
+            "lon": -77.12177
+          },
+          {
+            "grupo_manual": "evt-0014",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0014",
+            "nota_id": "medio_b5e5428a5f00",
+            "fecha_publicacion": "2025-10-07",
+            "titulo": "Ancón I: INPE realiza requisa y halla equipos de comunicación usados en extorsiones",
+            "fuente_slug": "medio",
+            "url": "https://elcomercio.pe/lima/ancon-i-inpe-realiza-requisa-y-halla-equipos-de-comunicacion-usados-en-extorsiones-ultimas-noticia",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "penal Ancón I",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Lima",
+            "actividad_asociada": "extorsión",
+            "lat": -11.810983,
+            "lon": -77.12177
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.798838,
+          -17.23415
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0016",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Tacna",
+        "actividad_asociada": "extorsión",
+        "lat": -17.23415,
+        "lon": -69.798838,
+        "n_fuentes": 3,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0016",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0031",
+            "nota_id": "inpe-1323708",
+            "fecha_publicacion": "2025-12-30",
+            "titulo": "INPE da duro golpe a la criminalidad: Hallan antena y repetidores de señal en exteriores del penal de Challapalca",
+            "fuente_slug": "inpe",
+            "url": "https://www.gob.pe/institucion/inpe/noticias/1323708-inpe-da-duro-golpe-a-la-criminalidad-hallan-antena-y-repetidores-de-senal-en-exteriores-del-penal-de-challapalca",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "penal Challapalca",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Tacna",
+            "actividad_asociada": "extorsión",
+            "lat": -17.23415,
+            "lon": -69.798838
+          },
+          {
+            "grupo_manual": "evt-0016",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0034",
+            "nota_id": "medio_96b2b280d872",
+            "fecha_publicacion": "2026-01-02",
+            "titulo": "HBA Noticias - #Puno ||| Incautan antena Starlink... | Facebook",
+            "fuente_slug": "medio",
+            "url": "https://www.facebook.com/HBAnoticias/posts/puno-incautan-antena-starlink-clandestina-cerca-del-penal-challapalcafuncionario/1285008953653531",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "penal Challapalca; Tarata; departamento puno",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Tacna",
+            "actividad_asociada": "extorsión",
+            "lat": -17.23415,
+            "lon": -69.798838
+          },
+          {
+            "grupo_manual": "evt-0016",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0016",
+            "nota_id": "medio_2d2b6c11dd62",
+            "fecha_publicacion": "2026-01-02",
+            "titulo": "🚨#Insólito|| Hallan Wi-Fi clandestino con antena de internet Starlink en exteriores del penal de Challapalca",
+            "fuente_slug": "medio",
+            "url": "https://www.instagram.com/p/DTBUjvrkbb0",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "penal Challapalca",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Tacna",
+            "actividad_asociada": "extorsión",
+            "lat": -17.23415,
+            "lon": -69.798838
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.97688,
+          -9.28054
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0018a",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Ucayali",
+        "actividad_asociada": "minería ilegal",
+        "lat": -9.28054,
+        "lon": -74.97688,
+        "n_fuentes": 3,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0018a",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0017",
+            "nota_id": "medio_16fc088aa363",
+            "fecha_publicacion": "2026-01-20",
+            "titulo": "Marina de Guerra golpea a la minería ilegal en Ucayali y Loreto por más de un millón de soles",
+            "fuente_slug": "medio",
+            "url": "https://elperuano.pe/noticia/287567-marina-de-guerra-golpea-a-la-mineria-ilegal-en-ucayali-y-loreto-por-mas-de-un-millon-de-soles",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "río Pachitea, en la región Ucayali, donde, a través de la Jefatura del distrito de Capitanía",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Ucayali",
+            "actividad_asociada": "minería ilegal",
+            "lat": -9.28054,
+            "lon": -74.97688
+          },
+          {
+            "grupo_manual": "evt-0018a",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0017",
+            "nota_id": "medio_5ec49684931e",
+            "fecha_publicacion": "2026-01-21",
+            "titulo": "Golpe millonario a la minería ilegal en la selva peruana: Incautaciones en Ucayali y Loreto superan el millón de soles",
+            "fuente_slug": "medio",
+            "url": "https://www.infobae.com/peru/2026/01/21/golpe-millonario-a-la-mineria-ilegal-en-la-selva-peruana-incautaciones-en-ucayali-y-loreto-superan-el-millon-de-soles",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "río Pachitea, en la región Ucayali, donde, a través de la Jefatura del distrito de Capitanía",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Ucayali",
+            "actividad_asociada": "minería ilegal",
+            "lat": -9.28054,
+            "lon": -74.97688
+          },
+          {
+            "grupo_manual": "evt-0018a",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0017",
+            "nota_id": "mindef-1337969",
+            "fecha_publicacion": "2026-01-20",
+            "titulo": "Marina de Guerra golpea a la minería ilegal en Ucayali y Loreto por más de un millón de soles",
+            "fuente_slug": "mindef",
+            "url": "https://www.gob.pe/institucion/mindef/noticias/1337969-marina-de-guerra-golpea-a-la-mineria-ilegal-en-ucayali-y-loreto-por-mas-de-un-millon-de-soles",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "río Pachitea, en la región Ucayali, donde, a través de la Jefatura del distrito de Capitanía",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Ucayali",
+            "actividad_asociada": "minería ilegal",
+            "lat": -9.28054,
+            "lon": -74.97688
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.2149053,
+          -3.3122772
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0018b",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Loreto",
+        "actividad_asociada": "minería ilegal",
+        "lat": -3.3122772,
+        "lon": -73.2149053,
+        "n_fuentes": 3,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0018b",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0017",
+            "nota_id": "medio_16fc088aa363",
+            "fecha_publicacion": "2026-01-20",
+            "titulo": "Marina de Guerra golpea a la minería ilegal en Ucayali y Loreto por más de un millón de soles",
+            "fuente_slug": "medio",
+            "url": "https://elperuano.pe/noticia/287567-marina-de-guerra-golpea-a-la-mineria-ilegal-en-ucayali-y-loreto-por-mas-de-un-millon-de-soles",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "localidad de Huaman Urco, distrito de Mazán, provincia de Maynas, en la región Loreto.",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "minería ilegal",
+            "lat": -3.3122772,
+            "lon": -73.2149053
+          },
+          {
+            "grupo_manual": "evt-0018b",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0017",
+            "nota_id": "medio_5ec49684931e",
+            "fecha_publicacion": "2026-01-21",
+            "titulo": "Golpe millonario a la minería ilegal en la selva peruana: Incautaciones en Ucayali y Loreto superan el millón de soles",
+            "fuente_slug": "medio",
+            "url": "https://www.infobae.com/peru/2026/01/21/golpe-millonario-a-la-mineria-ilegal-en-la-selva-peruana-incautaciones-en-ucayali-y-loreto-superan-el-millon-de-soles",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "localidad de Huaman Urco, distrito de Mazán, provincia de Maynas, en la región Loreto.",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "minería ilegal",
+            "lat": -3.3122772,
+            "lon": -73.2149053
+          },
+          {
+            "grupo_manual": "evt-0018b",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0017",
+            "nota_id": "mindef-1337969",
+            "fecha_publicacion": "2026-01-20",
+            "titulo": "Marina de Guerra golpea a la minería ilegal en Ucayali y Loreto por más de un millón de soles",
+            "fuente_slug": "mindef",
+            "url": "https://www.gob.pe/institucion/mindef/noticias/1337969-marina-de-guerra-golpea-a-la-mineria-ilegal-en-ucayali-y-loreto-por-mas-de-un-millon-de-soles",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "localidad de Huaman Urco, distrito de Mazán, provincia de Maynas, en la región Loreto.",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "minería ilegal",
+            "lat": -3.3122772,
+            "lon": -73.2149053
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6068778,
+          -3.6111967
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0034",
+        "cantidad_estimada": "2",
+        "departamento_detectado": "Loreto",
+        "actividad_asociada": "narcotráfico",
+        "lat": -3.6111967,
+        "lon": -70.6068778,
+        "n_fuentes": 2,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0034",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0017",
+            "nota_id": "medio_f790d0aad62f",
+            "fecha_publicacion": "2026-01-26",
+            "titulo": "Golpe al narcotráfico en frontera de Loreto con Brasil: destruyen laboratorios valorizados en más de US$422.000",
+            "fuente_slug": "medio",
+            "url": "https://larepublica.pe/sociedad/2026/01/26/loreto-destruyen-laboratorios-del-narcotrafico-valorizados-en-mas-de-422-mil-dolares-en-frontera-con-brasil-1221064",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "2",
+            "estimacion_georeferencia": "zona fronteriza en el distrito de Ramón Castilla, provincia de Mariscal Ramón Castilla.",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "narcotráfico",
+            "lat": -3.6111967,
+            "lon": -70.6068778
+          },
+          {
+            "grupo_manual": "evt-0034",
+            "incluir_nota": "T",
+            "evento_id_propuesto": null,
+            "nota_id": null,
+            "fecha_publicacion": "2026-01-29",
+            "titulo": "Así fue el megaoperativo en la frontera colombo-peruana que permitió la destrucción de cuatro laboratorios de cocaína",
+            "fuente_slug": "medio",
+            "url": "https://www.infobae.com/colombia/2026/01/30/asi-fue-el-megaoperativo-en-la-frontera-colombo-peruana-que-permitio-la-destruccion-de-cuatro-laboratorios-de-cocaina/",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "2",
+            "estimacion_georeferencia": "se concentraron en las comunidades de San Juan de Loreto Yacu y San Pedro de Tipisca, bajo jurisdicción del municipio de Puerto Nariño (Amazonas), zonas limítrofes con Perú.",
+            "certeza_georef": "alta",
+            "departamento_detectado": "loreto",
+            "actividad_asociada": "narcotráfico",
+            "lat": -3.6111967,
+            "lon": -70.6068778
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.94463,
+          -4.29352
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0020",
+        "cantidad_estimada": "2",
+        "departamento_detectado": "Loreto",
+        "actividad_asociada": "narcotráfico",
+        "lat": -4.29352,
+        "lon": -69.94463,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0020",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0032",
+            "nota_id": "medio_2a307331f7d3",
+            "fecha_publicacion": "2026-02-12",
+            "titulo": "🌎🚨 #PNPInforma | 𝗚𝗼𝗹𝗽𝗲 𝗮𝗹 𝗻𝗮𝗿𝗰𝗼𝘁𝗿á𝗳𝗶𝗰𝗼 𝘁𝗿𝗮𝗻𝘀𝗻𝗮𝗰𝗶𝗼𝗻𝗮𝗹: 𝗗𝗜𝗥𝗔𝗡𝗗𝗥𝗢 𝗣𝗡𝗣 𝗽𝗮𝗿𝘁𝗶𝗰𝗶𝗽𝗮 𝗲𝗻 𝗺𝗲𝗴𝗮𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝘃𝗼 𝗲𝗻 𝗲𝗹 𝗿í𝗼 𝗦𝗼𝗹𝗶𝗺õ𝗲𝘀 (𝗕𝗿𝗮𝘀𝗶𝗹) 🇵🇪🤝🇧🇷",
+            "fuente_slug": "medio",
+            "url": "https://www.facebook.com/Policia/videos/-pnpinforma-%F0%9D%97%9A%F0%9D%97%BC%F0%9D%97%B9%F0%9D%97%BD%F0%9D%97%B2-%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%BF%F0%9D%97%B0%F0%9D%97%BC%F0%9D%98%81%F0%9D%97%BF%C3%A1%F0%9D%97%B3%F0%9D%97%B6%F0%9D%97%B0%F0%9D%97%BC-%F0%9D%98%81%F0%9D%97%BF%F0%9D%97%AE%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%B0%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%97%F0%9D%97%9C%F0%9D%97%A5%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%97%F0%9D%97%A5%F0%9D%97%A2-%F0%9D%97%A3%F0%9D%97%A1%F0%9D%97%A3-%F0%9D%97%BD%F0%9D%97%AE%F0%9D%97%BF%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0%F0%9D%97%B6%F0%9D%97%BD%F0%9D%97%AE-%F0%9D%97%B2%F0%9D%97%BB-%F0%9D%97%BA%F0%9D%97%B2%F0%9D%97%B4%F0%9D%97%AE%F0%9D%97%BC%F0%9D%97%BD/26623473120569514",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "2",
+            "estimacion_georeferencia": "departamento amazonas; departamento la libertad; departamento lima",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "narcotráfico",
+            "lat": -4.29352,
+            "lon": -69.94463
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.38492,
+          -3.94847
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0021",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Loreto",
+        "actividad_asociada": "narcotráfico",
+        "lat": -3.94847,
+        "lon": -70.38492,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0021",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0019",
+            "nota_id": "ccffaa-1354983",
+            "fecha_publicacion": "2026-02-16",
+            "titulo": "Comando Unificado “PUMA” incauta helicóptero y continúa ofensiva contra puente aéreo clandestino en Mariscal Ramón Castilla",
+            "fuente_slug": "ccffaa",
+            "url": "https://www.gob.pe/institucion/ccffaa/noticias/1354983-comando-unificado-puma-incauta-helicoptero-y-continua-ofensiva-contra-puente-aereo-clandestino-en-mariscal-ramon-castilla",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "Comunidad nativa Nueva Galilea Cayarú. provincia de Mariscal Ramón Castilla",
+            "certeza_georef": "media",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "narcotráfico",
+            "lat": -3.94847,
+            "lon": -70.38492
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.8979,
+          -3.6728
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0023",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Loreto",
+        "actividad_asociada": "narcotráfico",
+        "lat": -3.6728,
+        "lon": -70.8979,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0023",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0021",
+            "nota_id": "ccffaa-1384028",
+            "fecha_publicacion": "2026-04-24",
+            "titulo": "Comando Unificado PUMA golpea al narcotráfico en Loreto: Destruyen más de dos toneladas de droga y desarticulan red criminal",
+            "fuente_slug": "ccffaa",
+            "url": "https://www.gob.pe/institucion/ccffaa/noticias/1384028-comando-unificado-puma-golpea-al-narcotrafico-en-loreto-destruyen-mas-de-dos-toneladas-de-droga-y-desarticulan-red-criminal",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "Mariscal Ramón Castilla; Iquitos",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "narcotráfico",
+            "lat": -3.6728,
+            "lon": -70.8979
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.66772,
+          -8.86145
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0024",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Huánuco",
+        "actividad_asociada": "minería ilegal",
+        "lat": -8.86145,
+        "lon": -74.66772,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0024",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0022",
+            "nota_id": "mpfn-1397388",
+            "fecha_publicacion": "2026-05-26",
+            "titulo": "FEMA logra la destrucción de tres dragas utilizadas para la minería ilegal en el río Pachitea",
+            "fuente_slug": "mpfn",
+            "url": "https://www.gob.pe/institucion/mpfn/noticias/1397388-fema-logra-la-destruccion-de-tres-dragas-utilizadas-para-la-mineria-ilegal-en-el-rio-pachitea",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "río Pachitea, ubicada en la provincia de Puerto Inca, en Huánuco.",
+            "certeza_georef": "alta",
+            "departamento_detectado": "Huánuco",
+            "actividad_asociada": "minería ilegal",
+            "lat": -8.86145,
+            "lon": -74.66772
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4103,
+          -12.6598
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0025",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Lima",
+        "actividad_asociada": "minería ilegal",
+        "lat": -12.6598,
+        "lon": -76.4103,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0025",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0023",
+            "nota_id": "mpfn-1412950",
+            "fecha_publicacion": "2026-06-30",
+            "titulo": "FEMA consigue la detención de ocho investigados por actividades de minería ilegal en Cañete",
+            "fuente_slug": "mpfn",
+            "url": "https://www.gob.pe/institucion/mpfn/noticias/1412950-fema-consigue-la-detencion-de-ocho-investigados-por-actividades-de-mineria-ilegal-en-canete",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "sector Totoral, distrito de Coayllo, provincia de Cañete.",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Lima",
+            "actividad_asociada": "minería ilegal",
+            "lat": -12.6598,
+            "lon": -76.4103
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.05579,
+          -3.79797
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0026",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Loreto",
+        "actividad_asociada": "minería ilegal",
+        "lat": -3.79797,
+        "lon": -74.05579,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0026",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0024",
+            "nota_id": "pcm-1414308",
+            "fecha_publicacion": "2026-07-04",
+            "titulo": "Loreto: Gobierno incauta 20 dragas y bienes usados por la minería ilegal valorizados en más de 800 mil soles",
+            "fuente_slug": "pcm",
+            "url": "https://www.gob.pe/institucion/pcm/noticias/1414308-loreto-gobierno-incauta-20-dragas-y-bienes-usados-por-la-mineria-ilegal-valorizados-en-mas-de-800-mil-soles",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "Sector Puca Urco, provincia de Maynas, Loreto.",
+            "certeza_georef": "media",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "minería ilegal",
+            "lat": -3.79797,
+            "lon": -74.05579
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.900236,
+          -9.390277
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0027a",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Huánuco",
+        "actividad_asociada": "minería ilegal",
+        "lat": -9.390277,
+        "lon": -74.900236,
+        "n_fuentes": 7,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0027a",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0025",
+            "nota_id": "medio_3d253d5fb424",
+            "fecha_publicacion": "2026-08-21",
+            "titulo": "Interdicciones en Huánuco y Junín afectan bienes usados en minería ilegal por S/ 7,3 millones",
+            "fuente_slug": "medio",
+            "url": "https://www.rumbominero.com/actualidad/interdicciones-huanuco-y-junin-mineria-ilegal-s-73-millones",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "quebrada del río Pintuyacu, en las comunidades nativas de Quimpichari y Tsamiri, provincia de Puerto Inca.",
+            "certeza_georef": "media",
+            "departamento_detectado": "Huánuco",
+            "actividad_asociada": null,
+            "lat": -9.390277,
+            "lon": -74.900236
+          },
+          {
+            "grupo_manual": "evt-0027a",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0025",
+            "nota_id": "medio_dae694f8bb8f",
+            "fecha_publicacion": "2026-08-21",
+            "titulo": "🚨🇵🇪 #Junín | 𝐏𝐍𝐏 𝐀𝐒𝐄𝐒𝐓𝐀 𝐃𝐔𝐑𝐎 𝐆𝐎𝐋𝐏𝐄 𝐀 𝐋𝐀 𝐌𝐈𝐍𝐄𝐑Í𝐀 𝐈𝐋𝐄𝐆𝐀𝐋 𝐄𝐍 𝐏𝐈𝐂𝐇𝐀𝐍𝐀𝐐𝐔𝐈 𝐘 𝐀𝐅𝐄𝐂𝐓𝐀 𝐁𝐈𝐄𝐍𝐄𝐒 𝐏𝐎𝐑 𝐌Á𝐒 𝐃𝐄 𝐒/𝟐 𝐌𝐈𝐋𝐋𝐎𝐍𝐄𝐒 🚔",
+            "fuente_slug": "medio",
+            "url": "https://www.threads.com/@policiaperu/post/DcUVQkzFEPc/junin-pnp-asesta-duro-golpe-a-la-mineria-ilegal-en-pichanaqui-y-afecta-bienes",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "quebrada del río Pintuyacu, en las comunidades nativas de Quimpichari y Tsamiri, provincia de Puerto Inca.",
+            "certeza_georef": "media",
+            "departamento_detectado": "Huánuco",
+            "actividad_asociada": "minería ilegal",
+            "lat": -9.390277,
+            "lon": -74.900236
+          },
+          {
+            "grupo_manual": "evt-0027a",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0025",
+            "nota_id": "mininter-1433323",
+            "fecha_publicacion": "2026-08-21",
+            "titulo": "PNP golpea a la minería ilegal con interdicción de bienes valorizados en más de S/ 7.3 millones en Huánuco y Junín",
+            "fuente_slug": "mininter",
+            "url": "https://www.gob.pe/institucion/mininter/noticias/1433323-pnp-golpea-a-la-mineria-ilegal-con-interdiccion-de-bienes-valorizados-en-mas-de-s-7-3-millones-en-huanuco-y-junin",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "quebrada del río Pintuyacu, en las comunidades nativas de Quimpichari y Tsamiri, provincia de Puerto Inca.",
+            "certeza_georef": "media",
+            "departamento_detectado": "Huánuco",
+            "actividad_asociada": "minería ilegal",
+            "lat": -9.390277,
+            "lon": -74.900236
+          },
+          {
+            "grupo_manual": "evt-0027a",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0033",
+            "nota_id": "medio_3aa5ec75e730",
+            "fecha_publicacion": "2026-08-21",
+            "titulo": "🚨🇵🇪 #Junín | 𝐏𝐍𝐏 𝐀𝐒𝐄𝐒𝐓𝐀 𝐃𝐔𝐑𝐎... - Policía Nacional del Perú | Facebook",
+            "fuente_slug": "medio",
+            "url": "https://www.facebook.com/Policia/posts/-jun%C3%ADn-%F0%9D%90%8F%F0%9D%90%8D%F0%9D%90%8F-%F0%9D%90%80%F0%9D%90%92%F0%9D%90%84%F0%9D%90%92%F0%9D%90%93%F0%9D%90%80-%F0%9D%90%83%F0%9D%90%94%F0%9D%90%91%F0%9D%90%8E-%F0%9D%90%86%F0%9D%90%8E%F0%9D%90%8B%F0%9D%90%8F%F0%9D%90%84-%F0%9D%90%80-%F0%9D%90%8B%F0%9D%90%80-%F0%9D%90%8C%F0%9D%90%88%F0%9D%90%8D%F0%9D%90%84%F0%9D%90%91%C3%AD%F0%9D%90%80-%F0%9D%90%88%F0%9D%90%8B%F0%9D%90%84%F0%9D%90%86%F0%9D%90%80%F0%9D%90%8B-%F0%9D%90%84%F0%9D%90%8D-%F0%9D%90%8F%F0%9D%90%88%F0%9D%90%82%F0%9D%90%87%F0%9D%90%80%F0%9D%90%8D%F0%9D%90%80%F0%9D%90%90%F0%9D%90%94%F0%9D%90%88-%F0%9D%90%98-%F0%9D%90%80%F0%9D%90%85%F0%9D%90%84%F0%9D%90%82%F0%9D%90%93%F0%9D%90%80-%F0%9D%90%81%F0%9D%90%88%F0%9D%90%84%F0%9D%90%8D%F0%9D%90%84%F0%9D%90%92-%F0%9D%90%8F/1533467692140332",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "quebrada del río Pintuyacu, en las comunidades nativas de Quimpichari y Tsamiri, provincia de Puerto Inca.",
+            "certeza_georef": "media",
+            "departamento_detectado": "Huánuco",
+            "actividad_asociada": "minería ilegal",
+            "lat": -9.390277,
+            "lon": -74.900236
+          },
+          {
+            "grupo_manual": "evt-0027a",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0025",
+            "nota_id": "medio_547ed691caeb",
+            "fecha_publicacion": "2026-08-23",
+            "titulo": "Huánuco: Operativo contra minería ilegal en Puerto Inca detecta 30 hectáreas afectadas y campamentos con internet satelital, radios y paneles solares",
+            "fuente_slug": "medio",
+            "url": "https://inforegion.pe/huanuco-operativo-contra-mineria-ilegal-en-puerto-inca-detecta-30-hectareas-afectadas-y-campamentos-con-internet-satelital-radios-y-paneles-solares",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "quebrada del río Pintuyacu, en las comunidades nativas de Quimpichari y Tsamiri, provincia de Puerto Inca.",
+            "certeza_georef": "media",
+            "departamento_detectado": "Huánuco",
+            "actividad_asociada": "minería ilegal",
+            "lat": -9.390277,
+            "lon": -74.900236
+          },
+          {
+            "grupo_manual": "evt-0027a",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0025",
+            "nota_id": "mpfn-1433917",
+            "fecha_publicacion": "2026-08-24",
+            "titulo": "FEMA consigue destrucción de tractores oruga utilizados para la minería ilegal en Puerto Inca",
+            "fuente_slug": "🚨 ¡Nuevo golpe a la minería ilegal!La PNP ejecutó dos operativos en Huánuco y Junín que permitieron interdictar e incautar maquinaria",
+            "url": "https://www.gob.pe/institucion/mpfn/noticias/1433917-fema-consigue-destruccion-de-tractores-oruga-utilizados-para-la-mineria-ilegal-en-puerto-inca",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "quebrada del río Pintuyacu, en las comunidades nativas de Quimpichari y Tsamiri, provincia de Puerto Inca.",
+            "certeza_georef": "media",
+            "departamento_detectado": "Huánuco",
+            "actividad_asociada": "minería ilegal",
+            "lat": -9.390277,
+            "lon": -74.900236
+          },
+          {
+            "grupo_manual": "evt-0027a",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0026",
+            "nota_id": "medio_feb835f56942",
+            "fecha_publicacion": "2026-08-22",
+            "titulo": "🚨 ¡Nuevo golpe a la minería ilegal!\n\nLa PNP ejecutó dos operativos en Huánuco y Junín que permitieron interdictar e incautar maquinaria, equipos e ins",
+            "fuente_slug": "medio",
+            "url": "https://www.instagram.com/reel/DcU5hVjCMr4",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "quebrada del río Pintuyacu, en las comunidades nativas de Quimpichari y Tsamiri, provincia de Puerto Inca.",
+            "certeza_georef": "media",
+            "departamento_detectado": "Huánuco",
+            "actividad_asociada": "minería ilegal",
+            "lat": -9.390277,
+            "lon": -74.900236
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.792883,
+          -10.889024
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0027b",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Junín",
+        "actividad_asociada": "minería ilegal",
+        "lat": -10.889024,
+        "lon": -74.792883,
+        "n_fuentes": 7,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0027b",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0025",
+            "nota_id": "medio_3d253d5fb424",
+            "fecha_publicacion": "2026-08-21",
+            "titulo": "Interdicciones en Huánuco y Junín afectan bienes usados en minería ilegal por S/ 7,3 millones",
+            "fuente_slug": "medio",
+            "url": "https://www.rumbominero.com/actualidad/interdicciones-huanuco-y-junin-mineria-ilegal-s-73-millones",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "centro poblado de Jerusalén, distrito de Pichanaqui, provincia de Chanchamayo",
+            "certeza_georef": "media",
+            "departamento_detectado": "Junín",
+            "actividad_asociada": "minería ilegal",
+            "lat": -10.889024,
+            "lon": -74.792883
+          },
+          {
+            "grupo_manual": "evt-0027b",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0025",
+            "nota_id": "medio_dae694f8bb8f",
+            "fecha_publicacion": "2026-08-21",
+            "titulo": "🚨🇵🇪 #Junín | 𝐏𝐍𝐏 𝐀𝐒𝐄𝐒𝐓𝐀 𝐃𝐔𝐑𝐎 𝐆𝐎𝐋𝐏𝐄 𝐀 𝐋𝐀 𝐌𝐈𝐍𝐄𝐑Í𝐀 𝐈𝐋𝐄𝐆𝐀𝐋 𝐄𝐍 𝐏𝐈𝐂𝐇𝐀𝐍𝐀𝐐𝐔𝐈 𝐘 𝐀𝐅𝐄𝐂𝐓𝐀 𝐁𝐈𝐄𝐍𝐄𝐒 𝐏𝐎𝐑 𝐌Á𝐒 𝐃𝐄 𝐒/𝟐 𝐌𝐈𝐋𝐋𝐎𝐍𝐄𝐒 🚔",
+            "fuente_slug": "medio",
+            "url": "https://www.threads.com/@policiaperu/post/DcUVQkzFEPc/junin-pnp-asesta-duro-golpe-a-la-mineria-ilegal-en-pichanaqui-y-afecta-bienes",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "centro poblado de Jerusalén, distrito de Pichanaqui, provincia de Chanchamayo",
+            "certeza_georef": "media",
+            "departamento_detectado": "Junín",
+            "actividad_asociada": "minería ilegal",
+            "lat": -10.889024,
+            "lon": -74.792883
+          },
+          {
+            "grupo_manual": "evt-0027b",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0025",
+            "nota_id": "mininter-1433323",
+            "fecha_publicacion": "2026-08-21",
+            "titulo": "PNP golpea a la minería ilegal con interdicción de bienes valorizados en más de S/ 7.3 millones en Huánuco y Junín",
+            "fuente_slug": "mininter",
+            "url": "https://www.gob.pe/institucion/mininter/noticias/1433323-pnp-golpea-a-la-mineria-ilegal-con-interdiccion-de-bienes-valorizados-en-mas-de-s-7-3-millones-en-huanuco-y-junin",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "centro poblado de Jerusalén, distrito de Pichanaqui, provincia de Chanchamayo",
+            "certeza_georef": "media",
+            "departamento_detectado": "Junín",
+            "actividad_asociada": "minería ilegal",
+            "lat": -10.889024,
+            "lon": -74.792883
+          },
+          {
+            "grupo_manual": "evt-0027b",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0033",
+            "nota_id": "medio_3aa5ec75e730",
+            "fecha_publicacion": "2026-08-21",
+            "titulo": "🚨🇵🇪 #Junín | 𝐏𝐍𝐏 𝐀𝐒𝐄𝐒𝐓𝐀 𝐃𝐔𝐑𝐎... - Policía Nacional del Perú | Facebook",
+            "fuente_slug": "medio",
+            "url": "https://www.facebook.com/Policia/posts/-jun%C3%ADn-%F0%9D%90%8F%F0%9D%90%8D%F0%9D%90%8F-%F0%9D%90%80%F0%9D%90%92%F0%9D%90%84%F0%9D%90%92%F0%9D%90%93%F0%9D%90%80-%F0%9D%90%83%F0%9D%90%94%F0%9D%90%91%F0%9D%90%8E-%F0%9D%90%86%F0%9D%90%8E%F0%9D%90%8B%F0%9D%90%8F%F0%9D%90%84-%F0%9D%90%80-%F0%9D%90%8B%F0%9D%90%80-%F0%9D%90%8C%F0%9D%90%88%F0%9D%90%8D%F0%9D%90%84%F0%9D%90%91%C3%AD%F0%9D%90%80-%F0%9D%90%88%F0%9D%90%8B%F0%9D%90%84%F0%9D%90%86%F0%9D%90%80%F0%9D%90%8B-%F0%9D%90%84%F0%9D%90%8D-%F0%9D%90%8F%F0%9D%90%88%F0%9D%90%82%F0%9D%90%87%F0%9D%90%80%F0%9D%90%8D%F0%9D%90%80%F0%9D%90%90%F0%9D%90%94%F0%9D%90%88-%F0%9D%90%98-%F0%9D%90%80%F0%9D%90%85%F0%9D%90%84%F0%9D%90%82%F0%9D%90%93%F0%9D%90%80-%F0%9D%90%81%F0%9D%90%88%F0%9D%90%84%F0%9D%90%8D%F0%9D%90%84%F0%9D%90%92-%F0%9D%90%8F/1533467692140332",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "centro poblado de Jerusalén, distrito de Pichanaqui, provincia de Chanchamayo",
+            "certeza_georef": "media",
+            "departamento_detectado": "Junín",
+            "actividad_asociada": "minería ilegal",
+            "lat": -10.889024,
+            "lon": -74.792883
+          },
+          {
+            "grupo_manual": "evt-0027b",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0025",
+            "nota_id": "medio_547ed691caeb",
+            "fecha_publicacion": "2026-08-23",
+            "titulo": "Huánuco: Operativo contra minería ilegal en Puerto Inca detecta 30 hectáreas afectadas y campamentos con internet satelital, radios y paneles solares",
+            "fuente_slug": "medio",
+            "url": "https://inforegion.pe/huanuco-operativo-contra-mineria-ilegal-en-puerto-inca-detecta-30-hectareas-afectadas-y-campamentos-con-internet-satelital-radios-y-paneles-solares",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "centro poblado de Jerusalén, distrito de Pichanaqui, provincia de Chanchamayo",
+            "certeza_georef": "media",
+            "departamento_detectado": "Junín",
+            "actividad_asociada": "minería ilegal",
+            "lat": -10.889024,
+            "lon": -74.792883
+          },
+          {
+            "grupo_manual": "evt-0027b",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0025",
+            "nota_id": "mpfn-1433917",
+            "fecha_publicacion": "2026-08-24",
+            "titulo": "FEMA consigue destrucción de tractores oruga utilizados para la minería ilegal en Puerto Inca",
+            "fuente_slug": "🚨 ¡Nuevo golpe a la minería ilegal!La PNP ejecutó dos operativos en Huánuco y Junín que permitieron interdictar e incautar maquinaria",
+            "url": "https://www.gob.pe/institucion/mpfn/noticias/1433917-fema-consigue-destruccion-de-tractores-oruga-utilizados-para-la-mineria-ilegal-en-puerto-inca",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "centro poblado de Jerusalén, distrito de Pichanaqui, provincia de Chanchamayo",
+            "certeza_georef": "media",
+            "departamento_detectado": "Junín",
+            "actividad_asociada": "minería ilegal",
+            "lat": -10.889024,
+            "lon": -74.792883
+          },
+          {
+            "grupo_manual": "evt-0027b",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0026",
+            "nota_id": "medio_feb835f56942",
+            "fecha_publicacion": "2026-08-22",
+            "titulo": "🚨 ¡Nuevo golpe a la minería ilegal!\n\nLa PNP ejecutó dos operativos en Huánuco y Junín que permitieron interdictar e incautar maquinaria, equipos e ins",
+            "fuente_slug": "medio",
+            "url": "https://www.instagram.com/reel/DcU5hVjCMr4",
+            "tipo_nota_origen": "multi_lugar",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "centro poblado de Jerusalén, distrito de Pichanaqui, provincia de Chanchamayo",
+            "certeza_georef": "media",
+            "departamento_detectado": "Junín",
+            "actividad_asociada": "minería ilegal",
+            "lat": -10.889024,
+            "lon": -74.792883
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.566001,
+          -3.405268
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0029",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Loreto",
+        "actividad_asociada": "trata de personas",
+        "lat": -3.405268,
+        "lon": -74.566001,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0029",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0027",
+            "nota_id": "medio_cfb51771bdad",
+            "fecha_publicacion": "2026-08-23",
+            "titulo": "El costo humano de la minería ilegal en la Amazonía: redes de explotación sexual cobran en gramos de oro",
+            "fuente_slug": "medio",
+            "url": "https://ojo-publico.com/6487/redes-internacionales-trata-cobran-gramos-oro-amazonico",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "comunidad de Alvarenga, río Nanay, Loreto",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "trata de personas",
+            "lat": -3.405268,
+            "lon": -74.566001
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.4984,
+          -12.86511
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0030",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Madre de Dios",
+        "actividad_asociada": "minería ilegal",
+        "lat": -12.86511,
+        "lon": -69.4984,
+        "n_fuentes": 2,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0030",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0028",
+            "nota_id": "medio_0d4888e2f87a",
+            "fecha_publicacion": "2026-09-09",
+            "titulo": "Fiscalía logra destrucción de 25 campamentos de minería ilegal en Madre de Dios",
+            "fuente_slug": "medio",
+            "url": "https://andina.pe/agencia/noticia-fiscalia-logra-destruccion-25-campamentos-mineria-ilegal-madre-dios-1091047.aspx",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "sector denominado ‘El Platanal’, situado en el distrito de Inambari",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Madre de Dios",
+            "actividad_asociada": "minería ilegal",
+            "lat": -12.86511,
+            "lon": -69.4984
+          },
+          {
+            "grupo_manual": "evt-0030",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0028",
+            "nota_id": "mpfn-1441455",
+            "fecha_publicacion": "2026-09-09",
+            "titulo": "FEMA logra la destrucción de 25 campamentos rústicos utilizados para la minería ilegal en Madre de Dios",
+            "fuente_slug": "mpfn",
+            "url": "https://www.gob.pe/institucion/mpfn/noticias/1441455-fema-logra-la-destruccion-de-25-campamentos-rusticos-utilizados-para-la-mineria-ilegal-en-madre-de-dios",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "sector denominado ‘El Platanal’, situado en el distrito de Inambari",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Madre de Dios",
+            "actividad_asociada": "minería ilegal",
+            "lat": -12.86511,
+            "lon": -69.4984
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.2109,
+          -13.0708
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0032",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Madre de Dios",
+        "actividad_asociada": "minería ilegal",
+        "lat": -13.0708,
+        "lon": -70.2109,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0032",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0030",
+            "nota_id": "mininter-1458776",
+            "fecha_publicacion": "2026-10-18",
+            "titulo": "Mininter: PNP golpea logística de la minería ilegal valorizada en S/1.3 millones en Madre de Dios",
+            "fuente_slug": "mininter",
+            "url": "https://www.gob.pe/institucion/mininter/noticias/1458776-mininter-pnp-golpea-logistica-de-la-mineria-ilegal-valorizada-en-s-1-3-millones-en-madre-de-dios",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "sector Balata, distrito de Inambari, provincia de Tambopata",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Madre de Dios",
+            "actividad_asociada": "minería ilegal",
+            "lat": -13.0708,
+            "lon": -70.2109
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.56655,
+          -3.40733
+        ]
+      },
+      "properties": {
+        "grupo_manual": "evt-0033",
+        "cantidad_estimada": "1",
+        "departamento_detectado": "Loreto",
+        "actividad_asociada": "minería ilegal",
+        "lat": -3.40733,
+        "lon": -74.56655,
+        "n_fuentes": 1,
+        "fuentes": [
+          {
+            "grupo_manual": "evt-0033",
+            "incluir_nota": "T",
+            "evento_id_propuesto": "evt-0035",
+            "nota_id": "medio_9f590bdef9a6",
+            "fecha_publicacion": "2026-10-19",
+            "titulo": "Mineros ilegales usan antenas Starlink para tener internet satelital en medio de la selva. #LatinaNoticias #PuntoFinal",
+            "fuente_slug": "medio",
+            "url": "https://www.facebook.com/LatinaNoticias.pe/videos/mineros-ilegales-usan-antenas-starlink-para-tener-internet-satelital-en-medio-de/1908230356391451",
+            "tipo_nota_origen": "simple",
+            "cantidad_estimada": "1",
+            "estimacion_georeferencia": "departamento tumbes",
+            "certeza_georef": "baja",
+            "departamento_detectado": "Loreto",
+            "actividad_asociada": "minería ilegal",
+            "lat": -3.40733,
+            "lon": -74.56655
+          }
+        ]
+      }
+    }
+  ]
+}
